@@ -1,0 +1,34 @@
+<script src="react.development.js"></script>
+<script src="react-dom.development.js"></script>
+<script src="babel.js"></script>
+
+<div id="root"></div>
+
+<script type="text/babel">
+  class Add extends React.Component {
+    handleSum = () => {
+      let n1Ref = this.refs.n1.value;
+      let n2Ref = this.refs.n2.value;
+      console.log(n1Ref, n2Ref, "my References");
+      let sum = Number(n1Ref) + parseInt(n2Ref);
+      console.log(sum, "sum");
+    };
+    render() {
+      console.log(this);
+      return (
+        <div>
+          <p>
+            <b>No1:</b> <input ref="n1" />
+          </p>
+          <p>
+            <b>No2:</b> <input ref="n2" />
+          </p>
+          <p>
+            <button onClick={this.handleSum}>Sum</button>
+          </p>
+        </div>
+      );
+    }
+  }
+  ReactDOM.render(<Add />, document.getElementById("root"));
+</script>

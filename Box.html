@@ -1,0 +1,41 @@
+<script src="react.development.js"></script>
+<script src="react-dom.development.js"></script>
+<script src="babel.js"></script>
+<style>
+  #box {
+    border: 1px solid red;
+    width: 100px;
+    display: inline-block;
+  }
+</style>
+
+<div id="root"></div>
+<script type="text/babel">
+  const Box = (props) => {
+    console.log(props, "props");
+    return <div id="box">{props.n}</div>;
+  };
+
+  const App = () => {
+    return (
+      <div>
+        <div>
+          <Box n="1" name="waseem" />
+          <Box n="2" />
+          <Box n="3" />
+        </div>
+        <div>
+          <Box n="4" />
+          <Box n="5" />
+          <Box n="6" />
+        </div>
+        <div>
+          <Box n="7" />
+          <Box n="8" />
+          <Box n="9" />
+        </div>
+      </div>
+    );
+  };
+  ReactDOM.render(<App />, document.getElementById("root"));
+</script>
