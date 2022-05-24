@@ -1,0 +1,34 @@
+<script src="react.development.js"></script>
+<script src="react-dom.development.js"></script>
+<script src="babel.js"></script>
+
+<div id="root"></div>
+<script type="text/babel">
+  class Example extends React.Component {
+    render() {
+      console.log(this, "current object");
+      const {loc, runs} = this.props;
+      return (
+        <div>
+          Child:::::Loc...{loc}....Runs
+          {runs}
+        </div>
+      );
+    }
+  }
+  class App extends React.Component {
+    constructor() {
+      super();
+      this.location = "Hyderabad";
+    }
+    render() {
+      return (
+        <div>
+          Parent
+          <Example loc={this.location} runs="19" />
+        </div>
+      );
+    }
+  }
+  ReactDOM.render(<App />, document.getElementById("root"));
+</script>

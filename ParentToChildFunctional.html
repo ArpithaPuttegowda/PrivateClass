@@ -1,0 +1,28 @@
+<script src="react.development.js"></script>
+<script src="react-dom.development.js"></script>
+<script src="babel.js"></script>
+
+<div id="root"></div>
+
+<script type="text/babel">
+  const App = () => {
+    const location = "Hyderabad";
+    const runs = 12;
+    return (
+      <div>
+        Parent.....
+        <Child loc={location} w={runs} />
+      </div>
+    );
+  };
+
+  const Child = ({loc, w}) => {
+    return (
+      <div>
+        Child....{loc} Runs:::{w}
+      </div>
+    );
+  };
+
+  ReactDOM.render(<App />, document.getElementById("root"));
+</script>

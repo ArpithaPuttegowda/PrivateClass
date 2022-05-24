@@ -1,17 +1,47 @@
 <script src="react.development.js"></script>
 <script src="react-dom.development.js"></script>
 <script src="babel.js"></script>
+<style>
+  .cr {
+    color: red;
+  }
+  .cg {
+    color: rgb(9, 0, 128);
+  }
+</style>
 
 <div id="root"></div>
 
 <script type="text/babel">
   class Add extends React.Component {
+    constructor() {
+      super();
+      this.state = {
+        total: 0,
+        cls: "",
+        name: "Sachin",
+        mul: ""
+      };
+    }
+
     handleSum = () => {
       let n1Ref = this.refs.n1.value;
       let n2Ref = this.refs.n2.value;
       console.log(n1Ref, n2Ref, "my References");
       let sum = Number(n1Ref) + parseInt(n2Ref);
-      console.log(sum, "sum");
+      this.setState({
+        total: sum,
+        cls: sum > 100 ? "cr" : "cg"
+      });
+    };
+
+    handleMultiplication = () => {
+      let n1 = this.refs.n1.value;
+      let n2 = this.refs.n2.value;
+      let product = n1 * n2;
+      this.setState({
+        mul: product
+      });
     };
     render() {
       console.log(this);
@@ -26,6 +56,24 @@
           <p>
             <button onClick={this.handleSum}>Sum</button>
           </p>
+          <div
+            style={{
+              color: this.state.total > 100 ? "red" : "green",
+              fontSize: "100px"
+            }}
+          >
+            {this.state.total}
+          </div>
+          <div className={this.state.total > 100 ? "cg" : "cr"}>
+            {this.state.total}
+          </div>
+          <div className={this.state.cls}>{this.state.total}</div>
+          <button onClick={() => this.setState({name: "DHONI"})}>
+            Update Name
+          </button>
+          <h1>Name:{this.state.name}</h1>
+          <button onClick={this.handleMultiplication}>Product</button>
+          <h1>Multiplcation:{this.state.mul}</h1>
         </div>
       );
     }
