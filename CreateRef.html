@@ -1,0 +1,41 @@
+<script src="react.development.js"></script>
+<script src="react-dom.development.js"></script>
+<script src="babel.js"></script>
+
+<div id="root"></div>
+
+<script type="text/babel">
+  class App extends React.Component {
+    constructor() {
+      super();
+      this.n1 = React.createRef(null);
+      this.n2 = React.createRef(null);
+    }
+    handleClick = () => {
+      debugger;
+      console.log(this);
+      //   let n1 = this.refs.n1.value;
+      //   let n2 = this.refs.n2.value;
+      let n1 = this.n1.current.value;
+      let n2 = this.n2.current.value;
+      console.log(Number(n1) + Number(n2));
+    };
+    render() {
+      return (
+        <div>
+          <p>
+            <b>N1:</b> <input ref={this.n1} />
+          </p>
+          <p>
+            <b>N2:</b> <input ref={this.n2} />
+          </p>
+          <p>
+            <button onClick={this.handleClick}>Click me</button>
+          </p>
+        </div>
+      );
+    }
+  }
+
+  ReactDOM.render(<App></App>, document.getElementById("root"));
+</script>

@@ -1,0 +1,7 @@
+nodejs
+npm i -g create-react-app
+create-react-app myapp
+
+OR
+npx create-react-app myapp
+
