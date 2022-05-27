@@ -1,6 +1,8 @@
 import {Component} from "react";
 import "./App.css";
-import ReferenceAsCallback from "./ReferenceAsCallback";
+import ReferenceAsCallback from "./Components/ReferenceAsCallback";
+import ReferenceUsingOnChange from "./Components/ReferenceUsingOnChange";
+import SetStateCallback from "./Components/SetStateCallback";
 import SetStateAsObject from "./SetStateAsObject";
 import SetStateAsObjectAndCallback from "./SetStateAsObjectAndCallback";
 
@@ -10,7 +12,9 @@ class App extends Component {
       <>
         {/* <ReferenceAsCallback /> */}
         {/* <SetStateAsObject /> */}
-        <SetStateAsObjectAndCallback />
+        {/* <SetStateAsObjectAndCallback /> */}
+        {/* <SetStateCallback /> */}
+        <ReferenceUsingOnChange />
       </>
     );
   }
