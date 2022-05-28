@@ -1,5 +1,8 @@
 import {Component} from "react";
 import "./App.css";
+import Footer from "./Components/Footer";
+import Header from "./Components/Header";
+import Menu from "./Components/Menu";
 import ReferenceAsCallback from "./Components/ReferenceAsCallback";
 import ReferenceUsingOnChange from "./Components/ReferenceUsingOnChange";
 import SetStateCallback from "./Components/SetStateCallback";
@@ -14,7 +17,10 @@ class App extends Component {
         {/* <SetStateAsObject /> */}
         {/* <SetStateAsObjectAndCallback /> */}
         {/* <SetStateCallback /> */}
-        <ReferenceUsingOnChange />
+        {/* <ReferenceUsingOnChange /> */}
+        <Header />
+        <Menu />
+        <Footer />
       </>
     );
   }
