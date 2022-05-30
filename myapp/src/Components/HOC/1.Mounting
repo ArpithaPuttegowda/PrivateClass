@@ -1,0 +1,28 @@
+1.Mounting
+loading the components in the DOM or browser(first time load)
+* constructor()
+* static getDerivedStateFromProps()
+*render()
+*componentDidMount()
+
+2.Updating
+if any state or prop change occus that we can call it like updationg phase
+* static getDerivedStateFromProps()
+* shouldComponentUpdate()
+ return boolean
+ if it true-> remaining life cycle methods will execute
+ else(false) it won't allow other life cycle to execute
+ * render()
+ *getSnapshotBeforeUpdate()
+ *componentDidUpdate()
+
+3.Unmounting
+removing component from the DOM 
+*componentWillUnmount()
+
+4.Exception Handling or Error Handling
+handling errors in the app
+these are the two life cycle methods will get execute inside parent component whenever any exception occurs for 
+Children component
+*static getDerivedStateFromError()
+*componentDidCatch()

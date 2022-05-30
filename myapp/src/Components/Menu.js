@@ -4,6 +4,7 @@ import Context from "./Context";
 import ExceptionHandling from "./ExceptionHandling";
 import HOC from "./HOC";
 import Home from "./Home";
+import LifeCycleMethods from "./LifeCycleMethods";
 
 export default class Menu extends Component {
   render() {
@@ -14,6 +15,7 @@ export default class Menu extends Component {
           <Link to="hoc">HOC</Link>
           <Link to="EH">EH</Link>
           <Link to="context">Context</Link>
+          <Link to="lifeCycleMethods">lifeCycleMethods</Link>
         </div>
         <Routes>
           <Route path="home" element={<Home />} />
@@ -22,6 +24,7 @@ export default class Menu extends Component {
           <Route path="context" element={<Context />} />
           <Route path="*" element={<Navigate to="home" />} />
           <Route path="home/:id/:tex" element={<HOC />} />
+          <Route path="lifeCycleMethods" element={<LifeCycleMethods />} />
         </Routes>
       </BrowserRouter>
     );
