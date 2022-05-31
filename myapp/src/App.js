@@ -2,6 +2,7 @@ import {Component} from "react";
 import "./App.css";
 import Footer from "./Components/Footer";
 import Header from "./Components/Header";
+import UnMountingLifeCycle from "./Components/LifeCycleMethods";
 import Menu from "./Components/Menu";
 import ReferenceAsCallback from "./Components/ReferenceAsCallback";
 import ReferenceUsingOnChange from "./Components/ReferenceUsingOnChange";
@@ -18,8 +19,9 @@ class App extends Component {
         {/* <SetStateAsObjectAndCallback /> */}
         {/* <SetStateCallback /> */}
         {/* <ReferenceUsingOnChange /> */}
+
         <Header />
-        <Menu />
+        <UnMountingLifeCycle />
         <Footer />
       </>
     );
