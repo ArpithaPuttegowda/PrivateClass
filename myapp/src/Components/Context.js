@@ -12,7 +12,7 @@ export default class Context extends Component {
       <div>
         Context::::
         <ctx.Provider value={this.data}>
-          <A />
+          <A>Arpitha</A>
         </ctx.Provider>
       </div>
     );
@@ -23,7 +23,10 @@ class A extends Component {
   render() {
     return (
       <div>
-        <B />
+        This is the data coming from A ::::::{this.props.children}
+        <B name="Sachin" myData={this.props.children}>
+          WASEEM
+        </B>
       </div>
     );
   }
@@ -31,9 +34,11 @@ class A extends Component {
 
 class B extends Component {
   render() {
+    console.log(this, "B");
     return (
       <div>
-        I'm B component::: {this.context}
+        I'm B component:::{this.props.name} {this.context}
+        THIS IS CHILD CONTENT....{this.props.children}
         <C />
       </div>
     );

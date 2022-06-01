@@ -21,7 +21,7 @@ class App extends Component {
         {/* <ReferenceUsingOnChange /> */}
 
         <Header />
-        <UnMountingLifeCycle />
+        <Menu />
         <Footer />
       </>
     );

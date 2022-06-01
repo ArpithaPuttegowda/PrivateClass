@@ -2,22 +2,33 @@ import React, {Component} from "react";
 
 export default class LifeCycleMethods extends Component {
   //mounting
-  constructor() {
-    super();
+  constructor(p) {
+    super(p);
     console.log("constructor got executed");
     this.state = {
       count: 0,
-      isChildLoad: false
+      isChildLoad: false,
+      myName: p.name,
+      RNO: 10
     };
+    console.log(p.name, p.loc, "props", p.runs);
   }
   //mounting and also updating
-  static getDerivedStateFromProps() {
+  static getDerivedStateFromProps(nextProps, nextState) {
     console.log("getDerivedStateFromProps");
+    console.log(nextState, nextProps, "getDerv");
+    return {
+      myName: "WASEEM"
+    };
   }
 
   //updating
-  shouldComponentUpdate() {
-    console.log("shouldComponentUpdate");
+  shouldComponentUpdate(nextProps, nextState) {
+    // console.log("shouldComponentUpdate", nextProps, nextState);
+    // if (nextState.RNO !== this.state.RNO) {
+    //   return true;
+    // }
+    // return false;
     return true;
   }
 
@@ -28,7 +39,7 @@ export default class LifeCycleMethods extends Component {
   };
   //mounting and also updating
   render() {
-    console.log("render");
+    console.log("render", this.props.name);
     return (
       <div>
         LifeCycleMethods
@@ -40,6 +51,10 @@ export default class LifeCycleMethods extends Component {
         >
           Toggle
         </button>
+        <button onClick={() => this.setState({RNO: 100})}>
+          RoNOUpdate{this.state.RNO}
+        </button>
+        <h1>{this.state.myName}</h1>
       </div>
     );
   }
@@ -49,12 +64,13 @@ export default class LifeCycleMethods extends Component {
   }
 
   //updating
-  getSnapshotBeforeUpdate() {
+  getSnapshotBeforeUpdate(prevProps, prevState) {
     console.log("getSnapshot before update");
   }
 
   //updating
-  componentDidUpdate() {
+  componentDidUpdate(preProps, preState) {
+    debugger;
     console.log("componentDidUpdate");
   }
 }
