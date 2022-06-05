@@ -2,6 +2,6 @@ import React, {Component} from "react";
 
 export default class ExceptionHandling extends Component {
   render() {
-    return <div>ExceptionHandling</div>;
+    return <div></div>;
   }
 }
