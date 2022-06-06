@@ -1,7 +1,9 @@
-import {Component} from "react";
+import {Component, useState} from "react";
 import "./App.css";
 import Footer from "./Components/Footer";
 import Header from "./Components/Header";
+import {UseEffect} from "./Components/Hooks/useEffect";
+import {Example} from "./Components/Hooks/useStateHook";
 import UnMountingLifeCycle from "./Components/LifeCycleMethods";
 import Menu from "./Components/Menu";
 import ReferenceAsCallback from "./Components/ReferenceAsCallback";
@@ -21,7 +23,9 @@ class App extends Component {
         {/* <ReferenceUsingOnChange /> */}
 
         <Header />
-        <Menu />
+        {/* <Example /> */}
+        {/* <Menu /> */}
+        <UseEffect />
         <Footer />
       </>
     );
