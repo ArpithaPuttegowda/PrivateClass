@@ -1,0 +1,12 @@
+
+redux- Global state management across the application
+redux={
+
+}
+this.state={
+
+}
+
+react -different application
+react-redux
+redux -library= Global state / store
