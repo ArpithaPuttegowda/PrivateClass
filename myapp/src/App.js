@@ -2,6 +2,7 @@ import {Component, useState} from "react";
 import "./App.css";
 import {ControlledComponentsFunctional} from "./Components/ControlledComponentsFunctional";
 import {Sample} from "./Components/ExampleWithoutRedux/Sample";
+import {SampleRedux} from "./Components/ExampleWithRedux/SampleRedux";
 import Footer from "./Components/Footer";
 import Header from "./Components/Header";
 import {UseEffect} from "./Components/Hooks/useEffect";
@@ -43,7 +44,8 @@ class App extends Component {
         {/* <MemoReact /> */}
         {/* <UseMemoHook /> */}
         {/* <UseCallbackHook /> */}
-        <Sample />
+        {/* <Sample /> */}
+        <SampleRedux />
         <Footer />
       </>
     );
