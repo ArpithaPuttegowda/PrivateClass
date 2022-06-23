@@ -1,6 +1,7 @@
 import {Component, useState} from "react";
 import "./App.css";
 import {ControlledComponentsFunctional} from "./Components/ControlledComponentsFunctional";
+import {ButtonHover} from "./Components/customHooks/ButtonHover";
 import {Sample} from "./Components/ExampleWithoutRedux/Sample";
 import {SampleRedux} from "./Components/ExampleWithRedux/SampleRedux";
 import Footer from "./Components/Footer";
@@ -45,7 +46,8 @@ class App extends Component {
         {/* <UseMemoHook /> */}
         {/* <UseCallbackHook /> */}
         {/* <Sample /> */}
-        <SampleRedux />
+        {/* <SampleRedux /> */}
+        <ButtonHover />
         <Footer />
       </>
     );
