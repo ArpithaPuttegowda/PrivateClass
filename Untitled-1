@@ -1,0 +1,32 @@
+
+
+1.static = we can not apply top , left , right and bottom
+
+2.absolute=it will remove space from the dom
+we could apply left, right, bottom and top
+it will change the behaviour , if it's block it will turn to be inline
+it will take parent as a reference only if it's having position other than static
+it may be absolute,relative,fixed or sticky
+
+3.relative
+it will not remove space from the dom
+we could apply left, right, bottom and top
+it will not change the behaviour 
+it will take current position as a reference
+
+4.fixed
+it will change the behaviour 
+it will remove space from the dom
+we could apply left, right, bottom and top
+it will take viewport as reference
+
+5.sticky
+it will not remove space from the dom
+we could apply left, right, bottom and top
+it will not change the behaviour 
+it will take viewport as reference
+to apply positions dynamically, it we want to stick the elements dynamically
+
+
+
+

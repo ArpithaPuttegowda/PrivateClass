@@ -1,0 +1,17 @@
+<button onclick="fn()">Click me</button>
+
+<script>
+  function fn() {
+    let obj = new XMLHttpRequest();
+    obj.open("get", "https://jsonplaceholder.typicode.com/posts");
+    obj.send();
+    obj.onload = () => {
+      let resp = obj.responseText;
+      console.log(resp, "succes");
+    };
+    obj.onerror = () => {
+      let resp = obj.responseText;
+      console.log(resp, "failure");
+    };
+  }
+</script>
