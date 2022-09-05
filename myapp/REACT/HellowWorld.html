@@ -4,9 +4,26 @@
 
 <div id="root"></div>
 <script type="text/babel">
-  const App = () => {
-    return <div>Hellow world......</div>;
+  const HellowWorld = () => {
+    return <div>Hellow world</div>;
   };
+
+  const App = () => {
+    return (
+      <div>
+        <HellowWorld></HellowWorld>
+        <HellowWorld />
+        <HellowWorld />
+        <HellowWorld />
+        <HellowWorld />
+        <HellowWorld />
+        <HellowWorld />
+        <HellowWorld />
+        <div>Hyderabad</div>
+      </div>
+    );
+  };
+
   //   console.log(App());
   //   document.getElementById("root").innerHTML = App().props.children;
   ReactDOM.render(<App />, document.getElementById("root"));

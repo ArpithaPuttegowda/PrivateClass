@@ -1,0 +1,46 @@
+<script src="react.development.js"></script>
+<script src="babel.min.js"></script>
+<script src="react-dom.development.js"></script>
+
+<div id="root"></div>
+<script type="text/babel">
+  const Box = (data) => {
+    console.log(data, "Data");
+    return (
+      <div
+        style={{
+          border: "1px solid red",
+          display: "inline-block",
+          width: "100px",
+          height: "100px"
+        }}
+      >
+        {data.n}
+      </div>
+    );
+  };
+
+  const App = () => {
+    return (
+      <div>
+        <div>
+          <Box n="1" loc="karnataka" />
+          <Box n="2" />
+          <Box n="3" />
+        </div>
+        <div>
+          <Box />
+          <Box />
+          <Box />
+        </div>
+        <div>
+          <Box />
+          <Box />
+          <Box />
+        </div>
+      </div>
+    );
+  };
+
+  ReactDOM.render(<App />, document.getElementById("root"));
+</script>
