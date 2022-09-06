@@ -5,7 +5,7 @@
 <div id="root"></div>
 <script type="text/babel">
   const Box = (data) => {
-    console.log(data, "Data");
+    const {n, loc} = data;
     return (
       <div
         style={{
@@ -15,7 +15,7 @@
           height: "100px"
         }}
       >
-        {data.n}
+        {n}...{loc}
       </div>
     );
   };
@@ -29,9 +29,9 @@
           <Box n="3" />
         </div>
         <div>
-          <Box />
-          <Box />
-          <Box />
+          <Box n="4" />
+          <Box n="5" />
+          <Box n="6" />
         </div>
         <div>
           <Box />

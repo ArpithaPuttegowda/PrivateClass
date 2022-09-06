@@ -1,0 +1,53 @@
+<script src="react.development.js"></script>
+<script src="babel.min.js"></script>
+<script src="react-dom.development.js"></script>
+
+<div id="root"></div>
+<script type="text/babel">
+  class Box extends React.Component {
+    render() {
+      console.log(this, "current");
+      return (
+        <div
+          style={{
+            border: "1px solid red",
+            display: "inline-block",
+            width: "100px",
+            height: "100px"
+          }}
+        >
+          {this.props.n}
+        </div>
+      );
+    }
+  }
+
+  class App extends React.Component {
+    constructor() {
+      super();
+    }
+    render() {
+      return (
+        <div>
+          <div>
+            <Box n="1" loc="karnataka" />
+            <Box n="2" />
+            <Box n="3" />
+          </div>
+          <div>
+            <Box n="4" />
+            <Box n="5" />
+            <Box n="6" />
+          </div>
+          <div>
+            <Box n="7" />
+            <Box n="8" />
+            <Box n="9" />
+          </div>
+        </div>
+      );
+    }
+  }
+
+  ReactDOM.render(<App />, document.getElementById("root"));
+</script>
