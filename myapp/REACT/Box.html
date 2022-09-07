@@ -5,7 +5,7 @@
 <div id="root"></div>
 <script type="text/babel">
   const Box = (data) => {
-    const {n, loc} = data;
+    const {n, loc, d} = data;
     return (
       <div
         style={{
@@ -15,18 +15,19 @@
           height: "100px"
         }}
       >
-        {n}...{loc}
+        {n}...{loc}...{d}
       </div>
     );
   };
 
   const App = () => {
+    const myData = "mumbai";
     return (
       <div>
         <div>
           <Box n="1" loc="karnataka" />
           <Box n="2" />
-          <Box n="3" />
+          <Box n="3" d={myData} />
         </div>
         <div>
           <Box n="4" />

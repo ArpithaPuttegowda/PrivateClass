@@ -16,7 +16,7 @@
             height: "100px"
           }}
         >
-          {this.props.n}
+          {this.props.n}....{this.props.data}
         </div>
       );
     }
@@ -25,19 +25,20 @@
   class App extends React.Component {
     constructor() {
       super();
+      this.myData = "hyderabad";
     }
     render() {
       return (
         <div>
           <div>
-            <Box n="1" loc="karnataka" />
+            <Box n="1" />
             <Box n="2" />
             <Box n="3" />
           </div>
           <div>
             <Box n="4" />
             <Box n="5" />
-            <Box n="6" />
+            <Box n="6" data={this.myData} />
           </div>
           <div>
             <Box n="7" />

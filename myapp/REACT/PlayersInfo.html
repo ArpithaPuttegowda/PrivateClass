@@ -1,0 +1,41 @@
+<script src="react.development.js"></script>
+<script src="babel.min.js"></script>
+<script src="react-dom.development.js"></script>
+
+<div id="root"></div>
+
+<script type="text/babel">
+  // class Player extends React.Component {
+  //   render() {
+  //     console.log(this);
+  //     return (
+  //       <div>
+  //         <h1>
+  //           I'm {this.props.name} , My Runs are {this.props.runs}
+  //         </h1>
+  //       </div>
+  //     );
+  //   }
+  // }
+
+  const Player = ({name, runs}) => {
+    return (
+      <h1>
+        I'm {name} , My Runs are {runs}
+      </h1>
+    );
+  };
+
+  const App = () => {
+    return (
+      <div>
+        <Player name="Sachin" loc="Mumbai" runs="10" />
+        <Player name="Dhoni" loc="Ranchi" runs="10" />
+        <Player name="Kohli" loc="Delhi" runs="10" />
+      </div>
+    );
+  };
+  ReactDOM.render(<App />, document.getElementById("root"), () =>
+    alert("component got placed inside the container")
+  );
+</script>

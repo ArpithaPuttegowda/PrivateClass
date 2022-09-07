@@ -1,0 +1,47 @@
+<script src="react.development.js"></script>
+<script src="babel.min.js"></script>
+<script src="react-dom.development.js"></script>
+
+<div id="root"></div>
+<script type="text/babel">
+  const App = () => {
+    const getData = (data) => {
+      alert(JSON.stringify(data));
+    };
+    const getLoc = (l) => {
+      alert(l);
+    };
+    return (
+      <div>
+        I'm Parent
+        <Player fn={getData} getLoc={getLoc} />
+      </div>
+    );
+  };
+
+  const Player = ({fn, getLoc}) => {
+    const myData = "sachin";
+    const playerInfo = "mumbai";
+    const loc = "hyderabad";
+    const totalInfo = {
+      myData,
+      playerInfo
+    };
+    const myFn = () => {
+      fn(totalInfo);
+    };
+
+    const onShareData = () => {
+      getLoc(loc);
+    };
+    return (
+      <div>
+        I'm Child
+        <button onClick={myFn}>Click</button>
+        <button onClick={onShareData}>Share data</button>
+      </div>
+    );
+  };
+
+  ReactDOM.render(<App />, document.getElementById("root"));
+</script>
