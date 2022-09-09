@@ -1,0 +1,42 @@
+<script src="react.development.js"></script>
+<script src="babel.min.js"></script>
+<script src="react-dom.development.js"></script>
+
+<div id="root"></div>
+<script type="text/babel">
+  class App extends React.Component {
+    state = {
+      data: ""
+    };
+    getData = (data) => {
+      this.setState({
+        data
+      });
+    };
+    render() {
+      return (
+        <div>
+          <h1>data is coming from Child...{this.state.data}</h1>
+          <Child fn={this.getData} />
+        </div>
+      );
+    }
+  }
+  class Child extends React.Component {
+    constructor() {
+      super();
+      this.data = "sachin";
+    }
+    handleClick = () => {
+      this.props.fn(this.data);
+    };
+    render() {
+      return (
+        <div>
+          <button onClick={this.handleClick}>Click</button>
+        </div>
+      );
+    }
+  }
+  ReactDOM.render(<App />, document.getElementById("root"));
+</script>
