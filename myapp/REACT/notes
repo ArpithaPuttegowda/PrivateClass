@@ -1,0 +1,13 @@
+
+npm i -g create-react-app
+npm create-react-app myreactapp
+
+OR
+npx create-react-app myreactapp
+
+
+
+App->A
+       =>B
+          =>C
+            =>D

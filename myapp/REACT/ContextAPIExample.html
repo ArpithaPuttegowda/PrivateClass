@@ -1,0 +1,83 @@
+<script src="react.development.js"></script>
+<script src="babel.min.js"></script>
+<script src="react-dom.development.js"></script>
+
+<div id="root"></div>
+<script type="text/babel">
+  let ctx = React.createContext();
+  class App extends React.Component {
+    render() {
+      const data = {name: "sachin", runs: 10};
+      return (
+        <div>
+          <ctx.Provider value={data}>
+            <A />
+          </ctx.Provider>
+        </div>
+      );
+    }
+  }
+  class A extends React.Component {
+    render() {
+      console.log(this, "I'm A component");
+      return (
+        <div>
+          <B />
+          <h1>I'm A component</h1>
+          <ctx.Consumer>
+            {(data) => {
+              return (
+                <h1>
+                  I'm {data.name}, my runs are {data.runs}
+                </h1>
+              );
+            }}
+          </ctx.Consumer>
+        </div>
+      );
+    }
+  }
+  class B extends React.Component {
+    render() {
+      console.log(this, "I'm B component");
+      const data = this.context;
+      return (
+        <div>
+          <C />
+          I'm B..{data.name}...
+          {data.runs}
+        </div>
+      );
+    }
+  }
+  B.contextType = ctx;
+
+  class C extends React.Component {
+    render() {
+      return (
+        <div>
+          <D />
+        </div>
+      );
+    }
+  }
+  class D extends React.Component {
+    render() {
+      return (
+        <div>
+          I'm D...Component....
+          <ctx.Consumer>
+            {(data) => {
+              return (
+                <h1>
+                  I'm {data.name}, my runs are {data.runs}
+                </h1>
+              );
+            }}
+          </ctx.Consumer>
+        </div>
+      );
+    }
+  }
+  ReactDOM.render(<App />, document.getElementById("root"));
+</script>
