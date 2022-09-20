@@ -3,7 +3,8 @@ import React, {useState} from "react";
 export const ConditionalRendering = () => {
   const [isShow, setIsShow] = useState(true);
   const handleToggle = () => {
-    setIsShow(!isShow);
+    throw new Error("something went wrong");
+    // setIsShow(!isShow);
   };
   return (
     <div>

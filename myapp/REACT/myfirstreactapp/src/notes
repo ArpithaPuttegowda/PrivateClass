@@ -1,0 +1,21 @@
+1.Mounting phase/loading the components in the first time load/ rendering the components
+2.Updating phase/ if any state change or props change that phase is updating phase
+3.unmounting phase- removing the component from the DOM
+4.Exception handling / Error handling/if anything happened to the children components as a parent
+it should take care of the error boundary
+
+Mounting phase
+
+4
+*constructor
+*static getDerivedStateFromprops
+*render
+*componentDidMount
+
+Updating
+
+\**static getDerivedStateFromprops
+*shouldComponentUpdate
+*render
+*getSnapshotbeforeupdate
+\*componentDidUpdate
