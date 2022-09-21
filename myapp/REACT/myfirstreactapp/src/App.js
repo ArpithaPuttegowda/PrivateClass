@@ -1,5 +1,7 @@
 import {ConditionalRendering} from "./components/ConditionalRendering";
 import {ContextApi} from "./components/ContextApi";
+import ExceptionHandling from "./components/ExceptionHandling/ExceptionHandling";
+import Hero from "./components/ExceptionHandling/Hero";
 import LifeCycleMethodComponentWillUnMount from "./components/LifeCycleMethodComponentWillUnMount";
 import LifeCycleMethodsUpdation from "./components/LifeCycleMethodUpdating";
 // import LifeCycleMethods from "./components/LifeCycleMethods";
@@ -15,7 +17,8 @@ const App = () => {
       <TakeTheFormDataUseRef /> */}
       {/* <LifeCycleMethods /> */}
       {/* <LifeCycleMethodsUpdation /> */}
-      <LifeCycleMethodComponentWillUnMount />
+      {/* <LifeCycleMethodComponentWillUnMount /> */}
+      <ExceptionHandling />
     </div>
   );
 };
