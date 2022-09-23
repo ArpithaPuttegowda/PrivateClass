@@ -1,14 +1,15 @@
 import React, {Component} from "react";
 
 export default class LifeCycleMethods extends Component {
-  constructor() {
+  constructor(props) {
     super();
     this.state = {
       count: 0
     };
-    console.log("constructor got executed");
+    console.log("constructor got executed", props);
   }
-  static getDerivedStateFromProps() {
+  static getDerivedStateFromProps(nextProps, nextState) {
+    debugger;
     console.log("getDerivedStateFromProps got executed");
   }
   handleInc = () => {
@@ -17,7 +18,7 @@ export default class LifeCycleMethods extends Component {
     });
   };
   render() {
-    console.log("render got executed");
+    console.log("render got executed", this.props);
     return (
       <div>
         <button onClick={this.handleInc}>Inc count</button>
