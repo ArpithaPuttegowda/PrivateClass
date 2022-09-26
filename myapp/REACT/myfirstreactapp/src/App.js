@@ -13,6 +13,7 @@ import SetStateWithCallback from "./components/SetStateArguments/SetStateWithCal
 import LifeCycleMethods from "./components/LifeCycleMethods";
 import {TakeTheFormDataUseRef} from "./components/TakeDataByUseRef";
 import TakeTheFormData from "./components/TakeTheFormData";
+import {ParentBtnHover} from "./components/HOC/CustomHooks/ParentBtnHover";
 
 const App = () => {
   return (
@@ -21,7 +22,8 @@ const App = () => {
       <ConditionalRendering />
       <TakeTheFormData />
       <TakeTheFormDataUseRef /> */}
-      <LifeCycleMethods name="Delhi" runs={10} />
+      {/* <LifeCycleMethods name="Delhi" runs={10} /> */}
+      <ParentBtnHover />
       {/* <LifeCycleMethodsUpdation /> */}
       {/* <LifeCycleMethodComponentWillUnMount /> */}
       {/* <ExceptionHandling /> */}
