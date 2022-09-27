@@ -14,6 +14,8 @@ import LifeCycleMethods from "./components/LifeCycleMethods";
 import {TakeTheFormDataUseRef} from "./components/TakeDataByUseRef";
 import TakeTheFormData from "./components/TakeTheFormData";
 import {ParentBtnHover} from "./components/HOC/CustomHooks/ParentBtnHover";
+import AjaxComponentDidMount from "./components/AjaxComponentDidMount";
+import {ComponentDidMountUseEffect} from "./components/ComponentDidMountUseEffect";
 
 const App = () => {
   return (
@@ -23,7 +25,7 @@ const App = () => {
       <TakeTheFormData />
       <TakeTheFormDataUseRef /> */}
       {/* <LifeCycleMethods name="Delhi" runs={10} /> */}
-      <ParentBtnHover />
+      {/* <ParentBtnHover /> */}
       {/* <LifeCycleMethodsUpdation /> */}
       {/* <LifeCycleMethodComponentWillUnMount /> */}
       {/* <ExceptionHandling /> */}
@@ -32,6 +34,8 @@ const App = () => {
       {/* <SetStateAsObjectAndCallback /> */}
       {/* <SetStateWithCallback /> */}
       {/* <HOCExample /> */}
+      {/* <AjaxComponentDidMount /> */}
+      <ComponentDidMountUseEffect />
     </div>
   );
 };
