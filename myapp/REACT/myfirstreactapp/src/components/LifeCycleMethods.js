@@ -23,6 +23,7 @@ export default class LifeCycleMethods extends Component {
       count: this.state.count + 1
     });
   };
+
   render(a, b, c) {
     console.log("render got executed", this.props);
     return (

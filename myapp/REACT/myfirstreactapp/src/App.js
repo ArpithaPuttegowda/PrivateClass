@@ -16,6 +16,9 @@ import TakeTheFormData from "./components/TakeTheFormData";
 import {ParentBtnHover} from "./components/HOC/CustomHooks/ParentBtnHover";
 import AjaxComponentDidMount from "./components/AjaxComponentDidMount";
 import {ComponentDidMountUseEffect} from "./components/ComponentDidMountUseEffect";
+import {ComponentWillUnMountUseEffect} from "./components/ComponentWillUnMountUseEffect";
+import {AjaxUseEffect} from "./components/AjaxUseEffect";
+import ShouldComponentUpdate from "./components/ShouldComponentUpdate";
 
 const App = () => {
   return (
@@ -35,7 +38,11 @@ const App = () => {
       {/* <SetStateWithCallback /> */}
       {/* <HOCExample /> */}
       {/* <AjaxComponentDidMount /> */}
-      <ComponentDidMountUseEffect />
+      {/* <ComponentDidMountUseEffect /> */}
+      {/* <ComponentWillUnMountUseEffect /> */}
+      {/* <AjaxUseEffect /> */}
+      {/* <LifeCycleMethods color="red" /> */}
+      <ShouldComponentUpdate color="green" />
     </div>
   );
 };
