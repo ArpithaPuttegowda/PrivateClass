@@ -19,6 +19,10 @@ import {ComponentDidMountUseEffect} from "./components/ComponentDidMountUseEffec
 import {ComponentWillUnMountUseEffect} from "./components/ComponentWillUnMountUseEffect";
 import {AjaxUseEffect} from "./components/AjaxUseEffect";
 import ShouldComponentUpdate from "./components/ShouldComponentUpdate";
+import ExamplePureComponent from "./components/ExamplePureComponent";
+import ExamplePureComponentPtoC from "./components/ExamplePureComponentPtoC";
+import {FunctionalComponentReactMemo} from "./components/FunctionalComponentReactMemo";
+import {GetRef} from "./components/GetRef";
 
 const App = () => {
   return (
@@ -42,7 +46,11 @@ const App = () => {
       {/* <ComponentWillUnMountUseEffect /> */}
       {/* <AjaxUseEffect /> */}
       {/* <LifeCycleMethods color="red" /> */}
-      <ShouldComponentUpdate color="green" />
+      {/* <ShouldComponentUpdate color="green" /> */}
+      {/* <ExamplePureComponent /> */}
+      {/* <ExamplePureComponentPtoC /> */}
+      {/* <FunctionalComponentReactMemo /> */}
+      <GetRef />
     </div>
   );
 };

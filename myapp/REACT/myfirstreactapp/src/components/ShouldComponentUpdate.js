@@ -17,7 +17,7 @@ export default class ShouldComponentUpdate extends Component {
         <button
           onClick={() =>
             this.setState({
-              name: "Sachin"
+              name: "Dhoni"
             })
           }
         >
@@ -26,5 +26,16 @@ export default class ShouldComponentUpdate extends Component {
         <h1>{this.state.name}</h1>
       </div>
     );
+  }
+
+  getSnapshotBeforeUpdate(prevProps, prevState) {
+    alert("getSnapShot");
+    return null;
+  }
+
+  componentDidUpdate(prevProps, prevState) {
+    if (prevState.name === "Sachin") {
+      alert("this is sachin");
+    }
   }
 }
