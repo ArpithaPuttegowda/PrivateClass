@@ -23,6 +23,11 @@ import ExamplePureComponent from "./components/ExamplePureComponent";
 import ExamplePureComponentPtoC from "./components/ExamplePureComponentPtoC";
 import {FunctionalComponentReactMemo} from "./components/FunctionalComponentReactMemo";
 import {GetRef} from "./components/GetRef";
+import {PreparePlayerList} from "./components/ListKeys/PreparePlayerList";
+import PrepareCountryList from "./components/ListKeys/PrepareCountryList";
+import {PrepareOrderedList} from "./components/ListKeys/PrepareOrderedList";
+import {ListKeysComponent} from "./components/ListKeys/ListKeysComponent";
+import {DataFromApi} from "./components/ListKeys/DataFromApi";
 
 const App = () => {
   return (
@@ -50,7 +55,12 @@ const App = () => {
       {/* <ExamplePureComponent /> */}
       {/* <ExamplePureComponentPtoC /> */}
       {/* <FunctionalComponentReactMemo /> */}
-      <GetRef />
+      {/* <GetRef /> */}
+      {/* <PreparePlayerList /> */}
+      {/* <PrepareCountryList /> */}
+      {/* <PrepareOrderedList /> */}
+      {/* <ListKeysComponent /> */}
+      <DataFromApi />
     </div>
   );
 };
