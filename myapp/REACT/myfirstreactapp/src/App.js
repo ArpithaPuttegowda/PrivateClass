@@ -28,6 +28,8 @@ import PrepareCountryList from "./components/ListKeys/PrepareCountryList";
 import {PrepareOrderedList} from "./components/ListKeys/PrepareOrderedList";
 import {ListKeysComponent} from "./components/ListKeys/ListKeysComponent";
 import {DataFromApi} from "./components/ListKeys/DataFromApi";
+import {ListAndKeysTable} from "./components/ListKeys/ListAndKeysTable";
+import {VirtualDOM} from "./components/VirtualDOM";
 
 const App = () => {
   return (
@@ -60,7 +62,9 @@ const App = () => {
       {/* <PrepareCountryList /> */}
       {/* <PrepareOrderedList /> */}
       {/* <ListKeysComponent /> */}
-      <DataFromApi />
+      {/* <DataFromApi /> */}
+      {/* <ListAndKeysTable /> */}
+      <VirtualDOM />
     </div>
   );
 };
