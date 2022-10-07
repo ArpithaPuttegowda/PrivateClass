@@ -30,6 +30,10 @@ import {ListKeysComponent} from "./components/ListKeys/ListKeysComponent";
 import {DataFromApi} from "./components/ListKeys/DataFromApi";
 import {ListAndKeysTable} from "./components/ListKeys/ListAndKeysTable";
 import {VirtualDOM} from "./components/VirtualDOM";
+import {OrderedListColors} from "./components/ReusuableComponents/OrderedListColors";
+import {OrderedListFlowers} from "./components/ReusuableComponents/OrderedListFlowers";
+import {OrderedListComp} from "./components/ReusuableComponents/OrderedListComp";
+import OrderedListClassComp from "./components/ReusuableComponents/OrderedListClassComp";
 
 const App = () => {
   return (
@@ -64,7 +68,12 @@ const App = () => {
       {/* <ListKeysComponent /> */}
       {/* <DataFromApi /> */}
       {/* <ListAndKeysTable /> */}
-      <VirtualDOM />
+      {/* <VirtualDOM /> */}
+      {/* <OrderedListColors />
+      <OrderedListFlowers />
+      <OrderedListComp data={["red", "blue", "green", "yellow"]} />
+      <OrderedListComp data={["lilly", "jasmin", "Sun flowers"]} /> */}
+      <OrderedListClassComp data={["red", "blue", "green", "yellow"]} />
     </div>
   );
 };
