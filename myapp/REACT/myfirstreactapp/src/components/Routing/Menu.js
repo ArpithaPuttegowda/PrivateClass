@@ -1,19 +1,55 @@
-import React from "react";
-import {Link, BrowserRouter, Route, Routes} from "react-router-dom";
-import {About} from "./About";
-import {Home} from "./Home";
+import React, {lazy, Suspense} from "react";
+import {Link, BrowserRouter, Route, Routes, Navigate} from "react-router-dom";
+import Home from "./Home";
+import {PageNotFound} from "./404PageNotFound";
+
+const HOCExample = lazy(() => import("../HOC/HOCExample"));
+const About = lazy(() => import("./About"));
 
 export const Menu = () => {
+  const linkData = [
+    {path: "/home", content: "HOME"},
+    {path: "/about", content: "About Us"},
+    {path: "/hoc", content: "HOC"}
+  ];
+
+  const routeData = [
+    {path: "/", element: <Home />},
+    {path: "/home", element: <Home />},
+    {path: "/about", element: <About />},
+    {path: "/*", element: <Navigate to="/home" />},
+    {
+      path: "/hoc",
+      element: <HOCExample />
+    }
+  ];
   return (
     <div>
-      <BrowserRouter>
-        <Link to="/home">Home</Link>
-        <Link to="/about">About</Link>
-        <Routes>
-          <Route path="/home" element={<Home />} />
-          <Route path="/about" element={<About />} />
-        </Routes>
-      </BrowserRouter>
+      <Suspense fallback="...loading">
+        <BrowserRouter>
+          <div id="menu-items">
+            {linkData?.map((obj, index) => {
+              const {path, content} = obj;
+              return (
+                <Link key={index} to={path}>
+                  {content}
+                </Link>
+              );
+            })}
+          </div>
+          <Routes>
+            {routeData?.map((routeObj, index) => {
+              return (
+                <Route
+                  key={index + routeObj.path}
+                  path={routeObj.path}
+                  element={routeObj.element}
+                />
+              );
+            })}
+          </Routes>
+        </BrowserRouter>
+      </Suspense>
     </div>
   );
 };

@@ -22,3 +22,14 @@ footer{
   bottom: 0px;
   width: 100%;
 }
+
+#menu-items{
+  text-align: right;
+    background: lightblue;
+}
+
+#menu-items a{
+  margin: 10px;
+    color: red;
+    font-size: 25px;
+}
