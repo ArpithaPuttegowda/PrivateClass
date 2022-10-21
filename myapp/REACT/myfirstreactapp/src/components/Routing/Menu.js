@@ -1,7 +1,10 @@
 import React, {lazy, Suspense} from "react";
 import {Link, BrowserRouter, Route, Routes, Navigate} from "react-router-dom";
 import Home from "./Home";
+import {Parent} from "./ForwardRef";
 import {PageNotFound} from "./404PageNotFound";
+import {ExampleUseMemo} from "./ExampleUseMemo";
+import {ExampleUseCallback} from "./ExampleUseCallback";
 
 const HOCExample = lazy(() => import("../HOC/HOCExample"));
 const About = lazy(() => import("./About"));
@@ -10,7 +13,19 @@ export const Menu = () => {
   const linkData = [
     {path: "/home", content: "HOME"},
     {path: "/about", content: "About Us"},
-    {path: "/hoc", content: "HOC"}
+    {path: "/hoc", content: "HOC"},
+    {
+      path: "/forwardRef",
+      content: "FORWARD REF"
+    },
+    {
+      path: "/useMemo",
+      content: "USE MEMO"
+    },
+    {
+      path: "/useCallback",
+      content: "USE CALLBACK"
+    }
   ];
 
   const routeData = [
@@ -19,8 +34,20 @@ export const Menu = () => {
     {path: "/about", element: <About />},
     {path: "/*", element: <Navigate to="/home" />},
     {
+      path: "/forwardRef",
+      element: <Parent />
+    },
+    {
       path: "/hoc",
       element: <HOCExample />
+    },
+    {
+      path: "/useMemo",
+      element: <ExampleUseMemo />
+    },
+    {
+      path: "/useCallback",
+      element: <ExampleUseCallback />
     }
   ];
   return (
