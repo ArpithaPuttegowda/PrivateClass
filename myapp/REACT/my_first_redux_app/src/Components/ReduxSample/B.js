@@ -1,5 +1,6 @@
 import React, {useRef} from "react";
 import {useDispatch} from "react-redux";
+import {LOC} from "../../constants";
 
 export const B = () => {
   const dispatch = useDispatch();
@@ -8,7 +9,7 @@ export const B = () => {
     let loc = locRef.current.value;
     locRef.current.value = "";
     dispatch({
-      type: "LOC",
+      type: LOC,
       payload: loc
     });
   };
