@@ -9,7 +9,7 @@ class A extends Component {
   }
   handleName = () => {
     let name = this.nameRef.current.value;
-    this.props.dispatch({
+    this.props.d({
       type: "NAME_C",
       payload: name
     });
@@ -28,7 +28,7 @@ class A extends Component {
 // };
 const mdp = (dispatch) => {
   return {
-    dispatch
+    d: dispatch
   };
 };
 export default connect(null, mdp)(A);

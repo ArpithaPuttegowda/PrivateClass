@@ -4,6 +4,7 @@ import {Home} from "../Home";
 import {ReduxSample} from "../ReduxSample/ReduxSample";
 import {WithoutRedux} from "../WithoutRedux/WithoutRedux";
 import {AjaxAxios} from "../AjaxAxios";
+import {ReduxSampleClass} from "../ReduxSampleClass/ReduxSampleClass";
 
 export const Menu = () => {
   return (
@@ -13,6 +14,7 @@ export const Menu = () => {
           <Link to="/home">Home</Link>
           <Link to="/withoutRedux"> WithoutRedux </Link>
           <Link to="/redux-sample"> Redux Sample </Link>
+          <Link to="redux-sample_c">Redux Sample Class</Link>
           <Link to="/axios">Axios</Link>
         </div>
         <Routes>
@@ -20,6 +22,7 @@ export const Menu = () => {
           <Route path="/withoutRedux" element={<WithoutRedux />} />
           <Route path="/redux-sample" element={<ReduxSample />} />
           <Route path="/axios" element={<AjaxAxios />} />
+          <Route path="redux-sample_c" element={<ReduxSampleClass />} />
         </Routes>
       </HashRouter>
     </div>

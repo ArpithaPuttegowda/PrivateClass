@@ -1,12 +1,17 @@
 import React, {Component, createRef} from "react";
+import {connect} from "react-redux";
 
-export default class B extends Component {
+class B extends Component {
   constructor() {
     super();
     this.locRef = createRef(null);
   }
   handleLoc = () => {
     let loc = this.locRef.current.value;
+    this.props.dis({
+      type: "LOC_C",
+      payload: loc
+    });
   };
   render() {
     return (
@@ -17,3 +22,10 @@ export default class B extends Component {
     );
   }
 }
+
+const mdp = (d) => {
+  return {
+    dis: d
+  };
+};
+export default connect(null, mdp)(B);
