@@ -1,0 +1,31 @@
+<script src="react.development.js"></script>
+<script src="react-dom.development.js"></script>
+<script src="babel.js"></script>
+
+<span class="mySpan"></span>
+
+<script type="text/babel">
+  class App extends React.Component {
+    add() {
+      return <h1>Kolkata</h1>;
+    }
+    sub() {
+      return <h1>Mumbai</h1>;
+    }
+    render() {
+      return <h1>Hyderabad</h1>;
+    }
+  }
+
+  const Hero = () => {
+    return (
+      <div>
+        <h2>SAchin</h2>
+        <App />
+      </div>
+    );
+  };
+
+  //   ReactDOM.render(<App />, document.getElementsByClassName("mySpan")[0]);
+  ReactDOM.render(<Hero />, document.querySelector(".mySpan"));
+</script>
