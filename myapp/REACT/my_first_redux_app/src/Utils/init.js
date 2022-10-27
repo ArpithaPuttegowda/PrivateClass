@@ -6,3 +6,8 @@ export const initialState = {
 export const initialStatePayment = {
   paymentInfo: ""
 };
+
+export const initialStateClass = {
+  name: "",
+  loc: ""
+};
