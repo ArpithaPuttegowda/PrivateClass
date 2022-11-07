@@ -6,13 +6,12 @@
 <div id="root"></div>
 
 <script type="text/babel">
-  const Box = ({data, name}) => {
-    return (
-      <div id="circle">
-        {data}....{name}
-      </div>
-    );
-  };
+  class Box extends React.Component {
+    render() {
+      console.log(this, "current object");
+      return <div id="box">{this.props.data}</div>;
+    }
+  }
 
   class App extends React.Component {
     render() {
