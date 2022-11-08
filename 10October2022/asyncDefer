@@ -1,0 +1,5 @@
+script => load and execute html async loading both js and html parallely loading
+of js will get over it will stop loading html tags it will completely execute js
+and later it will load remaining html tags defer loading both js and html
+parallely and it will laod both js and html completely then only it will start
+executing js

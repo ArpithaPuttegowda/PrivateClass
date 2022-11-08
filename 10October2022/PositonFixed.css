@@ -1,0 +1,28 @@
+header{
+    background: blue;
+    color: white;
+    text-align: center;
+    font-size: 50px;
+    font-weight: bold;
+    font-style: italic;
+}
+
+body{
+    margin: 0;
+    height: 1000px;
+}
+
+footer{
+    background: blue;
+    color: white;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+    font-style: italic;
+}
+#menu-items{
+    background: lightblue;
+    text-align: right;
+}
