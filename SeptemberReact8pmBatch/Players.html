@@ -1,20 +1,29 @@
 <script src="react.development.js"></script>
 <script src="react-dom.development.js"></script>
 <script src="babel.js"></script>
-<link rel="stylesheet" href="box.css" />
 
 <div id="root"></div>
 
 <script type="text/babel">
-  const App = () => {
+  const Players = ({name, location, id}) => {
     return (
       <div>
-        <div>I'm Sachin,I'm from Mumbai</div>
-        <div>I'm Dhoni,I'm from Ranchi</div>
-        <div>I'm Kohli,I'm from Delhi</div>
+        I'm {name},I'm from {location}, id::::{id}
       </div>
     );
   };
-
-  ReactDOM.render(<App />, document.getElementById("root"));
+  class PlayersTeam extends React.Component {
+    render() {
+      return (
+        <div>
+          <div>
+            <Players id="1" name="sachin" location="mumbai" />
+            <Players id="2" name="Dravid" location="Bombay" />
+            <Players id="3" name="Gangully" location="Hyderbad" />
+          </div>
+        </div>
+      );
+    }
+  }
+  ReactDOM.render(<PlayersTeam />, document.getElementById("root"));
 </script>
