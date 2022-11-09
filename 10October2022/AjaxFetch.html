@@ -1,0 +1,10 @@
+<button onclick="onAjax()">Ajax</button>
+
+<script>
+  function onAjax() {
+    fetch("https://jsonplaceholder.typicode.com/comments")
+      .then((success) => success.json())
+      .then((data) => console.log(data, "data"))
+      .catch((failure) => console.log(failure, "failure"));
+  }
+</script>

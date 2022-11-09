@@ -3,7 +3,7 @@
 <script>
   function onAjax() {
     let instance = new XMLHttpRequest();
-    instance.open("GET", "https://jonplaceholder.typicode.com/comments");
+    instance.open("GET", "https://jsonplaceholder.typicode.com/comments");
     instance.send();
     instance.onload = () => {
       let response = instance.responseText;
