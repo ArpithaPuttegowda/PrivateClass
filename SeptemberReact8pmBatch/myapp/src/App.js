@@ -1,3 +1,8 @@
-const name = "arpitha123";
+import React from "react";
 
-export default name;
+class App extends React.Component {
+  render() {
+    return <div>Hellow world</div>;
+  }
+}
+export default App;
