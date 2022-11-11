@@ -1,0 +1,41 @@
+<script src="react.development.js"></script>
+<script src="react-dom.development.js"></script>
+<script src="babel.js"></script>
+<link rel="stylesheet" href="box.css" />
+
+<div id="root"></div>
+
+<script type="text/babel">
+  class Box extends React.Component {
+    render() {
+      console.log(this, "current object");
+      return <div id="box">{this.props.data}</div>;
+    }
+  }
+
+  class App extends React.Component {
+    render() {
+      return (
+        <div>
+          <div>
+            <Box data="1" name="arpitha" />
+            <Box data="2" />
+            <Box data="3" />
+          </div>
+          <div>
+            <Box data="4" />
+            <Box data="5" />
+            <Box data="6" />
+          </div>
+          <div>
+            <Box data="7" />
+            <Box data="8" />
+            <Box data="9" />
+          </div>
+        </div>
+      );
+    }
+  }
+
+  ReactDOM.render(<App />, document.getElementById("root"));
+</script>

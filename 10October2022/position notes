@@ -1,0 +1,37 @@
+
+
+
+static=>can not apply top , left , right , bottom
+
+positions
+absolute = apply top , left , right , bottom
+relative=apply top , left , right , bottom
+sticky=apply top , left , right , bottom
+fixed=apply top , left , right , bottom
+
+
+absolute
+1.apply top , left , right , bottom
+2.remove space from the DOM
+3.it will change the behaviour , ie., it converts to inline from block
+4. it takes parent as a reference only when parent must be having one position other than static
+
+
+relative
+1.apply top , left , right , bottom
+2.it won't remove space from the dom
+3.it will not change it's behaviour
+4.it will take current position as a reference
+
+fixed
+1.apply top , left , right , bottom
+2.remove space from the DOM
+3.it will change the behaviour , ie., it converts to inline from block
+4.it will take viewport or visibility area as reference
+
+sticky
+1.apply top , left , right , bottom
+2.it won't remove space from the dom
+3.it will not change it's behaviour
+4.it will take viewport or visibility area as reference
+

@@ -1,0 +1,17 @@
+<button onclick="onAjax()">Ajax</button>
+
+<script>
+  function onAjax() {
+    let instance = new XMLHttpRequest();
+    instance.open("GET", "https://jsonplaceholder.typicode.com/comments");
+    instance.send();
+    instance.onload = () => {
+      let response = instance.responseText;
+      console.log(response, "success");
+    };
+    instance.onerror = () => {
+      let response = instance.responseText;
+      console.log(response, "failure");
+    };
+  }
+</script>
