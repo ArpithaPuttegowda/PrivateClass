@@ -2,13 +2,33 @@
 <script src="react-dom.development.js"></script>
 <script src="babel.js"></script>
 
-<div id="root"></div>
+<!-- container or root element -->
+<div id="root" class="myDiv"></div>
 
 <script type="text/babel">
-  function App() {
-    return <h1>Hellow world</h1>;
+  function Template() {
+    return (
+      <div>
+        <p>Hyderabad</p>
+        <p>Mumbai</p>
+      </div>
+    );
   }
-  ReactDOM.render(<App />, document.getElementById("root"));
+
+  function App() {
+    return (
+      <div>
+        <Template />
+        <Template />
+        <Template />
+        <Template /> <Template />
+        <Template /> <Template />
+        <Template /> <Template />
+        <Template />
+      </div>
+    );
+  }
+  ReactDOM.render(<App />, document.querySelector("#root"));
 </script>
 
 <!-- jsx

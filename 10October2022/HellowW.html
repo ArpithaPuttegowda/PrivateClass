@@ -1,0 +1,27 @@
+<script src="react.development.js"></script>
+<script src="react-dom.development.js"></script>
+<script src="babel.js"></script>
+
+<div id="root"></div>
+
+<script type="text/babel">
+  function Hellow() {
+    return <div>Hellow Hyderabad</div>;
+  }
+
+  function App() {
+    return (
+      <div>
+        <Hellow />
+        <Hellow />
+        <Hellow />
+        <Hellow />
+        <Hellow />
+        <Hellow />
+        <Hellow />
+      </div>
+    );
+  }
+
+  ReactDOM.render(<App />, document.getElementById("root"));
+</script>
