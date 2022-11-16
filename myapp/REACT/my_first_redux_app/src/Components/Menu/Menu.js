@@ -7,6 +7,7 @@ import {AjaxAxios} from "../AjaxAxios";
 import {ReduxSampleClass} from "../ReduxSampleClass/ReduxSampleClass";
 import {ReduxToolkit} from "../ReduxToolkit/ReduxToolkit";
 import {UseReducerExample} from "../UseReducerHook/UseReducerExample";
+import {UseReducerGlobalState} from "../UseReducerHook/UseReducerGlobalState";
 
 export const Menu = () => {
   return (
@@ -20,6 +21,7 @@ export const Menu = () => {
           <Link to="/axios">Axios</Link>
           <Link to="redux-toolkit">Redux toolkit</Link>
           <Link to="useReducer">UseReducer</Link>
+          <Link to="useReducerGlobal">UseReducer+Context</Link>
         </div>
         <Routes>
           <Route path="/home" element={<Home />} />
@@ -29,6 +31,7 @@ export const Menu = () => {
           <Route path="redux-sample_c" element={<ReduxSampleClass />} />
           <Route path="redux-toolkit" element={<ReduxToolkit />} />
           <Route path="useReducer" element={<UseReducerExample />} />
+          <Route path="useReducerGlobal" element={<UseReducerGlobalState />} />
         </Routes>
       </HashRouter>
     </div>
