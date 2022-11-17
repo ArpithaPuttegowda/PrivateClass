@@ -1,0 +1,29 @@
+<script src="react.development.js"></script>
+<script src="react-dom.development.js"></script>
+<script src="babel.js"></script>
+
+<div id="root"></div>
+
+<script type="text/babel">
+  class App extends React.Component {
+    constructor() {
+      super();
+      this.color = "red";
+      this.flower = "jasmin";
+    }
+    render() {
+      const name = "sachin";
+      let loc = "mumbai";
+      return (
+        <div>
+          Hellow world...{name}...{loc}
+          <h1>
+            {this.color}....{this.flower}
+          </h1>
+        </div>
+      );
+    }
+  }
+
+  ReactDOM.render(<App />, document.getElementById("root"));
+</script>
