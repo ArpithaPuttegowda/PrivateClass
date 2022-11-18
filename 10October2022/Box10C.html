@@ -1,0 +1,49 @@
+<script src="react.development.js"></script>
+<script src="react-dom.development.js"></script>
+<script src="babel.js"></script>
+<style>
+  #box {
+    border: 1px solid red;
+    width: 100px;
+    height: 100px;
+    display: inline-block;
+  }
+</style>
+
+<div id="root"></div>
+
+<script type="text/babel">
+  class Box extends React.Component {
+    render() {
+      console.log(this, "current object");
+      return (
+        <div id="box">
+          {this.props.data}....{this.props.name}
+        </div>
+      );
+    }
+  }
+  const App = () => {
+    const info = "red";
+    return (
+      <p>
+        <div>
+          <Box data="1" name="mumbai" />
+          <Box data="2" name="hyderabad" />
+          <Box data="3" name="kolkata" />
+        </div>
+        <div>
+          <Box data="4" i={info} />
+          <Box data="5" />
+          <Box data="6" />
+        </div>
+        <div>
+          <Box data="7" />
+          <Box data="8" />
+          <Box data="9" />
+        </div>
+      </p>
+    );
+  };
+  ReactDOM.render(<App />, document.getElementById("root"));
+</script>
