@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 
-export const ConditionalRendering = () => {
-  const [isLogin, setIsLogin] = useState(false);
+const ConditionalRendering = () => {
+  const [isLogin, setIsLogin] = useState(true);
   const handleClick = () => {
     setIsLogin(!isLogin);
   };
@@ -15,6 +15,7 @@ export const ConditionalRendering = () => {
   );
 };
 
+export default ConditionalRendering;
 const Login = () => {
   return <h1>Login</h1>;
 };

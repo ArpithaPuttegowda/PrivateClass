@@ -1,7 +1,9 @@
 import "./App.css";
 import {Add} from "./Components/Add";
 import Addclass from "./Components/AddC";
-import {ConditionalRendering} from "./Components/ConditionalRendering";
+import Parent from "./Components/ChildToParent";
+import {ParentF} from "./Components/ChildToParentF";
+import ConditionalRendering from "./Components/ConditionalRendering";
 import {ConditionalRenderingShortCircuit} from "./Components/ConditionalRenderingShortCircuit";
 import Count from "./Components/Count";
 import {CountF} from "./Components/CountF";
@@ -16,7 +18,9 @@ function App() {
       <Add />
       <Addclass /> */}
       {/* <ConditionalRendering /> */}
-      <ConditionalRenderingShortCircuit />
+      {/* <ConditionalRenderingShortCircuit /> */}
+      {/* <Parent /> */}
+      <ParentF />
     </div>
   );
 }
