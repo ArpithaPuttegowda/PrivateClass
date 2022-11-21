@@ -5,9 +5,12 @@ import Parent from "./Components/ChildToParent";
 import {ParentF} from "./Components/ChildToParentF";
 import ConditionalRendering from "./Components/ConditionalRendering";
 import {ConditionalRenderingShortCircuit} from "./Components/ConditionalRenderingShortCircuit";
+import {Context} from "./Components/ContextAPI/ContextAPI";
 import Count from "./Components/Count";
 import {CountF} from "./Components/CountF";
+import {Parent1} from "./Components/CtoP";
 import {IncCount} from "./Components/IncCount";
+import {WithoutContext} from "./Components/WithoutContext";
 
 function App() {
   return (
@@ -20,7 +23,10 @@ function App() {
       {/* <ConditionalRendering /> */}
       {/* <ConditionalRenderingShortCircuit /> */}
       {/* <Parent /> */}
-      <ParentF />
+      {/* <ParentF /> */}
+      {/* <Parent1 /> */}
+      {/* <WithoutContext /> */}
+      <Context />
     </div>
   );
 }
