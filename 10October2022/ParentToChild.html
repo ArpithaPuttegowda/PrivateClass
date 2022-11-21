@@ -1,0 +1,22 @@
+<script src="react.development.js"></script>
+<script src="react-dom.development.js"></script>
+<script src="babel.js"></script>
+
+<div id="root"></div>
+
+<script type="text/babel">
+  const App = () => {
+    const clr = "red";
+    return (
+      <div>
+        Parent
+        <Color myColor={clr} />
+      </div>
+    );
+  };
+
+  const Color = ({myColor}) => {
+    return <div>Child:::::{myColor}</div>;
+  };
+  ReactDOM.render(<App />, document.getElementById("root"));
+</script>

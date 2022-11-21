@@ -1,0 +1,26 @@
+<script src="react.development.js"></script>
+<script src="react-dom.development.js"></script>
+<script src="babel.js"></script>
+
+<div id="root"></div>
+
+<script type="text/babel">
+  const Player = ({n, l, r}) => {
+    return (
+      <h1>
+        I'm {n},I'm from {l}, runs {r}
+      </h1>
+    );
+  };
+
+  const App = () => {
+    return (
+      <h1>
+        <Player n="sachin" l="mumbai" r="10" />
+        <Player n="dhoni" l="ranchi" r="20" />
+        <Player n="kohli" l="delhi" r="30" />
+      </h1>
+    );
+  };
+  ReactDOM.render(<App />, document.getElementById("root"));
+</script>
