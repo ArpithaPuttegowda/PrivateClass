@@ -1,0 +1,9 @@
+
+NPM
+download and install nodejs
+npm i create-react-app
+npm create-react-app myapp
+
+NPX
+download and install nodejs
+npx create-react-app myapp

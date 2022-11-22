@@ -1,0 +1,30 @@
+<script src="react.development.js"></script>
+<script src="react-dom.development.js"></script>
+<script src="babel.js"></script>
+<div id="root"></div>
+
+<script type="text/babel">
+  class Count extends React.Component {
+    constructor() {
+      super();
+      //   this.count = 0;
+      this.state = {
+        count: 10
+      };
+    }
+    incCount = () => {
+      this.state.count = this.state.count + 1;
+      console.log(this.state.count);
+    };
+    render() {
+      alert("render called ");
+      return (
+        <div>
+          <button onClick={this.incCount}>Inc Count</button>
+          <h1>{this.state.count}</h1>
+        </div>
+      );
+    }
+  }
+  ReactDOM.render(<Count />, document.getElementById("root"));
+</script>
