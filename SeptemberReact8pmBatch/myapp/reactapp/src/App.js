@@ -7,15 +7,18 @@ import ConditionalRendering from "./Components/ConditionalRendering";
 import {ConditionalRenderingShortCircuit} from "./Components/ConditionalRenderingShortCircuit";
 import {Context} from "./Components/ContextAPI/ContextAPI";
 import ContextAPIC from "./Components/ContextAPI/ContextAPIC";
+import {ContextAPIF} from "./Components/ContextAPI/ContextApiF";
 import Count from "./Components/Count";
 import {CountF} from "./Components/CountF";
 import {Parent1} from "./Components/CtoP";
 import {IncCount} from "./Components/IncCount";
+import {OrderedList} from "./Components/ListAndKeys/OrderedList";
 import {WithoutContext} from "./Components/WithoutContext";
 
 function App() {
+  const data = ["red", "blue", "yellow", "pink", "green"];
   return (
-    <div className="App">
+    <div>
       {/* <Count />
       <CountF />
       <IncCount />
@@ -28,7 +31,9 @@ function App() {
       {/* <Parent1 /> */}
       {/* <WithoutContext /> */}
       {/* <Context /> */}
-      <ContextAPIC />
+      {/* <ContextAPIC /> */}
+      {/* <ContextAPIF /> */}
+      <OrderedList />
     </div>
   );
 }
