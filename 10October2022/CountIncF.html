@@ -1,0 +1,32 @@
+<script src="react.development.js"></script>
+<script src="react-dom.development.js"></script>
+<script src="babel.js"></script>
+<div id="root"></div>
+
+<script type="text/babel">
+  const Count = () => {
+    const [count, setCount] = React.useState(0);
+    const [name, setName] = React.useState("Sachin");
+    const [loc, setLoc] = React.useState("Mumbai");
+    const incCount = () => {
+      setCount(count + 1);
+    };
+
+    const changeName = () => {
+      setName("Dhoni");
+      setLoc("Ranchi");
+    };
+    return (
+      <div>
+        {alert("component called")}
+        <button onClick={incCount}>Inc count</button>
+        <h1>{count}</h1>
+        <button onClick={changeName}>Change Name</button>
+        <h1>
+          Name:::{name}...Loc::::{loc}
+        </h1>
+      </div>
+    );
+  };
+  ReactDOM.render(<Count />, document.getElementById("root"));
+</script>

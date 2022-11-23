@@ -9,12 +9,21 @@
       super();
       //   this.count = 0;
       this.state = {
-        count: 10
+        count: 0,
+        name: "sachin",
+        loc: "mumbai"
       };
     }
     incCount = () => {
-      this.state.count = this.state.count + 1;
-      console.log(this.state.count);
+      this.setState({
+        count: this.state.count + 1
+      });
+    };
+    handleChangeName = () => {
+      this.setState({
+        name: "Dhoni",
+        loc: "Ranchi"
+      });
     };
     render() {
       alert("render called ");
@@ -22,6 +31,10 @@
         <div>
           <button onClick={this.incCount}>Inc Count</button>
           <h1>{this.state.count}</h1>
+          <button onClick={this.handleChangeName}>Change Name</button>
+          <h1>
+            Name:::{this.state.name}..Loc:::::{this.state.loc}
+          </h1>
         </div>
       );
     }
