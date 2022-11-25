@@ -12,7 +12,10 @@ import Count from "./Components/Count";
 import {CountF} from "./Components/CountF";
 import {Parent1} from "./Components/CtoP";
 import {IncCount} from "./Components/IncCount";
+import {DropDown} from "./Components/ListAndKeys/DropDown";
 import {OrderedList} from "./Components/ListAndKeys/OrderedList";
+import {ParaListKeys} from "./Components/ListAndKeys/ParaListKeys";
+import {TableListkeys} from "./Components/ListAndKeys/TableListkeys";
 import {WithoutContext} from "./Components/WithoutContext";
 
 function App() {
@@ -33,7 +36,10 @@ function App() {
       {/* <Context /> */}
       {/* <ContextAPIC /> */}
       {/* <ContextAPIF /> */}
-      <OrderedList />
+      {/* <OrderedList /> */}
+      {/* <DropDown /> */}
+      {/* <ParaListKeys /> */}
+      <TableListkeys />
     </div>
   );
 }
