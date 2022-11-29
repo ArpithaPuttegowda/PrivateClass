@@ -1,9 +1,9 @@
 import React from "react";
 
-export const DropDown = () => {
-  let data = ["PAK", "India"];
+export const DropDown = ({data, header}) => {
   return (
     <div>
+      <h1>{header}</h1>
       {data ? (
         <select>
           {data?.map((v, i) => {
