@@ -5,6 +5,8 @@ import Count from "./Components/Count";
 import {CountF} from "./Components/CountF";
 import {PassingData} from "./Components/PassingData";
 import {PassingDAta2} from "./Components/PassingDAta2";
+import {WithContext} from "./Components/ContextAPI/WithContext";
+import {WithoutContext} from "./Components/WithoutContext";
 
 export const App = () => {
   return (
@@ -14,7 +16,9 @@ export const App = () => {
       {/* <PassingData /> */}
       {/* <PassingDAta2 /> */}
       {/* <Parent /> */}
-      <Parent2 />
+      {/* <Parent2 /> */}
+      {/* <WithoutContext /> */}
+      <WithContext />
     </div>
   );
 };
