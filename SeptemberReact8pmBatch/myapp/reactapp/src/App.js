@@ -12,6 +12,9 @@ import Count from "./Components/Count";
 import {CountF} from "./Components/CountF";
 import {Parent1} from "./Components/CtoP";
 import {IncCount} from "./Components/IncCount";
+import LifeCycle from "./Components/LifeCycleMethods/LifeCycle";
+import UnMountingPhase from "./Components/LifeCycleMethods/UnMountingPhase";
+import UpdatingPhase from "./Components/LifeCycleMethods/UpdatingPhase";
 import {DropDown} from "./Components/ListAndKeys/DropDown";
 import {OrderedList} from "./Components/ListAndKeys/OrderedList";
 import {ParaListKeys} from "./Components/ListAndKeys/ParaListKeys";
@@ -46,7 +49,7 @@ function App() {
       {/* <TableListkeys /> */}
       {/* <MyColorOrder /> */}
       {/* <MyFlowersOrder /> */}
-      <ReusuableOrderList data={["jasmin", "lilly"]} />
+      {/* <ReusuableOrderList data={["jasmin", "lilly"]} />
       <ReusuableOrderList data={["red", "blue", "orange"]} />
       <ReusuableOrderList />
       <DropDown data={["India", "US"]} header="Country" />
@@ -67,7 +70,10 @@ function App() {
           {color: "yellow", flower: "lilly"}
         ]}
         keys={["color", "flower"]}
-      />
+      /> */}
+      {/* <LifeCycle /> */}
+      {/* <UpdatingPhase /> */}
+      <UnMountingPhase />
     </div>
   );
 }
