@@ -13,6 +13,7 @@ import {CountF} from "./Components/CountF";
 import {Parent1} from "./Components/CtoP";
 import {IncCount} from "./Components/IncCount";
 import LifeCycle from "./Components/LifeCycleMethods/LifeCycle";
+import LifeCycleMethodArg from "./Components/LifeCycleMethods/LifeCycleMethodArg";
 import UnMountingPhase from "./Components/LifeCycleMethods/UnMountingPhase";
 import UpdatingPhase from "./Components/LifeCycleMethods/UpdatingPhase";
 import {DropDown} from "./Components/ListAndKeys/DropDown";
@@ -73,7 +74,8 @@ function App() {
       /> */}
       {/* <LifeCycle /> */}
       {/* <UpdatingPhase /> */}
-      <UnMountingPhase />
+      {/* <UnMountingPhase /> */}
+      <LifeCycleMethodArg data="arpitha" loc="mumbai" />
     </div>
   );
 }
