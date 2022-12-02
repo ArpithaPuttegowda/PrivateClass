@@ -5,7 +5,8 @@ class UpdatingPhase extends Component {
     super();
     console.log("constructor");
     this.state = {
-      count: 0
+      count: 0,
+      name: "Sachin"
     };
   }
   static getDerivedStateFromProps() {
@@ -17,7 +18,7 @@ class UpdatingPhase extends Component {
     });
   };
 
-  shouldComponentUpdate() {
+  shouldComponentUpdate(nextProps, nextState) {
     console.log("shouldComponentUpdate");
     return true;
   }
@@ -28,16 +29,27 @@ class UpdatingPhase extends Component {
       <div>
         <button onClick={this.incCount}>Inc Count</button>
         <h1>{this.state.count}</h1>
+        <button
+          onClick={() =>
+            this.setState({
+              name: "Dhoni"
+            })
+          }
+        >
+          ChangeName
+        </button>
+        <h1>{this.state.name}</h1>
       </div>
     );
   }
   componentDidMount() {
     console.log("componentDidMount");
   }
-  getSnapshotBeforeUpdate() {
+  getSnapshotBeforeUpdate(prevProps, prevState) {
     console.log("getSnapshotBeforeUpdate");
   }
-  componentDidUpdate() {
+  componentDidUpdate(prevProps, prevState) {
+    debugger;
     console.log("componentDidUpdate");
   }
 }
