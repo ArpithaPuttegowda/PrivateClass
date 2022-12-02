@@ -1,4 +1,5 @@
 import React, {createRef, useRef, useState} from "react";
+import "../App.css";
 
 export const Add = () => {
   const [result, setResult] = useState(0);
@@ -25,7 +26,8 @@ export const Add = () => {
       <p>
         <button onClick={handleSum}>Sum</button>
       </p>
-      <h1>Result:{result}</h1>
+      <h1 style={{color: result > 100 ? "red" : "green"}}>Result:{result}</h1>
+      <h1 className={result > 100 ? "cr" : "cg"}>Result::{result}</h1>
     </div>
   );
 };

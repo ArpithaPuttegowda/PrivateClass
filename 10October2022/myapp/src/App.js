@@ -9,6 +9,10 @@ import {WithContext} from "./Components/ContextAPI/WithContext";
 import {WithoutContext} from "./Components/WithoutContext";
 import {WithContext2} from "./Components/ContextAPI/withContext2";
 import {Add} from "./Components/Add";
+import {OrderedList} from "./Components/ListAndKeys/OrderedList";
+import {UnorderList} from "./Components/ListAndKeys/UnorderList";
+import {DropDown} from "./Components/ListAndKeys/DropDown";
+import {Header} from "./Components/ListAndKeys/Header";
 
 export const App = () => {
   return (
@@ -22,7 +26,11 @@ export const App = () => {
       {/* <WithoutContext /> */}
       {/* <WithContext /> */}
       {/* <WithContext2 /> */}
-      <Add />
+      {/* <Add /> */}
+      <OrderedList />
+      <UnorderList />
+      <DropDown />
+      <Header />
     </div>
   );
 };
