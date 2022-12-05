@@ -13,6 +13,7 @@ import {CountF} from "./Components/CountF";
 import {Parent1} from "./Components/CtoP";
 import {IncCount} from "./Components/IncCount";
 import LifeCycle from "./Components/LifeCycleMethods/LifeCycle";
+import {LifeCycleFunctional} from "./Components/LifeCycleMethods/LifeCycleFunctional";
 import LifeCycleMethodArg from "./Components/LifeCycleMethods/LifeCycleMethodArg";
 import {MountingPhaseF} from "./Components/LifeCycleMethods/MountingPhaseF";
 import MyPureComponent from "./Components/LifeCycleMethods/MyPureComponent";
@@ -80,7 +81,8 @@ function App() {
       {/* <LifeCycleMethodArg data="arpitha" loc="mumbai" /> */}
       {/* <UpdatingPhase name="sachin" loc="mumbai" /> */}
       {/* <MyPureComponent /> */}
-      <MountingPhaseF />
+      {/* <MountingPhaseF /> */}
+      <LifeCycleFunctional />
     </div>
   );
 }

@@ -1,3 +1,4 @@
+import axios from "axios";
 import React, {useEffect, useState} from "react";
 
 export const MountingPhaseF = () => {
@@ -8,13 +9,24 @@ export const MountingPhaseF = () => {
       .then((data) => console.log(data))
       .catch((err) => console.log(err));
   };
-  //componentDidMount
+  //componentDidUpdate
   useEffect(() => {
     fetch("https://jsonplaceholder.typicode.com/posts")
       .then((res) => res.json())
-      .then((data) => console.log(data))
+      .then((data) => console.log(data, "post"))
       .catch((err) => console.log(err));
   });
+  //componentDidMount
+  useEffect(() => {
+    axios
+      .get("https://jsonplaceholder.typicode.com/comments")
+      .then((res) => {
+        console.log(res.data, "comments");
+      })
+      .catch((res) => {
+        console.log(res);
+      });
+  }, []);
   const incCount = () => {
     setCount(count + 1);
   };
