@@ -13,6 +13,13 @@ import {OrderedList} from "./Components/ListAndKeys/OrderedList";
 import {UnorderList} from "./Components/ListAndKeys/UnorderList";
 import {DropDown} from "./Components/ListAndKeys/DropDown";
 import {Header} from "./Components/ListAndKeys/Header";
+import {TableList} from "./Components/ListAndKeys/TableList";
+import {OrderedListColor} from "./Components/ReusableComponents/OrderedListColor";
+import {OrderedListFlower} from "./Components/ReusableComponents/OrderedListFlower";
+import {OrderedListSubject} from "./Components/ReusableComponents/OrderedListSubject";
+import {OrderedListReusuable} from "./Components/ReusableComponents/OrderedListReusuable";
+import {DropDownReusuable} from "./Components/ReusableComponents/DropDown";
+import {Registration} from "./Components/ReusableComponents/Registration";
 
 export const App = () => {
   return (
@@ -27,10 +34,20 @@ export const App = () => {
       {/* <WithContext /> */}
       {/* <WithContext2 /> */}
       {/* <Add /> */}
-      <OrderedList />
+      {/* <OrderedList />
       <UnorderList />
       <DropDown />
-      <Header />
+      <Header /> */}
+      {/* <TableList /> */}
+      <OrderedListColor />
+      <OrderedListFlower />
+      <OrderedListSubject />
+      <OrderedListReusuable data={["red", "blue", "yellow"]} />
+      <OrderedListReusuable data={["rose", "jasmin", "lilly", "sunFlower"]} />
+      <OrderedListReusuable data={["reactjs", "angular", "electonjs"]} />
+      <DropDownReusuable data={["India", "Pak", "US"]} />
+      <DropDownReusuable data={["Modi", "DeveGowda"]} />
+      <Registration></Registration>
     </div>
   );
 };
