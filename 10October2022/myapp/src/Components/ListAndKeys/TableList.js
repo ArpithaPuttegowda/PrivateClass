@@ -18,11 +18,12 @@ export const TableList = () => {
         </thead>
         <tbody>
           {data.map((obj, i) => {
+            const {name, loc, runs} = obj;
             return (
               <tr>
-                <td>{obj.name}</td>
-                <td>{obj.loc}</td>
-                <td>{obj.runs}</td>
+                <td>{name}</td>
+                <td>{loc}</td>
+                <td>{runs}</td>
               </tr>
             );
           })}

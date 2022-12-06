@@ -20,6 +20,7 @@ import {OrderedListSubject} from "./Components/ReusableComponents/OrderedListSub
 import {OrderedListReusuable} from "./Components/ReusableComponents/OrderedListReusuable";
 import {DropDownReusuable} from "./Components/ReusableComponents/DropDown";
 import {Registration} from "./Components/ReusableComponents/Registration";
+import {TableReusuable} from "./Components/ReusableComponents/TableReusuable";
 
 export const App = () => {
   return (
@@ -48,6 +49,43 @@ export const App = () => {
       <DropDownReusuable data={["India", "Pak", "US"]} />
       <DropDownReusuable data={["Modi", "DeveGowda"]} />
       <Registration></Registration>
+      <TableReusuable
+        headers={["Name", "Loc"]}
+        data={[
+          {name: "sachin", loc: "mumbai"},
+          {name: "Dhoni", loc: "ranchi"}
+        ]}
+        keys={["name", "loc"]}
+      />
+      <TableReusuable
+        headers={["color", "flower"]}
+        data={[
+          {color: "red", flower: "rose"},
+          {color: "yellow", flower: "lilly"}
+        ]}
+        keys={["color", "flower"]}
+      />
+      <TableReusuable
+        headers={["runs", "pincode", "address"]}
+        data={[
+          {
+            runs: 10,
+            pincode: 123,
+            address: "abc"
+          },
+          {
+            runs: 20,
+            pincode: 678,
+            address: "xyz"
+          },
+          {
+            runs: 10,
+            pincode: 999,
+            address: "abc"
+          }
+        ]}
+        keys={["runs", "pincode", "address"]}
+      />
     </div>
   );
 };
