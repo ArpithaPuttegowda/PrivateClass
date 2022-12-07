@@ -21,6 +21,10 @@ import {OrderedListReusuable} from "./Components/ReusableComponents/OrderedListR
 import {DropDownReusuable} from "./Components/ReusableComponents/DropDown";
 import {Registration} from "./Components/ReusableComponents/Registration";
 import {TableReusuable} from "./Components/ReusableComponents/TableReusuable";
+import LifeCycleMethodMouting from "./Components/LifeCycleMethods/LifeCycleMethodMouting";
+import LifeCycleMethodsUpdating from "./Components/LifeCycleMethods/LifeCycleMethodsUpdating";
+import LifeCycleMethodsUnMounting from "./Components/LifeCycleMethods/LifeCycleMethodsUnMounting";
+import ParentComp from "./Components/HOC/ParentComp";
 
 export const App = () => {
   return (
@@ -40,7 +44,7 @@ export const App = () => {
       <DropDown />
       <Header /> */}
       {/* <TableList /> */}
-      <OrderedListColor />
+      {/* <OrderedListColor />
       <OrderedListFlower />
       <OrderedListSubject />
       <OrderedListReusuable data={["red", "blue", "yellow"]} />
@@ -85,7 +89,11 @@ export const App = () => {
           }
         ]}
         keys={["runs", "pincode", "address"]}
-      />
+      /> */}
+      {/* <LifeCycleMethodMouting /> */}
+      {/* <LifeCycleMethodsUpdating /> */}
+      {/* <LifeCycleMethodsUnMounting /> */}
+      <ParentComp />
     </div>
   );
 };

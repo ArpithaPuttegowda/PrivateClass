@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from "react";
-import ParentComp from "./Components/HOC/ParentComp";
+import {ParentF} from "./Components/CustomHooks/ParentF";
 
 const ComponentWillUnmountUseEffect = () => {
   const [isChild, setIsChild] = useState(true);
@@ -7,7 +7,8 @@ const ComponentWillUnmountUseEffect = () => {
     <div>
       {/* {isChild && <Child />}
       <button onClick={() => setIsChild(!isChild)}>Toggle</button> */}
-      <ParentComp></ParentComp>
+      {/* <ParentComp></ParentComp> */}
+      <ParentF />
     </div>
   );
 };
