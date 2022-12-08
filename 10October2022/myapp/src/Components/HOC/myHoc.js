@@ -14,7 +14,7 @@ export const myHoc = (MyComponent) => {
       });
     };
     render() {
-      return <MyComponent />;
+      return <MyComponent count={this.state.count} fn={this.handleInc} />;
     }
   }
   return Logic;

@@ -5,7 +5,7 @@ class ButtonComp extends Component {
   render() {
     return (
       <div>
-        <button onClick={}>Click me</button>
+        <button onClick={this.props.fn}>Click me{this.props.count}</button>
       </div>
     );
   }
