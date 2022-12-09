@@ -2,19 +2,38 @@ import React, {Component} from "react";
 
 class LifeCycleMethodMouting extends Component {
   constructor(properties) {
-    debugger;
     super();
-    console.log(properties.name, "props constructor");
+    this.state = {
+      count: 0
+    };
+    console.log(properties, "props constructor");
     console.log("constructor got called");
   }
-  static getDerivedStateFromProps() {
-    console.log("getDerivedStateFromProps got called");
+  static getDerivedStateFromProps(nextProps, nextState) {
+    if (nextState.count === 3) {
+      return {
+        count: 1000
+      };
+    }
   }
-  render() {
+  render(a, b, c, d) {
     console.log(this.props, "props render");
-    return <div>LifeCycleMethods</div>;
+    return (
+      <div>
+        <button
+          onClick={() =>
+            this.setState({
+              count: this.state.count + 1
+            })
+          }
+        >
+          Inc Count...{this.state.count}
+        </button>
+      </div>
+    );
   }
-  componentDidMount() {
+  componentDidMount(a, b, c, d) {
+    debugger;
     console.log("componentDidMount got called");
   }
 }

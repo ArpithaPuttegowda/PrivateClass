@@ -26,6 +26,7 @@ import LifeCycleMethodsUpdating from "./Components/LifeCycleMethods/LifeCycleMet
 import LifeCycleMethodsUnMounting from "./Components/LifeCycleMethods/LifeCycleMethodsUnMounting";
 import ParentComp from "./Components/HOC/ParentComp";
 import {ParentCompF} from "./Components/CustomHooks/ParentCompF";
+import AjaxLifeCycleMethod from "./Components/LifeCycleMethods/AjaxLifeCycleMethod";
 
 export const App = () => {
   return (
@@ -91,11 +92,12 @@ export const App = () => {
         ]}
         keys={["runs", "pincode", "address"]}
       /> */}
-      <LifeCycleMethodMouting name="sachin" />
+      {/* <LifeCycleMethodMouting name="sachin" loc="mumbai" /> */}
       {/* <LifeCycleMethodsUpdating /> */}
       {/* <LifeCycleMethodsUnMounting /> */}
       {/* <ParentComp /> */}
       {/* <ParentCompF /> */}
+      <AjaxLifeCycleMethod />
     </div>
   );
 };
