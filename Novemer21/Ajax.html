@@ -1,0 +1,17 @@
+<button onclick="fn()">Ajax</button>
+
+<script>
+  function fn() {
+    let instance = new XMLHttpRequest();
+    instance.open("Get", "https://jsonplaceholder.typicode.com/posts");
+    instance.send();
+    instance.onload = () => {
+      let resp = instance.responseText;
+      console.log(resp, "success");
+    };
+    instance.onerror = () => {
+      let resp = instance.responseText;
+      console.log(resp, "failure");
+    };
+  }
+</script>
