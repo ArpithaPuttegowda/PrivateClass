@@ -18,3 +18,11 @@ footer{
     bottom: 0;
     width: 100%;
 }
+
+#menu a{
+  padding: 10px;
+}
+
+#menu{
+  text-align: right;
+}
