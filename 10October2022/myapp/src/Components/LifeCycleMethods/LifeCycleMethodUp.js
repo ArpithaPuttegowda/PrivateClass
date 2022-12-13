@@ -1,20 +1,23 @@
 import React, {useEffect, useState} from "react";
 
-export const LifeCycleMethodF = () => {
-  const [data, setData] = useState([]);
+export const LifeCycleMethodUp = () => {
+  const [count, setCount] = useState(0);
   useEffect(() => {
+    alert("useEffect callled, componentDidUpdate");
     fetch("https://jsonplaceholder.typicode.com/posts")
       .then((res) => res.json())
-      .then((d) => setData(d))
+      .then((d) => console.log(d, "data"))
       .catch((res) => {
         console.log(res);
       });
+  });
+
+  useEffect(() => {
+    alert("useEffect callled, componentDidMount");
   }, []);
   return (
     <div>
-      {data?.map((obj, i) => {
-        return <h1 key={i}>{obj.title}</h1>;
-      })}
+      <button onClick={() => setCount(count + 1)}>Inc Count{count}</button>
     </div>
   );
 };

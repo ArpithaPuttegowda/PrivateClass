@@ -27,6 +27,9 @@ import LifeCycleMethodsUnMounting from "./Components/LifeCycleMethods/LifeCycleM
 import ParentComp from "./Components/HOC/ParentComp";
 import {ParentCompF} from "./Components/CustomHooks/ParentCompF";
 import AjaxLifeCycleMethod from "./Components/LifeCycleMethods/AjaxLifeCycleMethod";
+import {LifeCycleMethodF} from "./Components/LifeCycleMethods/LifeCycleMethodF";
+import {LifeCycleMethodUp} from "./Components/LifeCycleMethods/LifeCycleMethodUp";
+import {ExampleUseEffect} from "./Components/LifeCycleMethods/ExampleUseEffect";
 
 export const App = () => {
   return (
@@ -97,7 +100,10 @@ export const App = () => {
       {/* <LifeCycleMethodsUnMounting /> */}
       {/* <ParentComp /> */}
       {/* <ParentCompF /> */}
-      <AjaxLifeCycleMethod />
+      {/* <AjaxLifeCycleMethod /> */}
+      {/* <LifeCycleMethodF /> */}
+      {/* <LifeCycleMethodUp /> */}
+      <ExampleUseEffect />
     </div>
   );
 };
