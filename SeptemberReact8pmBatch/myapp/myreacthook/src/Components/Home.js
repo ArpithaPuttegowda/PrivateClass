@@ -1,7 +1,7 @@
 import React from "react";
 import {ReusableComponent} from "./ReusableComponent";
 
-export const Home = () => {
+const Home = () => {
   return (
     <>
       <h1>
@@ -11,3 +11,5 @@ export const Home = () => {
     </>
   );
 };
+
+export default Home;

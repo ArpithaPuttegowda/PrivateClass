@@ -1,7 +1,7 @@
 import React from "react";
 import {ReusableComponent} from "./ReusableComponent";
 
-export const About = () => {
+const About = () => {
   return (
     <div>
       About
@@ -9,3 +9,5 @@ export const About = () => {
     </div>
   );
 };
+
+export default About;

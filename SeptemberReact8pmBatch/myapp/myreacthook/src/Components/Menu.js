@@ -1,8 +1,11 @@
-import React from "react";
+import React, {lazy, Suspense} from "react";
 import {Link, BrowserRouter, Routes, Route} from "react-router-dom";
-import {About} from "./About";
-import {ExampleUseMemo} from "./ExampleUseMemo";
-import {Home} from "./Home";
+// import About from "./About";
+// import ExampleReactMemo from "./ExampleReactMemo";
+import Home from "./Home";
+const About = lazy(() => import("./About"));
+const ExampleReactMemo = lazy(() => import("./ExampleReactMemo"));
+const ExampleUseMemo = lazy(() => import("./ExampleUseMemo"));
 
 export const Menu = () => {
   const linkData = [
@@ -18,6 +21,10 @@ export const Menu = () => {
     {
       path: "/useMemo",
       content: "Use Memo"
+    },
+    {
+      path: "/reactMemo",
+      content: "ReactMemo"
     }
   ];
 
@@ -33,25 +40,31 @@ export const Menu = () => {
     {
       route: "/useMemo",
       ele: <ExampleUseMemo />
+    },
+    {
+      route: "/reactMemo",
+      ele: <ExampleReactMemo />
     }
   ];
   return (
     <div id="menu">
-      <BrowserRouter>
-        {linkData.map((obj, i) => {
-          const {path, content} = obj;
-          return (
-            <Link key={i} to={path}>
-              {content}
-            </Link>
-          );
-        })}
-        <Routes>
-          {routeData.map((obj, i) => {
-            return <Route key={i} path={obj.route} element={obj.ele} />;
+      <Suspense fallback={"...loading"}>
+        <BrowserRouter>
+          {linkData.map((obj, i) => {
+            const {path, content} = obj;
+            return (
+              <Link key={i} to={path}>
+                {content}
+              </Link>
+            );
           })}
-        </Routes>
-      </BrowserRouter>
+          <Routes>
+            {routeData.map((obj, i) => {
+              return <Route key={i} path={obj.route} element={obj.ele} />;
+            })}
+          </Routes>
+        </BrowserRouter>
+      </Suspense>
     </div>
   );
 };
