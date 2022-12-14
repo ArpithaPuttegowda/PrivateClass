@@ -1,4 +1,5 @@
 import React from "react";
+import {Link} from "react-router-dom";
 import {ReusableComponent} from "./ReusableComponent";
 
 const Home = () => {
@@ -6,6 +7,7 @@ const Home = () => {
     <>
       <h1>
         This is Home
+        <Link to="home-sublink">Home-sublink</Link>
         <ReusableComponent data={["red", "blue"]} />
       </h1>
     </>

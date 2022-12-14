@@ -1,5 +1,7 @@
 import React, {lazy, Suspense} from "react";
 import {Link, BrowserRouter, Routes, Route} from "react-router-dom";
+import {ControlledComponent} from "./ControlledComponent";
+import {ExampleUseCallBack} from "./ExampleUseCallBack";
 // import About from "./About";
 // import ExampleReactMemo from "./ExampleReactMemo";
 import Home from "./Home";
@@ -25,6 +27,14 @@ export const Menu = () => {
     {
       path: "/reactMemo",
       content: "ReactMemo"
+    },
+    {
+      path: "/useCallback",
+      content: "UseCallBack"
+    },
+    {
+      path: "/onChange",
+      content: "OnChangeControlled"
     }
   ];
 
@@ -44,6 +54,14 @@ export const Menu = () => {
     {
       route: "/reactMemo",
       ele: <ExampleReactMemo />
+    },
+    {
+      route: "/useCallback",
+      ele: <ExampleUseCallBack />
+    },
+    {
+      route: "/onChange",
+      ele: <ControlledComponent />
     }
   ];
   return (
