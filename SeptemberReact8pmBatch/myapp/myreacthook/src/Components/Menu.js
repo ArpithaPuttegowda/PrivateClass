@@ -2,6 +2,7 @@ import React, {lazy, Suspense} from "react";
 import {Link, BrowserRouter, Routes, Route} from "react-router-dom";
 import {TableComp} from "./ControlledComponent";
 import {ExampleUseCallBack} from "./ExampleUseCallBack";
+import {Exception} from "./ExceptionHandling/Exception";
 // import About from "./About";
 // import ExampleReactMemo from "./ExampleReactMemo";
 import Home from "./Home";
@@ -35,6 +36,10 @@ export const Menu = () => {
     {
       path: "/onChange",
       content: "OnChangeControlled"
+    },
+    {
+      path: "/eh",
+      content: "ExceptionHandling"
     }
   ];
 
@@ -62,6 +67,10 @@ export const Menu = () => {
     {
       route: "/onChange",
       ele: <TableComp header={["Name", "loc"]} />
+    },
+    {
+      route: "eh",
+      ele: <Exception />
     }
   ];
   return (
