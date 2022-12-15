@@ -1,33 +1,30 @@
-import React, {createRef} from "react";
+import React from "react";
 
-export const ControlledComponent = () => {
-  let data = {};
-  const handleSubmit = () => {
-    console.log(data, "final data");
-  };
-  const handleOnChange = (eve) => {
-    let val = eve.target.value;
-    let id = eve.target.id;
-    data = {...data, [id]: val};
-    console.log(data);
-  };
+export const TableComp = ({header, data, keys}) => {
   return (
-    <div>
-      <p>
-        <b>Name</b>
-        <input onChange={handleOnChange} id="name" />
-      </p>
-      <p>
-        <b>Password</b>
-        <input onChange={handleOnChange} id="pwd" />
-      </p>
-      <p>
-        <b>Email</b>
-        <input onChange={handleOnChange} id="email" />
-      </p>
-      <p>
-        <button onClick={handleSubmit}>Submit</button>
-      </p>
-    </div>
+    <p>
+      {
+        <table border="1px solid">
+          <thead>
+            <tr>
+              {header?.map((h, i) => {
+                return <th key={i}>{h}</th>;
+              })}
+            </tr>
+          </thead>
+          <tbody>
+            {data?.map((obj, i) => {
+              return (
+                <tr key={i}>
+                  {keys.map((k, i) => {
+                    return <td>{obj[k]}</td>;
+                  })}
+                </tr>
+              );
+            })}
+          </tbody>
+        </table>
+      }
+    </p>
   );
 };

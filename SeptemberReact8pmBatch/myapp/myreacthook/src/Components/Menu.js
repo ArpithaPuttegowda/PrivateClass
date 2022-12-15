@@ -1,6 +1,6 @@
 import React, {lazy, Suspense} from "react";
 import {Link, BrowserRouter, Routes, Route} from "react-router-dom";
-import {ControlledComponent} from "./ControlledComponent";
+import {TableComp} from "./ControlledComponent";
 import {ExampleUseCallBack} from "./ExampleUseCallBack";
 // import About from "./About";
 // import ExampleReactMemo from "./ExampleReactMemo";
@@ -61,7 +61,7 @@ export const Menu = () => {
     },
     {
       route: "/onChange",
-      ele: <ControlledComponent />
+      ele: <TableComp header={["Name", "loc"]} />
     }
   ];
   return (
