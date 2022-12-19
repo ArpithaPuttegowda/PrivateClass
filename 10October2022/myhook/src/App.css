@@ -57,3 +57,11 @@ footer{
     font-weight: bold;
 }
 
+
+#menu a{
+  padding: 10px;
+}
+
+#menu-items{
+  text-align: right;
+}
