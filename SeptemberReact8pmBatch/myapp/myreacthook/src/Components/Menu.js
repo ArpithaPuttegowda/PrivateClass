@@ -1,5 +1,6 @@
 import React, {lazy, Suspense} from "react";
-import {Link, BrowserRouter, Routes, Route} from "react-router-dom";
+import {Link, BrowserRouter, Routes, Route, Navigate} from "react-router-dom";
+import {PageNotFound} from "./404";
 import {TableComp} from "./ControlledComponent";
 import {ExampleUseCallBack} from "./ExampleUseCallBack";
 import {Exception} from "./ExceptionHandling/Exception";
@@ -71,6 +72,14 @@ export const Menu = () => {
     {
       route: "eh",
       ele: <Exception />
+    },
+    // {
+    //   route: "*",
+    //   ele: <Navigate to="/home" />
+    // },
+    {
+      route: "*",
+      ele: <PageNotFound />
     }
   ];
   return (
