@@ -7,6 +7,7 @@ import {Exception} from "./ExceptionHandling/Exception";
 // import About from "./About";
 // import ExampleReactMemo from "./ExampleReactMemo";
 import Home from "./Home";
+import {WithoutRedux} from "./WithoutRedux/WithoutRedux";
 const About = lazy(() => import("./About"));
 const ExampleReactMemo = lazy(() => import("./ExampleReactMemo"));
 const ExampleUseMemo = lazy(() => import("./ExampleUseMemo"));
@@ -41,6 +42,10 @@ export const Menu = () => {
     {
       path: "/eh",
       content: "ExceptionHandling"
+    },
+    {
+      path: "/withoutRedux",
+      content: "WithoutRedux"
     }
   ];
 
@@ -80,6 +85,10 @@ export const Menu = () => {
     {
       route: "*",
       ele: <PageNotFound />
+    },
+    {
+      route: "/withoutRedux",
+      ele: <WithoutRedux />
     }
   ];
   return (

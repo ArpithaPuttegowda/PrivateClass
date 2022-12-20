@@ -1,7 +1,6 @@
 import React, {memo, useCallback, useState} from "react";
 
 export const ExampleUseCallBack = () => {
-  alert("parent got called");
   const [count, setCount] = useState(0);
   const fn = useCallback(() => {}, []);
   return (
