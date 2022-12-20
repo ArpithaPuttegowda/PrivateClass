@@ -38,33 +38,29 @@
 
 // import React, {createRef, useRef} from "react";
 
-export const GettingDataOnChange = () => {
-  let data = {};
-  const handleSubmit = (event) => {
-    console.log(data, "final data");
+const GettingDataOnChange = () => {
+  let data;
+  const handleSubmit = (eve) => {
+    console.log(data);
   };
   const handleChange = (eve) => {
-    let v = eve.target.value;
     let k = eve.target.id;
-    data = {
-      ...data,
-      [k]: v
-    };
-    console.log(data);
+    let v = eve.target.value;
+    data = {...data, [k]: v};
   };
   return (
     <div>
       <p>
         <b>Name:</b>
-        <input onChange={handleChange} id="name" />
+        <input id="name" onChange={handleChange} />
       </p>
       <p>
         <b>Password:</b>
-        <input type="password" onChange={handleChange} id="pwd" />
+        <input type="password" id="pwd" onChange={handleChange} />
       </p>
       <p>
         <b>Email:</b>
-        <input type="email" onChange={handleChange} id="email" />
+        <input type="email" id="email" onChange={handleChange} />
       </p>
       <p>
         <input type="button" value="Submit" onClick={handleSubmit} />
@@ -72,3 +68,5 @@ export const GettingDataOnChange = () => {
     </div>
   );
 };
+
+export default GettingDataOnChange;
