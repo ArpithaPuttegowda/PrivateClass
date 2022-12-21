@@ -3,6 +3,7 @@ import {Parent} from "./Components/CommunicationB/ParentToChild";
 import "./App.css";
 import BoxC from "./Components/CommunicationB/BoxC";
 import Count from "./Components/Count";
+import {CountF} from "./Components/CountF";
 
 // const App = () => {
 //   const loc = "hyderabad";
@@ -53,7 +54,8 @@ import Count from "./Components/Count";
 const App = () => {
   return (
     <div>
-      <Count />
+      {/* <Count /> */}
+      <CountF />
     </div>
   );
 };

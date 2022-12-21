@@ -3,18 +3,22 @@ import React, {Component} from "react";
 class Count extends Component {
   constructor() {
     super();
-    this.count = 0;
+    this.state = {
+      count: 0
+    };
   }
-  fn = () => {
-    this.count = this.count + 1;
-    console.log(this.count, "count");
+  handleInc = () => {
+    this.setState({
+      count: this.state.count + 1
+    });
   };
   render() {
     alert("render called");
     return (
       <div>
-        <button onClick={this.fn}>Inc Count</button>
-        <h1>COUNT:::{this.count}</h1>
+        5000lines of Code
+        <button onClick={this.handleInc}>Inc Count</button>
+        <h1>COUNT:::{this.state.count}</h1>
       </div>
     );
   }
