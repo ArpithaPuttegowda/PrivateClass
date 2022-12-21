@@ -1,14 +1,18 @@
-import React from "react";
+import React, {useState} from "react";
 import {A} from "./A";
 import {B} from "./B";
 import {C} from "./C";
 
 export const WithoutRedux = () => {
+  const [name, setName] = useState("");
+  const getName = (data) => {
+    setName(data);
+  };
   return (
     <div>
-      <A />
+      <A fn={getName} />
       <B />
-      <C />
+      <C name={name} />
     </div>
   );
 };

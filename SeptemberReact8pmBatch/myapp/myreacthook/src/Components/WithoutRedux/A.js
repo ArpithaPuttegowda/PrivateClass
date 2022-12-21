@@ -1,10 +1,10 @@
 import React, {useRef} from "react";
 
-export const A = () => {
+export const A = ({fn}) => {
   const nameRef = useRef(null);
   const handleName = () => {
     let name = nameRef.current.value;
-    alert(name);
+    fn(name);
   };
   return (
     <div>
