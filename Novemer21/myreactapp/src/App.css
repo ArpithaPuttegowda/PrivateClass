@@ -43,3 +43,10 @@
     height: 100px;
     display: inline-block;
 }
+
+.cr{
+  color: red;
+}
+.cg{
+  color: green;
+}

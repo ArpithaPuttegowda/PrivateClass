@@ -4,6 +4,8 @@ import "./App.css";
 import BoxC from "./Components/CommunicationB/BoxC";
 import Count from "./Components/Count";
 import {CountF} from "./Components/CountF";
+import {Add} from "./Components/Add";
+import {AddF} from "./Components/AddUseRef";
 
 // const App = () => {
 //   const loc = "hyderabad";
@@ -55,7 +57,9 @@ const App = () => {
   return (
     <div>
       {/* <Count /> */}
-      <CountF />
+      {/* <CountF /> */}
+      <Add />
+      <AddF />
     </div>
   );
 };
