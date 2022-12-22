@@ -1,5 +1,7 @@
 import React, {lazy, Suspense} from "react";
 import {Link, BrowserRouter, Routes, Route, Navigate} from "react-router-dom";
+import {ExampleForwardRef} from "../ExampleForwardRef";
+import {Exception} from "../ExceptionHandling/Exception";
 import GettingDataOnChange from "../GettingDataOnChange";
 import {ExampleCallback} from "../Hooks/ExampleCallback";
 // import {ExampleUseMemo} from "../Hooks/ExampleUseMemo";
@@ -21,6 +23,14 @@ export const Menu = () => {
     {
       href: "/useCallback",
       content: "UseCallback"
+    },
+    {
+      href: "/forwardRef",
+      content: "Forward Ref"
+    },
+    {
+      href: "/eh",
+      content: "Exception Handling"
     }
   ];
   const routeData = [
@@ -36,6 +46,14 @@ export const Menu = () => {
     {
       path: "/useCallback",
       element: <ExampleCallback />
+    },
+    {
+      path: "/forwardRef",
+      element: <ExampleForwardRef />
+    },
+    {
+      path: "/eh",
+      element: <Exception />
     }
   ];
   return (

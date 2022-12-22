@@ -1,0 +1,11 @@
+
+
+
+Real DOM=5000lines+count:1
+
+Virtual DOM 1=5000lines+count:2
+click the button =>1
+diff algorithms= fast algorithms
+
+Virtual DOM 2=5000lines+count:2 =>after updating into VD1 , this will get destroyed.
+
