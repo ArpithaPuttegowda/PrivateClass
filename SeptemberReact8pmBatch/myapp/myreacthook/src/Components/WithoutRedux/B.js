@@ -1,10 +1,10 @@
 import React, {useRef} from "react";
 
-export const B = () => {
+export const B = ({fl}) => {
   const locRef = useRef(null);
   const handleLoc = () => {
     let loc = locRef.current.value;
-    alert(loc);
+    fl(loc);
   };
   return (
     <div>

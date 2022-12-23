@@ -6,6 +6,9 @@ import Count from "./Components/Count";
 import {CountF} from "./Components/CountF";
 import {Add} from "./Components/Add";
 import {AddF} from "./Components/AddUseRef";
+import P from "./Components/CommunicationB/ChildToParent";
+import {ParentF} from "./Components/CommunicationB/ChildToParentF";
+import {ExampleParent} from "./Components/CommunicationB/ChildToParent__ParentToChild";
 
 // const App = () => {
 //   const loc = "hyderabad";
@@ -58,8 +61,11 @@ const App = () => {
     <div>
       {/* <Count /> */}
       {/* <CountF /> */}
-      <Add />
-      <AddF />
+      {/* <Add /> */}
+      {/* <AddF /> */}
+      {/* <P /> */}
+      {/* <ParentF /> */}
+      <ExampleParent />
     </div>
   );
 };
