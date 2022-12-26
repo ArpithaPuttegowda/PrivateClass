@@ -9,6 +9,8 @@ import {AddF} from "./Components/AddUseRef";
 import P from "./Components/CommunicationB/ChildToParent";
 import {ParentF} from "./Components/CommunicationB/ChildToParentF";
 import {ExampleParent} from "./Components/CommunicationB/ChildToParent__ParentToChild";
+import {WithoutContextAPI} from "./Components/ContextAPI/WithoutContextAPI";
+import {WithContextApi} from "./Components/ContextAPI/WithContextApi";
 
 // const App = () => {
 //   const loc = "hyderabad";
@@ -65,7 +67,9 @@ const App = () => {
       {/* <AddF /> */}
       {/* <P /> */}
       {/* <ParentF /> */}
-      <ExampleParent />
+      {/* <ExampleParent /> */}
+      {/* <WithoutContextAPI /> */}
+      <WithContextApi />
     </div>
   );
 };
