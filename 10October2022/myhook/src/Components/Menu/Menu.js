@@ -4,6 +4,7 @@ import {ExampleForwardRef} from "../ExampleForwardRef";
 import {Exception} from "../ExceptionHandling/Exception";
 import GettingDataOnChange from "../GettingDataOnChange";
 import {ExampleCallback} from "../Hooks/ExampleCallback";
+import {WithoutJSX} from "../WithoutJSX/WithoutJSX";
 // import {ExampleUseMemo} from "../Hooks/ExampleUseMemo";
 // import AboutUs from "../AboutUs";
 const Home = lazy(() => import("../Home"));
@@ -31,6 +32,10 @@ export const Menu = () => {
     {
       href: "/eh",
       content: "Exception Handling"
+    },
+    {
+      href: "/jsx",
+      content: "Without JSX"
     }
   ];
   const routeData = [
@@ -54,6 +59,10 @@ export const Menu = () => {
     {
       path: "/eh",
       element: <Exception />
+    },
+    {
+      path: "/jsx",
+      element: <WithoutJSX />
     }
   ];
   return (
