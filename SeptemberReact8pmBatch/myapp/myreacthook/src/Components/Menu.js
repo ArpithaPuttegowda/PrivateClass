@@ -1,5 +1,6 @@
 import React, {lazy, Suspense} from "react";
 import {Link, BrowserRouter, Routes, Route, Navigate} from "react-router-dom";
+import {WithRedux} from "../REDUX/withRedux/WithRedux";
 import {PageNotFound} from "./404";
 import {TableComp} from "./ControlledComponent";
 import {ExampleUseCallBack} from "./ExampleUseCallBack";
@@ -46,6 +47,10 @@ export const Menu = () => {
     {
       path: "/withoutRedux",
       content: "WithoutRedux"
+    },
+    {
+      path: "/withRedux",
+      content: "WithRedux"
     }
   ];
 
@@ -89,6 +94,10 @@ export const Menu = () => {
     {
       route: "/withoutRedux",
       ele: <WithoutRedux />
+    },
+    {
+      route: "/withRedux",
+      ele: <WithRedux />
     }
   ];
   return (

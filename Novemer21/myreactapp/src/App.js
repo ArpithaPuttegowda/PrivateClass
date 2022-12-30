@@ -11,6 +11,8 @@ import {ParentF} from "./Components/CommunicationB/ChildToParentF";
 import {ExampleParent} from "./Components/CommunicationB/ChildToParent__ParentToChild";
 import {WithoutContextAPI} from "./Components/ContextAPI/WithoutContextAPI";
 import {WithContextApi} from "./Components/ContextAPI/WithContextApi";
+import {OrderedList} from "./Components/ListAndKeys/OrderedList";
+import {UnOrderedList} from "./Components/ListAndKeys/UnorderedList";
 
 // const App = () => {
 //   const loc = "hyderabad";
@@ -69,7 +71,9 @@ const App = () => {
       {/* <ParentF /> */}
       {/* <ExampleParent /> */}
       {/* <WithoutContextAPI /> */}
-      <WithContextApi />
+      {/* <WithContextApi /> */}
+      <OrderedList />
+      <UnOrderedList />
     </div>
   );
 };
