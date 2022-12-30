@@ -8,6 +8,7 @@ import {Exception} from "./ExceptionHandling/Exception";
 // import About from "./About";
 // import ExampleReactMemo from "./ExampleReactMemo";
 import Home from "./Home";
+import {ReduxMiddlewares} from "./ReduxMiddlewares/ReduxMiddlewares";
 import {WithoutRedux} from "./WithoutRedux/WithoutRedux";
 const About = lazy(() => import("./About"));
 const ExampleReactMemo = lazy(() => import("./ExampleReactMemo"));
@@ -51,6 +52,10 @@ export const Menu = () => {
     {
       path: "/withRedux",
       content: "WithRedux"
+    },
+    {
+      path: "/reduxMiddleware",
+      content: "Redux MiddleWare"
     }
   ];
 
@@ -98,6 +103,10 @@ export const Menu = () => {
     {
       route: "/withRedux",
       ele: <WithRedux />
+    },
+    {
+      route: "/reduxMiddleware",
+      ele: <ReduxMiddlewares />
     }
   ];
   return (

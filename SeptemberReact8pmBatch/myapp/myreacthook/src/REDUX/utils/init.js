@@ -1,4 +1,8 @@
 export const initData = {
   name: "",
-  loc: ""
+  loc: "",
+  users: [],
+  posts: [],
+  photos: [],
+  comments: []
 };
