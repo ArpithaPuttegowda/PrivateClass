@@ -13,6 +13,10 @@ import {WithoutContextAPI} from "./Components/ContextAPI/WithoutContextAPI";
 import {WithContextApi} from "./Components/ContextAPI/WithContextApi";
 import {OrderedList} from "./Components/ListAndKeys/OrderedList";
 import {UnOrderedList} from "./Components/ListAndKeys/UnorderedList";
+import {DropDown} from "./Components/ListAndKeys/DropDown";
+import {Headers} from "./Components/ListAndKeys/Headers";
+import {ColorsFlowerList} from "./Components/ListAndKeys/ColorsFlowerList";
+import {SachinDataList} from "./Components/ListAndKeys/SachinDataList";
 
 // const App = () => {
 //   const loc = "hyderabad";
@@ -74,6 +78,10 @@ const App = () => {
       {/* <WithContextApi /> */}
       <OrderedList />
       <UnOrderedList />
+      <DropDown />
+      <Headers />
+      <ColorsFlowerList />
+      <SachinDataList />
     </div>
   );
 };
