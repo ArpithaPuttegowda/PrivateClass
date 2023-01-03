@@ -1,10 +1,10 @@
 import React from "react";
 
-export const C = ({name}) => {
+export const C = ({n, l}) => {
   return (
     <div>
-      <h1>Name:{name}</h1>
-      <h1>Loc:</h1>
+      <h1>Name:{n}</h1>
+      <h1>Loc:{l}</h1>
     </div>
   );
 };

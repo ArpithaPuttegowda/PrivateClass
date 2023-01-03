@@ -5,14 +5,18 @@ import {C} from "./C";
 
 export const WithoutRedux = () => {
   const [name, setName] = useState("");
-  const getData = (myName) => {
+  const [loc, setLoc] = useState("");
+  const getName = (myName) => {
     setName(myName);
+  };
+  const getLoc = (myLoc) => {
+    setLoc(myLoc);
   };
   return (
     <div>
-      <A fn={getData} />
-      <B />
-      <C name={name} />
+      <A fn={getName} />
+      <B fl={getLoc} />
+      <C n={name} l={loc} />
     </div>
   );
 };

@@ -1,10 +1,15 @@
-import React from "react";
+import React, {useRef} from "react";
 
-export const B = () => {
+export const B = ({fl}) => {
+  const locRef = useRef(null);
+  const handleName = () => {
+    const loc = locRef.current.value;
+    fl(loc);
+  };
   return (
     <div>
-      <input />
-      <button>Loc</button>
+      <input ref={locRef} />
+      <button onClick={handleName}>Loc</button>
     </div>
   );
 };

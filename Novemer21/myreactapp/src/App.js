@@ -17,6 +17,11 @@ import {DropDown} from "./Components/ListAndKeys/DropDown";
 import {Headers} from "./Components/ListAndKeys/Headers";
 import {ColorsFlowerList} from "./Components/ListAndKeys/ColorsFlowerList";
 import {SachinDataList} from "./Components/ListAndKeys/SachinDataList";
+import {TableList} from "./Components/ListAndKeys/TableList";
+import TableListC from "./Components/ListAndKeys/TableListC";
+import {ColorList} from "./Components/ReusuableComponents/ColorList";
+import {Flowers} from "./Components/ReusuableComponents/Flowers";
+import {OrderListReusuable} from "./Components/ReusuableComponents/OrderListReusuable";
 
 // const App = () => {
 //   const loc = "hyderabad";
@@ -65,6 +70,7 @@ import {SachinDataList} from "./Components/ListAndKeys/SachinDataList";
 // };
 
 const App = () => {
+  const flowers = ["jasmin", "lilly", "sunFlower"];
   return (
     <div>
       {/* <Count /> */}
@@ -76,12 +82,19 @@ const App = () => {
       {/* <ExampleParent /> */}
       {/* <WithoutContextAPI /> */}
       {/* <WithContextApi /> */}
-      <OrderedList />
-      <UnOrderedList />
-      <DropDown />
-      <Headers />
-      <ColorsFlowerList />
-      <SachinDataList />
+      {/* <OrderedList /> */}
+      {/* <UnOrderedList /> */}
+      {/* <DropDown /> */}
+      {/* <Headers /> */}
+      {/* <ColorsFlowerList /> */}
+      {/* <SachinDataList /> */}
+      {/* <TableList /> */}
+      {/* <TableListC /> */}
+      <ColorList />
+      <Flowers data={["Rose", "lilly"]} />
+      <OrderListReusuable data={["red", "blue", "yellow"]} />
+      <OrderListReusuable data={flowers} />
+      <OrderListReusuable />
     </div>
   );
 };
