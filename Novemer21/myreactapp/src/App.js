@@ -22,6 +22,9 @@ import TableListC from "./Components/ListAndKeys/TableListC";
 import {ColorList} from "./Components/ReusuableComponents/ColorList";
 import {Flowers} from "./Components/ReusuableComponents/Flowers";
 import {OrderListReusuable} from "./Components/ReusuableComponents/OrderListReusuable";
+import {DropDownReusuable} from "./Components/ReusuableComponents/DropDown";
+import {TableResuableComp} from "./Components/ReusuableComponents/TableResuableComp";
+import {ConditionalRenderingAnd} from "./Components/ConditionalRenderingInReact/ConditionalRenderingAnd";
 
 // const App = () => {
 //   const loc = "hyderabad";
@@ -95,6 +98,26 @@ const App = () => {
       <OrderListReusuable data={["red", "blue", "yellow"]} />
       <OrderListReusuable data={flowers} />
       <OrderListReusuable />
+      <DropDownReusuable data={["India", "Pak", "US"]} label="Contry" />
+      <DropDownReusuable data={["red", "blue", "yellow"]} label="Colours" />
+      <DropDownReusuable />
+      <TableResuableComp
+        headers={["name", "loc"]}
+        data={[
+          {name: "sachin", loc: "Mumbai"},
+          {name: "dhoni", loc: "ranchi"}
+        ]}
+        tableKeys={["name", "loc"]}
+      />
+      <TableResuableComp
+        headers={["Flower", "Color", "Priority"]}
+        data={[
+          {flower: "rose", clr: "red", pri: "1"},
+          {flower: "lilly", clr: "yellow", pri: "2"}
+        ]}
+        tableKeys={["flower", "clr", "pri"]}
+      />
+      <ConditionalRenderingAnd />
     </div>
   );
 };
