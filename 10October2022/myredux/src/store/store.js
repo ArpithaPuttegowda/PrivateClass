@@ -2,7 +2,7 @@ import {combineReducers, configureStore} from "@reduxjs/toolkit";
 import nameLocReducer from "../Reducers/reducer";
 
 let rootRed = combineReducers({
-  nameLocReducer
+  nameLoc: nameLocReducer
 });
 
 const store = configureStore({

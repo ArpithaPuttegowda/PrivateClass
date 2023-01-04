@@ -14,6 +14,7 @@ export const WithoutRedux = () => {
   };
   return (
     <div>
+      <h1>Without Redux</h1>
       <A fn={getName} />
       <B fl={getLoc} />
       <C n={name} l={loc} />
