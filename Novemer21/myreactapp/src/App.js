@@ -25,6 +25,7 @@ import {OrderListReusuable} from "./Components/ReusuableComponents/OrderListReus
 import {DropDownReusuable} from "./Components/ReusuableComponents/DropDown";
 import {TableResuableComp} from "./Components/ReusuableComponents/TableResuableComp";
 import {ConditionalRenderingAnd} from "./Components/ConditionalRenderingInReact/ConditionalRenderingAnd";
+import {ConditionalRenderingTernary} from "./Components/ConditionalRenderingInReact/ConditionalRenderingTernary";
 
 // const App = () => {
 //   const loc = "hyderabad";
@@ -118,6 +119,7 @@ const App = () => {
         tableKeys={["flower", "clr", "pri"]}
       />
       <ConditionalRenderingAnd />
+      <ConditionalRenderingTernary />
     </div>
   );
 };
