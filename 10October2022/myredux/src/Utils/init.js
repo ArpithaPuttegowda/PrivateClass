@@ -5,5 +5,7 @@ export const init = {
 
 export const initC = {
   nameC: "",
-  locC: ""
+  locC: "",
+  nameF: "",
+  locF: ""
 };
