@@ -11,15 +11,16 @@ class CC extends Component {
   }
   componentDidMount() {
     store.subscribe(() => {
-      let state = store.getState();
+      const myState = store.getState();
       this.setState({
-        name: state.nameLocC.nameC,
-        loc: state.nameLocC.locC
+        name: myState?.nameLocC?.nameC,
+        loc: myState?.nameLocC?.locC
       });
     });
   }
 
   render() {
+    alert("render called");
     return (
       <div>
         <h1>Name:{this.state.name}</h1>
