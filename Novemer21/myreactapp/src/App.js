@@ -26,6 +26,8 @@ import {DropDownReusuable} from "./Components/ReusuableComponents/DropDown";
 import {TableResuableComp} from "./Components/ReusuableComponents/TableResuableComp";
 import {ConditionalRenderingAnd} from "./Components/ConditionalRenderingInReact/ConditionalRenderingAnd";
 import {ConditionalRenderingTernary} from "./Components/ConditionalRenderingInReact/ConditionalRenderingTernary";
+import LifeCycleMouting from "./Components/LifeCycleMethods/LifeCycleMouting";
+import LifeCycleMethodUpdating from "./Components/LifeCycleMethods/LifeCycleMethodUpdating";
 
 // const App = () => {
 //   const loc = "hyderabad";
@@ -94,7 +96,7 @@ const App = () => {
       {/* <SachinDataList /> */}
       {/* <TableList /> */}
       {/* <TableListC /> */}
-      <ColorList />
+      {/* <ColorList />
       <Flowers data={["Rose", "lilly"]} />
       <OrderListReusuable data={["red", "blue", "yellow"]} />
       <OrderListReusuable data={flowers} />
@@ -119,7 +121,9 @@ const App = () => {
         tableKeys={["flower", "clr", "pri"]}
       />
       <ConditionalRenderingAnd />
-      <ConditionalRenderingTernary />
+      <ConditionalRenderingTernary /> */}
+      {/* <LifeCycleMouting /> */}
+      <LifeCycleMethodUpdating />
     </div>
   );
 };

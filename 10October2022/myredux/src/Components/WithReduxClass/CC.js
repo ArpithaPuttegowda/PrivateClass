@@ -4,19 +4,26 @@ import store from "../../store/store";
 class CC extends Component {
   constructor() {
     super();
-    this.myState = store.getState();
+    this.state = {
+      name: "",
+      loc: ""
+    };
   }
   componentDidMount() {
     store.subscribe(() => {
-      this.myState = store.getState();
+      let state = store.getState();
+      this.setState({
+        name: state.nameLocC.nameC,
+        loc: state.nameLocC.locC
+      });
     });
   }
 
   render() {
     return (
       <div>
-        <h1>Name:{this.myState?.nameLocC?.nameC}</h1>
-        <h1>Loc:{this.myState?.nameLocC?.locC}</h1>
+        <h1>Name:{this.state.name}</h1>
+        <h1>Loc:{this.state.loc}</h1>
       </div>
     );
   }
