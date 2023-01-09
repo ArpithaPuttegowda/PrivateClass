@@ -11,12 +11,17 @@ class LifeCycleMethodUpdating extends Component {
   static getDerivedStateFromProps() {
     console.log("getDerivedStateFromProps");
   }
+  shouldComponentUpdate() {
+    console.log("should componentUpdate");
+    return true;
+  }
   handleInc = () => {
     this.setState({
       count: this.state.count + 1
     });
   };
   render() {
+    alert("rendered");
     console.log("render called");
     return (
       <div>
@@ -24,8 +29,16 @@ class LifeCycleMethodUpdating extends Component {
       </div>
     );
   }
+
+  componentDidUpdate() {
+    console.log("componentDidUpdate");
+  }
   componentDidMount() {
     console.log("componentDidMount");
+  }
+  getSnapshotBeforeUpdate() {
+    console.log("GetSnapshotbeforeupdate");
+    return null;
   }
 }
 
