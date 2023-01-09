@@ -1,4 +1,5 @@
 import React, {Component, createRef} from "react";
+import {connect} from "react-redux";
 import store from "../../store/store";
 
 class AC extends Component {
@@ -8,7 +9,11 @@ class AC extends Component {
   }
   handleName = () => {
     let name = this.nameRef.current.value;
-    store.dispatch({
+    // store.dispatch({
+    //   type: "NAME_C",
+    //   payload: name
+    // });
+    this.props.d({
       type: "NAME_C",
       payload: name
     });
@@ -23,4 +28,11 @@ class AC extends Component {
   }
 }
 
-export default AC;
+const msp = () => {};
+const mdp = (dispatch) => {
+  return {
+    d: dispatch
+  };
+};
+
+export default connect(msp, mdp)(AC);

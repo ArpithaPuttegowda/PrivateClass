@@ -1,11 +1,16 @@
 import React, {useRef} from "react";
+import {connect} from "react-redux";
 import store from "../../store/store";
 
-export const B = () => {
+const B = ({dispatch}) => {
   const locRef = useRef(null);
   const handleLoc = () => {
     let loc = locRef.current.value;
-    store.dispatch({
+    // store.dispatch({
+    //   type: "LOC_F",
+    //   loc
+    // });
+    dispatch({
       type: "LOC_F",
       loc
     });
@@ -17,3 +22,11 @@ export const B = () => {
     </div>
   );
 };
+
+const mdp = (dispatch) => {
+  return {
+    dispatch
+  };
+};
+
+export default connect(null, mdp)(B);

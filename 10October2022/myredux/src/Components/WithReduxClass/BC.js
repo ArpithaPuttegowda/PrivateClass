@@ -1,4 +1,5 @@
 import React, {Component, createRef} from "react";
+import {connect} from "react-redux";
 import store from "../../store/store";
 
 class BC extends Component {
@@ -8,7 +9,11 @@ class BC extends Component {
   }
   handleLoc = () => {
     const loc = this.locRef.current.value;
-    store.dispatch({
+    // store.dispatch({
+    //   type: "LOC_C",
+    //   payload: loc
+    // });
+    this.props.dis({
       type: "LOC_C",
       payload: loc
     });
@@ -23,4 +28,9 @@ class BC extends Component {
   }
 }
 
-export default BC;
+const mdp = (d) => {
+  return {
+    dis: d
+  };
+};
+export default connect(null, mdp)(BC);

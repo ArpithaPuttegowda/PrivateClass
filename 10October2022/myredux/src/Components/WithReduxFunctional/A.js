@@ -1,11 +1,16 @@
 import React, {useRef} from "react";
+import {connect} from "react-redux";
 import store from "../../store/store";
 
-export const A = () => {
+const A = ({dis}) => {
   const nameRef = useRef(null);
   const handleName = () => {
     let name = nameRef.current.value;
-    store.dispatch({
+    // store.dispatch({
+    //   type: "NAME_F",
+    //   data: name
+    // });
+    dis({
       type: "NAME_F",
       data: name
     });
@@ -17,5 +22,13 @@ export const A = () => {
     </div>
   );
 };
+
+const mdp = (d) => {
+  return {
+    dis: d
+  };
+};
+
+export default connect(null, mdp)(A);
 
 //component=>reducer=>redux
