@@ -123,9 +123,9 @@ const App = () => {
       />
       <ConditionalRenderingAnd />
       <ConditionalRenderingTernary /> */}
-      {/* <LifeCycleMouting /> */}
+      <LifeCycleMouting name="Delhi" />
       {/* <LifeCycleMethodUpdating /> */}
-      <LifeCycleUnMounting />
+      {/* <LifeCycleUnMounting /> */}
     </div>
   );
 };
