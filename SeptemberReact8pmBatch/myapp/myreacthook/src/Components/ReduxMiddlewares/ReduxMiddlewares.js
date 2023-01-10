@@ -1,3 +1,4 @@
+import axios from "axios";
 import React from "react";
 import {useDispatch} from "react-redux";
 import {postAction} from "../Actions/action";
@@ -7,7 +8,17 @@ export const ReduxMiddlewares = () => {
   const handlePosts = () => {
     postAction(dispatch);
   };
-  const handlePhotos = () => {};
+  const handlePhotos = () => {
+    axios
+      .get("https://jsonplaceholder.typicode.com/photos")
+      .then((res) => {
+        dispatch({
+          type: "Photos",
+          data: res.data
+        });
+      })
+      .catch((f) => {});
+  };
   const handleUsers = () => {};
   const handleComments = () => {};
   return (
