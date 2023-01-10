@@ -9,6 +9,5 @@ export const myReducer = (state = initData, action) => {
   if (action.type === LOC) {
     state = {...state, loc: action.payload};
   }
-  console.log(state, "updated state");
   return state;
 };
