@@ -123,8 +123,8 @@ const App = () => {
       />
       <ConditionalRenderingAnd />
       <ConditionalRenderingTernary /> */}
-      <LifeCycleMouting name="Delhi" />
-      {/* <LifeCycleMethodUpdating /> */}
+      {/* <LifeCycleMouting name="Delhi" /> */}
+      <LifeCycleMethodUpdating name="hyderabad" />
       {/* <LifeCycleUnMounting /> */}
     </div>
   );

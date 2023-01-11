@@ -3,42 +3,42 @@ import React, {Component} from "react";
 class LifeCycleMethodUpdating extends Component {
   constructor() {
     super();
-    console.log("constructor");
     this.state = {
-      count: 0
+      name: "sachin"
     };
   }
-  static getDerivedStateFromProps() {
+  static getDerivedStateFromProps(nextProps, nextState) {
     console.log("getDerivedStateFromProps");
   }
-  shouldComponentUpdate() {
-    console.log("should componentUpdate");
-    return true;
+  shouldComponentUpdate(nextProps, nextState) {
+    if (nextState.name !== this.state.name) {
+      return true;
+    }
+    return false;
   }
   handleInc = () => {
     this.setState({
-      count: this.state.count + 1
+      name: "dhoni"
     });
   };
   render() {
-    alert("rendered");
-    console.log("render called");
+    alert("render called");
     return (
       <div>
-        <button onClick={this.handleInc}>Inc Count..{this.state.count}</button>
+        <button onClick={this.handleInc}>Inc Count..{this.state.name}</button>
       </div>
     );
   }
-
-  componentDidUpdate() {
+  getSnapshotBeforeUpdate(prevProp, preState) {
+    console.log("GetSnapshotbeforeupdate");
+    return null;
+  }
+  componentDidUpdate(prevProp, preState) {
+    debugger;
     console.log("componentDidUpdate");
   }
   componentDidMount() {
     console.log("componentDidMount");
-  }
-  getSnapshotBeforeUpdate() {
-    console.log("GetSnapshotbeforeupdate");
-    return null;
   }
 }
 
