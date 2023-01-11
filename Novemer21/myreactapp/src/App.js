@@ -77,6 +77,7 @@ import LifeCycleUnMounting from "./Components/LifeCycleMethods/LifeCycleUnMounti
 // };
 
 const App = () => {
+  console.log("arpitha,newly added");
   const flowers = ["jasmin", "lilly", "sunFlower"];
   return (
     <div>
