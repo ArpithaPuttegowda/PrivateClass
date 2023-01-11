@@ -1,8 +1,12 @@
-import logo from "./logo.svg";
 import "./App.css";
+import {ReduxMiddleware} from "./Components/ReduxMiddleware";
 
 function App() {
-  return <div className="App">App</div>;
+  return (
+    <div className="App">
+      <ReduxMiddleware />
+    </div>
+  );
 }
 
 export default App;
