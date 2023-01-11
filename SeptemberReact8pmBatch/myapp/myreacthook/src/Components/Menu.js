@@ -8,7 +8,7 @@ import {Exception} from "./ExceptionHandling/Exception";
 // import About from "./About";
 // import ExampleReactMemo from "./ExampleReactMemo";
 import Home from "./Home";
-import {ReduxMiddlewares} from "./ReduxMiddlewares/ReduxMiddlewares";
+import ReduxMiddlewares from "./ReduxMiddlewares/ReduxMiddlewares";
 import {WithoutRedux} from "./WithoutRedux/WithoutRedux";
 const About = lazy(() => import("./About"));
 const ExampleReactMemo = lazy(() => import("./ExampleReactMemo"));

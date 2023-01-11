@@ -2,6 +2,7 @@ import {combineReducers, configureStore} from "@reduxjs/toolkit";
 import {myReducer} from "../Reducers/reducer";
 import ajaxReducer from "../Reducers/ajaxReducer";
 import logger from "redux-logger";
+import thunk from "redux-thunk";
 
 const rootReducer = combineReducers({
   nameLocRed: myReducer,
@@ -9,7 +10,7 @@ const rootReducer = combineReducers({
 });
 const myStore = configureStore({
   reducer: rootReducer,
-  middleware: [logger]
+  middleware: [logger, thunk]
 });
 
 export default myStore;

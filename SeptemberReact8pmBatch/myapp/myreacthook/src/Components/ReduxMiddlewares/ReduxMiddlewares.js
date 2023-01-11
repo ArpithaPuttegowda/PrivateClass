@@ -1,23 +1,16 @@
-import axios from "axios";
 import React from "react";
 import {useDispatch} from "react-redux";
 import {postAction} from "../Actions/action";
+import {thunkAction} from "../Actions/thunkAction";
+import {connect} from "react-redux";
 
-export const ReduxMiddlewares = () => {
+const ReduxMiddlewares = ({t}) => {
   const dispatch = useDispatch();
   const handlePosts = () => {
     postAction(dispatch);
   };
   const handlePhotos = () => {
-    axios
-      .get("https://jsonplaceholder.typicode.com/photos")
-      .then((res) => {
-        dispatch({
-          type: "Photos",
-          data: res.data
-        });
-      })
-      .catch((f) => {});
+    t();
   };
   const handleUsers = () => {};
   const handleComments = () => {};
@@ -30,3 +23,9 @@ export const ReduxMiddlewares = () => {
     </div>
   );
 };
+
+const mdp = {
+  t: thunkAction
+};
+
+export default connect(null, mdp)(ReduxMiddlewares);
