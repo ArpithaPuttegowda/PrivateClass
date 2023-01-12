@@ -1,11 +1,23 @@
 import React, {Component} from "react";
+import {Hero} from "../ExceptionHandling/Hero";
 
 class LifeCycleMethodUpdating extends Component {
   constructor() {
     super();
     this.state = {
-      name: "sachin"
+      name: "sachin",
+      isError: false
     };
+  }
+
+  static getDerivedStateFromError() {
+    return {
+      isError: true
+    };
+  }
+
+  componentDidCatch(e) {
+    console.log(e);
   }
   static getDerivedStateFromProps(nextProps, nextState) {
     console.log("getDerivedStateFromProps");
@@ -25,7 +37,16 @@ class LifeCycleMethodUpdating extends Component {
     alert("render called");
     return (
       <div>
-        <button onClick={this.handleInc}>Inc Count..{this.state.name}</button>
+        {this.state.isError ? (
+          <h1>Something went wrong </h1>
+        ) : (
+          <>
+            <Hero heroName="joker" />
+            <button onClick={this.handleInc}>
+              Inc Count..{this.state.name}
+            </button>
+          </>
+        )}
       </div>
     );
   }

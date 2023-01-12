@@ -29,6 +29,7 @@ import {ConditionalRenderingTernary} from "./Components/ConditionalRenderingInRe
 import LifeCycleMouting from "./Components/LifeCycleMethods/LifeCycleMouting";
 import LifeCycleMethodUpdating from "./Components/LifeCycleMethods/LifeCycleMethodUpdating";
 import LifeCycleUnMounting from "./Components/LifeCycleMethods/LifeCycleUnMounting";
+import ErrorHandling from "./Components/ExceptionHandling/ErrorHandling";
 
 // const App = () => {
 //   const loc = "hyderabad";
@@ -127,6 +128,7 @@ const App = () => {
       {/* <LifeCycleMouting name="Delhi" /> */}
       <LifeCycleMethodUpdating name="hyderabad" />
       {/* <LifeCycleUnMounting /> */}
+      <ErrorHandling />
     </div>
   );
 };
