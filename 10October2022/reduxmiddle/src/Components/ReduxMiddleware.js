@@ -1,25 +1,15 @@
-import axios from "axios";
 import React from "react";
-import {useDispatch} from "react-redux";
+import {connect, useDispatch} from "react-redux";
 import {postAction} from "../Actions/postAction";
+import thunkAction from "../Actions/thunkAction";
 
-export const ReduxMiddleware = () => {
+const ReduxMiddleware = ({t}) => {
   const dispatch = useDispatch();
   const handlePost = () => {
     postAction(dispatch);
   };
   const handleComments = () => {
-    axios
-      .get("https://jsonplaceholder.typicode.com/comments")
-      .then((res) => {
-        dispatch({
-          type: "COMMENTS",
-          payload: res.data
-        });
-      })
-      .catch((res) => {
-        console.log(res, "failure");
-      });
+    t();
   };
   return (
     <div>
@@ -28,3 +18,14 @@ export const ReduxMiddleware = () => {
     </div>
   );
 };
+
+// const mdp=(d)=>{
+//   return {
+//     dis:d
+//   }
+// }
+const mdp = {
+  t: thunkAction
+};
+
+export default connect(null, mdp)(ReduxMiddleware);

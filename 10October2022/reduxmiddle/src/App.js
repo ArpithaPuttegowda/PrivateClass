@@ -1,5 +1,5 @@
 import "./App.css";
-import {ReduxMiddleware} from "./Components/ReduxMiddleware";
+import ReduxMiddleware from "./Components/ReduxMiddleware";
 
 function App() {
   return (
