@@ -30,6 +30,7 @@ import LifeCycleMouting from "./Components/LifeCycleMethods/LifeCycleMouting";
 import LifeCycleMethodUpdating from "./Components/LifeCycleMethods/LifeCycleMethodUpdating";
 import LifeCycleUnMounting from "./Components/LifeCycleMethods/LifeCycleUnMounting";
 import ErrorHandling from "./Components/ExceptionHandling/ErrorHandling";
+import BH from "./Components/HOC/BH";
 
 // const App = () => {
 //   const loc = "hyderabad";
@@ -126,9 +127,10 @@ const App = () => {
       <ConditionalRenderingAnd />
       <ConditionalRenderingTernary /> */}
       {/* <LifeCycleMouting name="Delhi" /> */}
-      <LifeCycleMethodUpdating name="hyderabad" />
+      {/* <LifeCycleMethodUpdating name="hyderabad" /> */}
       {/* <LifeCycleUnMounting /> */}
-      <ErrorHandling />
+      {/* <ErrorHandling /> */}
+      <BH />
     </div>
   );
 };

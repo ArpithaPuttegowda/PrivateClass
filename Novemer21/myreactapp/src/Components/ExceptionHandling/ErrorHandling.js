@@ -1,36 +1,23 @@
 import React, {Component} from "react";
+import ErrorBoundary from "./ErrorBoundary";
 import {Hero} from "./Hero";
 
 class ErrorHandling extends Component {
-  constructor() {
-    super();
-    this.state = {
-      isError: false
-    };
-  }
-  static getDerivedStateFromError() {
-    return {
-      isError: true
-    };
-  }
-
-  componentDidCatch(e) {
-    console.log(e);
-  }
-
   render() {
     return (
       <div>
-        {this.state.isError ? (
-          <h1>Something went wrong</h1>
-        ) : (
-          <>
-            <Hero heroName="Rajkumar" />
-            <Hero heroName="VishnuVardan" />
-            <Hero heroName="Punith" />
-            {/* <Hero heroName="joker" /> */}
-          </>
-        )}
+        <ErrorBoundary>
+          <Hero heroName="Rajkumar">Arpitha</Hero>
+        </ErrorBoundary>
+        <ErrorBoundary>
+          <Hero heroName="VishnuVardan" />
+        </ErrorBoundary>
+        <ErrorBoundary>
+          <Hero heroName="Punith" />
+        </ErrorBoundary>
+        <ErrorBoundary>
+          <Hero heroName="joker" />
+        </ErrorBoundary>
       </div>
     );
   }
