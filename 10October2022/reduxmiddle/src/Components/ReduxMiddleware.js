@@ -11,10 +11,18 @@ const ReduxMiddleware = ({t}) => {
   const handleComments = () => {
     t();
   };
+  const handleUsers = () => {
+    dispatch({
+      type: "USER_1"
+    });
+  };
   return (
     <div>
       <button onClick={handlePost}>Get post</button>
       <button onClick={handleComments}>Get comments</button>
+      <button onClick={handleUsers}>Get Users</button>
+      <button>Get Photos</button>
+      <button>Get Photos</button>
     </div>
   );
 };

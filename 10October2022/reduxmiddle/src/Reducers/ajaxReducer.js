@@ -6,6 +6,9 @@ const ajaxReducer = (state = initData, action) => {
   if (action.type === "COMMENTS") {
     return (state = {...state, comments: action.payload});
   }
+  if (action.type === "USERS") {
+    return (state = {...state, users: action.payload});
+  }
   return state;
 };
 
