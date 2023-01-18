@@ -31,6 +31,7 @@ import LifeCycleMethodUpdating from "./Components/LifeCycleMethods/LifeCycleMeth
 import LifeCycleUnMounting from "./Components/LifeCycleMethods/LifeCycleUnMounting";
 import ErrorHandling from "./Components/ExceptionHandling/ErrorHandling";
 import BH from "./Components/HOC/BH";
+import {Moutingphase} from "./Components/useEffectHook/moutingphase";
 
 // const App = () => {
 //   const loc = "hyderabad";
@@ -130,7 +131,8 @@ const App = () => {
       {/* <LifeCycleMethodUpdating name="hyderabad" /> */}
       {/* <LifeCycleUnMounting /> */}
       {/* <ErrorHandling /> */}
-      <BH />
+      {/* <BH /> */}
+      <Moutingphase />
     </div>
   );
 };

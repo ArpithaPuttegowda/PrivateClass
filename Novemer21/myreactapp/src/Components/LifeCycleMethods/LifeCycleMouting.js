@@ -17,11 +17,16 @@ class LifeCycleMouting extends Component {
       };
     }
   }
-
+  // handleFetchData = () => {
+  //   fetch("https://jsonplaceholder.typicode.com/posts")
+  //     .then((res) => res.json())
+  //     .then((data) => console.log(data));
+  // };
   render(a, b, c) {
     console.log("render called", this.props.name);
     return (
       <div>
+        {/* <button onClick={this.handleFetchData}>Fetch data</button> */}
         <button onClick={() => this.setState({count: this.state.count + 1})}>
           Inc Count {this.state.count}...change Name...{this.state.name}
         </button>
@@ -29,7 +34,9 @@ class LifeCycleMouting extends Component {
     );
   }
   componentDidMount(a, b, c) {
-    debugger;
+    fetch("https://jsonplaceholder.typicode.com/posts")
+      .then((res) => res.json())
+      .then((data) => console.log(data));
     console.log("componentDidMount");
   }
 }
