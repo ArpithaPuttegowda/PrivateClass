@@ -32,6 +32,10 @@ import LifeCycleUnMounting from "./Components/LifeCycleMethods/LifeCycleUnMounti
 import ErrorHandling from "./Components/ExceptionHandling/ErrorHandling";
 import BH from "./Components/HOC/BH";
 import {Moutingphase} from "./Components/useEffectHook/moutingphase";
+import {UpdatingPhase} from "./Components/useEffectHook/UpdatingPhase";
+import ReactPureComp from "./Components/PureComponentAndReactMemo/ReactPureComp";
+import ReactPureComp2 from "./Components/PureComponentAndReactMemo/ReactPureComp2";
+import ExampleMemo from "./Components/PureComponentAndReactMemo/MemoReactEx";
 
 // const App = () => {
 //   const loc = "hyderabad";
@@ -132,7 +136,11 @@ const App = () => {
       {/* <LifeCycleUnMounting /> */}
       {/* <ErrorHandling /> */}
       {/* <BH /> */}
-      <Moutingphase />
+      {/* <Moutingphase /> */}
+      {/* <UpdatingPhase /> */}
+      {/* <ReactPureComp /> */}
+      {/* <ReactPureComp2 /> */}
+      <ExampleMemo />
     </div>
   );
 };
