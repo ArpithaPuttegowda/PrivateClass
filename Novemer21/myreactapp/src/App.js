@@ -36,6 +36,7 @@ import {UpdatingPhase} from "./Components/useEffectHook/UpdatingPhase";
 import ReactPureComp from "./Components/PureComponentAndReactMemo/ReactPureComp";
 import ReactPureComp2 from "./Components/PureComponentAndReactMemo/ReactPureComp2";
 import ExampleMemo from "./Components/PureComponentAndReactMemo/MemoReactEx";
+import {ExampleUseReducer} from "./Components/Hooks/ExampleUseReducer";
 
 // const App = () => {
 //   const loc = "hyderabad";
@@ -140,7 +141,8 @@ const App = () => {
       {/* <UpdatingPhase /> */}
       {/* <ReactPureComp /> */}
       {/* <ReactPureComp2 /> */}
-      <ExampleMemo />
+      {/* <ExampleMemo /> */}
+      <ExampleUseReducer />
     </div>
   );
 };
