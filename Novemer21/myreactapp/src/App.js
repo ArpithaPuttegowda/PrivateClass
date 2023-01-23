@@ -37,6 +37,7 @@ import ReactPureComp from "./Components/PureComponentAndReactMemo/ReactPureComp"
 import ReactPureComp2 from "./Components/PureComponentAndReactMemo/ReactPureComp2";
 import ExampleMemo from "./Components/PureComponentAndReactMemo/MemoReactEx";
 import {ExampleUseReducer} from "./Components/Hooks/ExampleUseReducer";
+import {GlobalStateManagement} from "./Components/GlobalStateManagementHooksContext/GlobalStatement";
 
 // const App = () => {
 //   const loc = "hyderabad";
@@ -142,7 +143,8 @@ const App = () => {
       {/* <ReactPureComp /> */}
       {/* <ReactPureComp2 /> */}
       {/* <ExampleMemo /> */}
-      <ExampleUseReducer />
+      {/* <ExampleUseReducer /> */}
+      <GlobalStateManagement />
     </div>
   );
 };
