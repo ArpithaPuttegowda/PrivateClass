@@ -50,3 +50,26 @@
 .cg{
   color: green;
 }
+
+body{
+  margin:0
+}
+
+#header{
+  color: blue;
+    background: lightblue;
+    text-align: center;
+    font-style: italic;
+    font-size: 60px;
+}
+
+#footer{
+  color: blue;
+    background: lightblue;
+    text-align: center;
+    font-style: italic;
+    font-size: 30px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}

@@ -1,0 +1,34 @@
+<input placeholder="search" onkeyup="throttling()" />
+
+<!-- <script>
+  let timer;
+  function search() {
+    console.log("ajax");
+  }
+
+  function debouncing() {
+    clearTimeout(timer);
+    timer = setTimeout(() => {
+      search();
+    }, 2000);
+  }
+</script> -->
+
+<script>
+  let timer,
+    flag = true;
+  function search() {
+    console.log("ajax");
+  }
+
+  function throttling() {
+    if (flag) {
+      search();
+      flag = false;
+    }
+    clearTimeout(timer);
+    timer = setTimeout(() => {
+      search();
+    }, 2000);
+  }
+</script>

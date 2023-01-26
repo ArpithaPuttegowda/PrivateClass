@@ -39,6 +39,10 @@ import ExampleMemo from "./Components/PureComponentAndReactMemo/MemoReactEx";
 import {ExampleUseReducer} from "./Components/Hooks/ExampleUseReducer";
 import {GlobalStateManagement} from "./Components/GlobalStateManagementHooksContext/GlobalStatement";
 import {ExampleUseMemo} from "./Components/Hooks/ExampleUseMemo";
+import {ExampleUseCallback} from "./Components/Hooks/ExampleUseCallback";
+import {Header} from "./Components/Header/Header";
+import {Menu} from "./Components/Menu/Menu";
+import {Footer} from "./Components/Footer/Footer";
 
 // const App = () => {
 //   const loc = "hyderabad";
@@ -146,7 +150,11 @@ const App = () => {
       {/* <ExampleMemo /> */}
       {/* <ExampleUseReducer /> */}
       {/* <GlobalStateManagement /> */}
-      <ExampleUseMemo />
+      {/* <ExampleUseMemo /> */}
+      {/* <ExampleUseCallback /> */}
+      <Header />
+      <Menu />
+      <Footer />
     </div>
   );
 };
