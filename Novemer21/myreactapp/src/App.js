@@ -16,7 +16,7 @@ const App = () => {
         <b>Password</b>
         <input placeholder="password" type="password" />
       </p>
-      <CountExample />
+      <CountExample data="Mumbai" />
     </>
   );
 };

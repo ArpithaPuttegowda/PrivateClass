@@ -1,6 +1,6 @@
 import {useState} from "react";
 
-const CountExample = () => {
+const CountExample = ({data}) => {
   const [input, setInput] = useState(0);
   const [count, setCount] = useState(0);
   const handleChange = (e) => {
@@ -14,11 +14,21 @@ const CountExample = () => {
   };
   return (
     <h1>
-      <h2>Count</h2>
-      <h3>{count}</h3>
-      <button onClick={handleDec}>-</button>
-      <input type="number" value={input} onChange={handleChange} />
-      <button onClick={handleInc}>+</button>
+      <h2 data-testid="header">Count Value</h2>
+      <h3 data-testid="count">{count}</h3>
+      <button data-testid="dec" onClick={handleDec}>
+        -
+      </button>
+      <input
+        data-testid="input"
+        type="number"
+        value={input}
+        onChange={handleChange}
+      />
+      <button data-testid="inc" onClick={handleInc}>
+        +
+      </button>
+      <h1>{data}</h1>
     </h1>
   );
 };
