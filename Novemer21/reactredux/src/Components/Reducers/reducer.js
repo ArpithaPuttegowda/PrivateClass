@@ -6,5 +6,8 @@ export const nameLocReducer = (state = init, action) => {
   if (action.type === "LOC") {
     state = {...state, loc: action.data};
   }
+  if (action.type === "INPUT") {
+    state = {...state, input: action.payload};
+  }
   return state;
 };
