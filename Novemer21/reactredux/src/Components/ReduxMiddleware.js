@@ -1,14 +1,17 @@
 import React from "react";
-import {useDispatch} from "react-redux";
+import {connect, useDispatch} from "react-redux";
 import postAction from "../actions/postAction";
+import thunkAction from "../actions/thunkAction";
 import ServerCallService from "../Services/ServerCallService";
 
-const ReduxMiddleware = () => {
+const ReduxMiddleware = ({myThunkAction}) => {
   const dispatch = useDispatch();
   const getPost = () => {
     postAction(dispatch);
   };
-  const getComments = () => {};
+  const getComments = () => {
+    myThunkAction();
+  };
   const getUsers = () => {};
   return (
     <div>
@@ -18,5 +21,8 @@ const ReduxMiddleware = () => {
     </div>
   );
 };
+const mdp = {
+  myThunkAction: thunkAction
+};
 
-export default ReduxMiddleware;
+export default connect(null, mdp)(ReduxMiddleware);
