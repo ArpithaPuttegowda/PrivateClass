@@ -2,6 +2,7 @@ import React from "react";
 import {connect, useDispatch} from "react-redux";
 import postAction from "../actions/postAction";
 import thunkAction from "../actions/thunkAction";
+import {G_USERS} from "../Saga/constant";
 import ServerCallService from "../Services/ServerCallService";
 
 const ReduxMiddleware = ({myThunkAction}) => {
@@ -12,7 +13,11 @@ const ReduxMiddleware = ({myThunkAction}) => {
   const getComments = () => {
     myThunkAction();
   };
-  const getUsers = () => {};
+  const getUsers = () => {
+    dispatch({
+      type: G_USERS
+    });
+  };
   return (
     <div>
       <button onClick={getPost}>Get Post</button>

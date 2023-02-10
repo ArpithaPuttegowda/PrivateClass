@@ -6,6 +6,8 @@ const middlewareRed = (state = initMid, action) => {
       return (state = {...state, posts: action.res});
     case "COMMENTS":
       return (state = {...state, comments: action.payload});
+    case "USERS":
+      return (state = {...state, users: action.payload});
     default:
       return state;
   }
