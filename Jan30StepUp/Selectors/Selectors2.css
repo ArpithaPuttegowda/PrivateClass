@@ -1,0 +1,14 @@
+
+
+/* Parent and direct child selector */
+div>span{
+    color: red;
+   
+}
+
+/* Parent and direct and indirect  child selector */
+
+div>b>span{
+    border:2px solid green
+}
+

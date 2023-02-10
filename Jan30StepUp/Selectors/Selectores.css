@@ -1,0 +1,29 @@
+/* Universal Selector */
+*{
+    font-family: cursive;
+}
+/* tag name selector */
+div{
+color: brown;
+}
+
+span{
+    color: blueviolet;
+}
+
+/* Group Selector */
+
+p,.sf,span{
+font-style: italic;
+font-size: 50px;
+}
+
+/* id selector */
+#py{
+    color: red;
+}
+
+/* class selector */
+.font-large{
+ font-size: 100px;
+}

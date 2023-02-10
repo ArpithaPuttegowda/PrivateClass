@@ -1,0 +1,12 @@
+
+/* + immediate sibling */
+h1>div+p{
+    color: blue;
+}
+
+h1>p+span{ color:green }
+
+/* ~ all siblings */
+h1>div~p,h1>div~div,h1>div~span{
+    font-style: italic;
+}

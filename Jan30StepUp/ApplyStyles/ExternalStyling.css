@@ -1,0 +1,9 @@
+span,
+p,
+b {
+  color: darkblue
+}
+
+div{
+    color: chartreuse !important;
+}
