@@ -82,6 +82,8 @@ button{
     cursor: pointer;
     background: transparent;
     transition: 1s;
+
+    
 }
 button:hover{
     background: lightgreen;

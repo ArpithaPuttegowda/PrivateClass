@@ -5,6 +5,7 @@ var mongodb = require("mongodb");
 
 router.post("/std-insert", function (req, res) {
   var data = req.body.data;
+  console.log(data, "data");
   var mongoClient = mongodb.MongoClient;
   var url = "mongodb://localhost:27017";
 
@@ -46,3 +47,5 @@ router.get("/get-std", function (req, res, next) {
 });
 
 module.exports = router;
+
+//url: http://localhost:2021/student/std-insert, requestmethod:post
