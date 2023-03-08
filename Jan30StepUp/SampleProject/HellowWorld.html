@@ -6,12 +6,27 @@
 
 <script type="text/babel">
   //  functional component
-  const App = () => {
-    return <h1>Hellow World</h1>;
+  const HelloWorld = () => {
+    return <h1>Hellow</h1>;
   };
   //jsx => javascript , html and xml
   //react-scripts
+
+  const App = () => {
+    return (
+      <div>
+        <HelloWorld />
+        <HelloWorld />
+        <HelloWorld />
+        <HelloWorld />
+        <HelloWorld />
+        <HelloWorld />
+        <HelloWorld />
+      </div>
+    );
+  };
+
   ReactDOM.render(<App />, document.getElementById("root"), () => {
-    alert("called");
+    console.log("called");
   });
 </script>
