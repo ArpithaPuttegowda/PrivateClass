@@ -27,17 +27,31 @@
   //   let instance=new App()
   //   instance.render()
 
-  const App = () => {
-    return (
-      <div>
-        <HelloWorld />
-        <HelloWorld />
-        <HelloWorld />
-        <HelloWorld />
-        <HelloWorld />
-      </div>
-    );
-  };
+  //   const App = () => {
+  //     return (
+  //       <div>
+  //         <HelloWorld />
+  //         <HelloWorld />
+  //         <HelloWorld />
+  //         <HelloWorld />
+  //         <HelloWorld />
+  //       </div>
+  //     );
+  //   };
+
+  class App extends React.Component {
+    render() {
+      return (
+        <div>
+          <HelloWorld />
+          <HelloWorld />
+          <HelloWorld />
+          <HelloWorld />
+          <HelloWorld />
+        </div>
+      );
+    }
+  }
 
   ReactDOM.render(<App />, document.querySelector("#root"));
 </script>
