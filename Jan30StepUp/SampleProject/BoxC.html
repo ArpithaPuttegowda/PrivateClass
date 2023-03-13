@@ -16,7 +16,8 @@
   class Box extends React.Component {
     render() {
       console.log(this, "current obj");
-      return <div id="box">{this.props.data}</div>;
+      const {data, loc} = this.props;
+      return <div id="box">{data}</div>;
     }
   }
 
