@@ -1,25 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
+// export const name = "sachin";
+// export const loc = "mumbai";
+// export const runs = 123;
+const subject = "nodejs";
+const name = "sachin";
+const loc = "mumbai";
+const runs = 123;
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+class A {}
 
-export default App;
+// export {name, loc, runs};
+
+export {name, A};
+export {loc};
+export {runs};
+
+export default subject;
