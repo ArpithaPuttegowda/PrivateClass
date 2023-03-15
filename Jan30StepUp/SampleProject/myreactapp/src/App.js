@@ -1,17 +1,15 @@
-// export const name = "sachin";
-// export const loc = "mumbai";
-// export const runs = 123;
-const subject = "nodejs";
-const name = "sachin";
-const loc = "mumbai";
-const runs = 123;
+import {Player} from "./Components/Player";
+import {Parent} from "./Components/PtoC";
 
-class A {}
-
-// export {name, loc, runs};
-
-export {name, A};
-export {loc};
-export {runs};
-
-export default subject;
+const App = () => {
+  return (
+    <div>
+      <h1>App</h1>
+      <Player name="Sachin" loc="mumbai" />
+      <Player name="Dhoni" loc="ranchi" />
+      <Player name="kohli" loc="delhi" />
+      <Parent />
+    </div>
+  );
+};
+export default App;

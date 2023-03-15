@@ -1,11 +1,5 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import s, {name, loc, runs} from "./App";
+import App from "./App";
 
-ReactDOM.render(
-  <h1>
-    Hyderabad...{name}..{loc}..{runs}...{s}
-  </h1>,
-  document.getElementById("root"),
-  () => alert("called")
-);
+ReactDOM.render(<App />, document.getElementById("root"));
