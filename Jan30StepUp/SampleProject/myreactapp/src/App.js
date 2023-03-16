@@ -1,5 +1,7 @@
 import {Player} from "./Components/Player";
+import PlayerC from "./Components/PlayerC";
 import {Parent} from "./Components/PtoC";
+import ParentC from "./Components/PtoCClass";
 
 const App = () => {
   return (
@@ -9,6 +11,11 @@ const App = () => {
       <Player name="Dhoni" loc="ranchi" />
       <Player name="kohli" loc="delhi" />
       <Parent />
+      <h1>This is class component</h1>
+      <PlayerC loc="Mumbai" />
+      <PlayerC name="Dhoni" loc="Ranchi" />
+      <PlayerC name="Kohli" loc="Delhi" />
+      <ParentC />
     </div>
   );
 };
