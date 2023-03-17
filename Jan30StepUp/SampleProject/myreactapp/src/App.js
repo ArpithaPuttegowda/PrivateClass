@@ -1,3 +1,4 @@
+import Count from "./Components/Count";
 import {Player} from "./Components/Player";
 import PlayerC from "./Components/PlayerC";
 import {Parent} from "./Components/PtoC";
@@ -6,8 +7,8 @@ import ParentC from "./Components/PtoCClass";
 const App = () => {
   return (
     <div>
-      <h1>App</h1>
-      <Player name="Sachin" loc="mumbai" />
+      {/* <h1>App</h1> */}
+      {/* <Player name="Sachin" loc="mumbai" />
       <Player name="Dhoni" loc="ranchi" />
       <Player name="kohli" loc="delhi" />
       <Parent />
@@ -15,7 +16,8 @@ const App = () => {
       <PlayerC loc="Mumbai" />
       <PlayerC name="Dhoni" loc="Ranchi" />
       <PlayerC name="Kohli" loc="Delhi" />
-      <ParentC />
+      <ParentC /> */}
+      <Count />
     </div>
   );
 };
