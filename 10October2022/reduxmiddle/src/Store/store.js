@@ -4,13 +4,13 @@ import logger from "redux-logger";
 import thunk from "redux-thunk";
 import createSagaMiddleware from "redux-saga";
 import rootSaga from "../Actions/SagaAction/rootSaga";
-import nameLocRed from "../ReduxToolkit/slice";
+import nameLocReducer from "../ReduxToolkit/slice";
 
 const saga = createSagaMiddleware();
 
 const rootReducer = combineReducers({
   ajax: ajaxReducer,
-  nameLoc: nameLocRed
+  nameLoc: nameLocReducer
 });
 
 const store = configureStore({
