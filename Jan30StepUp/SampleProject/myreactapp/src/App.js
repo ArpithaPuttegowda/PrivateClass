@@ -1,4 +1,7 @@
+import AddC from "./Components/AddC";
 import Count from "./Components/Count";
+import {CountF} from "./Components/CountF";
+import {NameChangeF} from "./Components/NameChangeF";
 import {Player} from "./Components/Player";
 import PlayerC from "./Components/PlayerC";
 import {Parent} from "./Components/PtoC";
@@ -17,7 +20,10 @@ const App = () => {
       <PlayerC name="Dhoni" loc="Ranchi" />
       <PlayerC name="Kohli" loc="Delhi" />
       <ParentC /> */}
-      <Count />
+      {/* <Count /> */}
+      {/* <CountF />
+      <NameChangeF /> */}
+      <AddC />
     </div>
   );
 };
