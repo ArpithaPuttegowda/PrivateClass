@@ -16,10 +16,10 @@ class AddC extends Component {
     // let n2 = document.getElementById("n2").value;
     const n1 = this.n1Ref.current.value;
     const n2 = this.n2Ref.current.value;
-    const sum = Number(n1) + Number(n2);
+    const s = Number(n1) + Number(n2);
 
     this.setState({
-      sum
+      sum: s
     });
   };
   render() {
@@ -36,7 +36,18 @@ class AddC extends Component {
         <p>
           <button onClick={this.handleSum}>Sum</button>
         </p>
-        <h1>{this.state.sum}</h1>
+        <h1
+          style={{
+            color: this.state.sum > 100 ? "green" : "red",
+            background: "pink",
+            fontSize: "43px"
+          }}
+        >
+          {this.state.sum}
+        </h1>
+        <h2 className={this.state.sum > 100 ? "cr" : "cg"}>
+          Sum:{this.state.sum}
+        </h2>
       </div>
     );
   }

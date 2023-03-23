@@ -1,4 +1,6 @@
+import "./App.css";
 import AddC from "./Components/AddC";
+import {AddF} from "./Components/AddF";
 import Count from "./Components/Count";
 import {CountF} from "./Components/CountF";
 import {NameChangeF} from "./Components/NameChangeF";
@@ -23,7 +25,8 @@ const App = () => {
       {/* <Count /> */}
       {/* <CountF />
       <NameChangeF /> */}
-      <AddC />
+      {/* <AddC /> */}
+      <AddF />
     </div>
   );
 };
