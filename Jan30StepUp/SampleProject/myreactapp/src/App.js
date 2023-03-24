@@ -3,10 +3,12 @@ import AddC from "./Components/AddC";
 import {AddF} from "./Components/AddF";
 import Count from "./Components/Count";
 import {CountF} from "./Components/CountF";
+import Parent from "./Components/CtoPclass";
+import {ParentFunctional} from "./Components/CtoPFunctional";
 import {NameChangeF} from "./Components/NameChangeF";
 import {Player} from "./Components/Player";
 import PlayerC from "./Components/PlayerC";
-import {Parent} from "./Components/PtoC";
+// import {Parent} from "./Components/PtoC";
 import ParentC from "./Components/PtoCClass";
 
 const App = () => {
@@ -26,7 +28,9 @@ const App = () => {
       {/* <CountF />
       <NameChangeF /> */}
       {/* <AddC /> */}
-      <AddF />
+      {/* <AddF /> */}
+      <Parent />
+      <ParentFunctional />
     </div>
   );
 };
