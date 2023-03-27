@@ -1,6 +1,9 @@
 import "./App.css";
 import AddC from "./Components/AddC";
 import {AddF} from "./Components/AddF";
+import ContextAPIClass from "./Components/ContextAPI/ContextAPIClass";
+import ContextAPIF from "./Components/ContextAPI/ContextAPIF";
+import PropDrilling from "./Components/ContextAPI/PropDrilling";
 import Count from "./Components/Count";
 import {CountF} from "./Components/CountF";
 import Parent from "./Components/CtoPclass";
@@ -29,8 +32,11 @@ const App = () => {
       <NameChangeF /> */}
       {/* <AddC /> */}
       {/* <AddF /> */}
-      <Parent />
-      <ParentFunctional />
+      {/* <Parent /> */}
+      {/* <ParentFunctional /> */}
+      {/* <PropDrilling /> */}
+      <ContextAPIClass />
+      <ContextAPIF />
     </div>
   );
 };
