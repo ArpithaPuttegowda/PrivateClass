@@ -1,0 +1,7 @@
+In React, "prop drilling" refers to the process of passing down props (properties) from a component to its child components, and then to their child components, and so on, even if some of the intermediate components don't actually need those props.
+
+Prop drilling can occur when a component in the middle of the component tree needs to pass a prop down to a component that's several levels deeper in the tree. Rather than passing the prop directly to the deeper component, the prop is passed down through all of the intermediate components that don't actually use the prop.
+
+Prop drilling can make the code harder to understand and maintain, especially if the component tree is very deep or complex. It can also negatively impact performance, as every intermediate component must process and pass down the props.
+
+One way to avoid prop drilling is to use React's Context API, which allows data to be passed down the component tree without having to explicitly pass it through each intermediate component. Another option is to use state management libraries like Redux or MobX, which provide a centralized store for data that can be accessed by any component in the application.

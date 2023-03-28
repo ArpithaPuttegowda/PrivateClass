@@ -1,6 +1,8 @@
 import "./App.css";
 import AddC from "./Components/AddC";
 import {AddF} from "./Components/AddF";
+import {ContextAPI2} from "./Components/ContextAPI/ContextAPI2";
+import {ContextAPI3} from "./Components/ContextAPI/ContextAPI3";
 import ContextAPIClass from "./Components/ContextAPI/ContextAPIClass";
 import ContextAPIF from "./Components/ContextAPI/ContextAPIF";
 import PropDrilling from "./Components/ContextAPI/PropDrilling";
@@ -17,7 +19,7 @@ import ParentC from "./Components/PtoCClass";
 const App = () => {
   return (
     <div>
-      {/* <h1>App</h1> */}
+      {/* <h1>App</h1>
       {/* <Player name="Sachin" loc="mumbai" />
       <Player name="Dhoni" loc="ranchi" />
       <Player name="kohli" loc="delhi" />
@@ -35,8 +37,10 @@ const App = () => {
       {/* <Parent /> */}
       {/* <ParentFunctional /> */}
       {/* <PropDrilling /> */}
-      <ContextAPIClass />
-      <ContextAPIF />
+      {/* <ContextAPIClass />
+      <ContextAPIF /> */}
+      {/* <ContextAPI2 /> */}
+      <ContextAPI3 />
     </div>
   );
 };
