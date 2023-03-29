@@ -10,6 +10,7 @@ import Count from "./Components/Count";
 import {CountF} from "./Components/CountF";
 import Parent from "./Components/CtoPclass";
 import {ParentFunctional} from "./Components/CtoPFunctional";
+import LifeCycleMethodMouting from "./Components/LifeCycleMethods/LifeCycleMethodMouting";
 import {NameChangeF} from "./Components/NameChangeF";
 import {Player} from "./Components/Player";
 import PlayerC from "./Components/PlayerC";
@@ -40,7 +41,8 @@ const App = () => {
       {/* <ContextAPIClass />
       <ContextAPIF /> */}
       {/* <ContextAPI2 /> */}
-      <ContextAPI3 />
+      {/* <ContextAPI3 /> */}
+      <LifeCycleMethodMouting />
     </div>
   );
 };
