@@ -1,3 +1,4 @@
+import {useState} from "react";
 import "./App.css";
 import AddC from "./Components/AddC";
 import {AddF} from "./Components/AddF";
@@ -11,6 +12,7 @@ import {CountF} from "./Components/CountF";
 import Parent from "./Components/CtoPclass";
 import {ParentFunctional} from "./Components/CtoPFunctional";
 import LifeCycleMethodMouting from "./Components/LifeCycleMethods/LifeCycleMethodMouting";
+import LifeCycleMethodsUpdating from "./Components/LifeCycleMethods/LifeCycleMethodsUpdating";
 import {NameChangeF} from "./Components/NameChangeF";
 import {Player} from "./Components/Player";
 import PlayerC from "./Components/PlayerC";
@@ -18,6 +20,10 @@ import PlayerC from "./Components/PlayerC";
 import ParentC from "./Components/PtoCClass";
 
 const App = () => {
+  const [name, setName] = useState("Sachin");
+  const handleChangeName = () => {
+    name === "Sachin" ? setName("Dhoni") : setName("Sachin");
+  };
   return (
     <div>
       {/* <h1>App</h1>
@@ -42,7 +48,9 @@ const App = () => {
       <ContextAPIF /> */}
       {/* <ContextAPI2 /> */}
       {/* <ContextAPI3 /> */}
-      <LifeCycleMethodMouting />
+      {/* <LifeCycleMethodMouting /> */}
+      <LifeCycleMethodsUpdating data={name} />
+      <button onMouseOver={handleChangeName}>Change Name</button>
     </div>
   );
 };
