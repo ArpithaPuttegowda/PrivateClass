@@ -12,6 +12,7 @@ import {CountF} from "./Components/CountF";
 import Parent from "./Components/CtoPclass";
 import {ParentFunctional} from "./Components/CtoPFunctional";
 import LifeCycleMethodMouting from "./Components/LifeCycleMethods/LifeCycleMethodMouting";
+import LifeCycleMethodsUnmounting from "./Components/LifeCycleMethods/LifeCycleMethodsUnmounting";
 import LifeCycleMethodsUpdating from "./Components/LifeCycleMethods/LifeCycleMethodsUpdating";
 import {NameChangeF} from "./Components/NameChangeF";
 import {Player} from "./Components/Player";
@@ -48,9 +49,10 @@ const App = () => {
       <ContextAPIF /> */}
       {/* <ContextAPI2 /> */}
       {/* <ContextAPI3 /> */}
-      {/* <LifeCycleMethodMouting /> */}
-      <LifeCycleMethodsUpdating data={name} />
-      <button onMouseOver={handleChangeName}>Change Name</button>
+      <LifeCycleMethodMouting />
+      {/* <LifeCycleMethodsUpdating data={name} />
+      <button onMouseOver={handleChangeName}>Change Name</button> */}
+      {/* <LifeCycleMethodsUnmounting /> */}
     </div>
   );
 };
