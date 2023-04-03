@@ -6,11 +6,12 @@ import {ContextAPI2} from "./Components/ContextAPI/ContextAPI2";
 import {ContextAPI3} from "./Components/ContextAPI/ContextAPI3";
 import ContextAPIClass from "./Components/ContextAPI/ContextAPIClass";
 import ContextAPIF from "./Components/ContextAPI/ContextAPIF";
-import PropDrilling from "./Components/ContextAPI/PropDrilling";
+// import PropDrilling from "./Components/ContextAPI/PropDrilling";
 import Count from "./Components/Count";
 import {CountF} from "./Components/CountF";
 import Parent from "./Components/CtoPclass";
 import {ParentFunctional} from "./Components/CtoPFunctional";
+import {LifeCycleMethodF} from "./Components/LifeCycleMethods/LifeCycleMethodF";
 import LifeCycleMethodMouting from "./Components/LifeCycleMethods/LifeCycleMethodMouting";
 import LifeCycleMethodsUnmounting from "./Components/LifeCycleMethods/LifeCycleMethodsUnmounting";
 import LifeCycleMethodsUpdating from "./Components/LifeCycleMethods/LifeCycleMethodsUpdating";
@@ -49,10 +50,11 @@ const App = () => {
       <ContextAPIF /> */}
       {/* <ContextAPI2 /> */}
       {/* <ContextAPI3 /> */}
-      <LifeCycleMethodMouting />
+      {/* <LifeCycleMethodMouting /> */}
       {/* <LifeCycleMethodsUpdating data={name} />
       <button onMouseOver={handleChangeName}>Change Name</button> */}
       {/* <LifeCycleMethodsUnmounting /> */}
+      <LifeCycleMethodF />
     </div>
   );
 };

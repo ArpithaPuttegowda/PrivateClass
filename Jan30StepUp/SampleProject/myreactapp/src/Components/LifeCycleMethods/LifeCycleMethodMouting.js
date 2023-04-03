@@ -8,10 +8,9 @@ class LifeCycleMethodMouting extends Component {
   }
   static getDerivedStateFromProps() {
     console.log("getDerivedStateFromProps");
-
     return null;
   }
-  handleAjax = () => {};
+
   render() {
     console.log("render called");
     return (
@@ -23,7 +22,7 @@ class LifeCycleMethodMouting extends Component {
   }
   componentDidMount() {
     fetch("https://jsonplaceholder.typicode.com/posts")
-      .then((raw) => raw.json())
+      .then((rawResp) => rawResp.json())
       .then((actualData) => console.log(actualData))
       .catch(() => console.log("something went wrong"));
     console.log("componentDidMount");
