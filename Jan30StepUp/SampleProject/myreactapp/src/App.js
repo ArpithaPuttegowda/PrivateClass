@@ -53,8 +53,8 @@ const App = () => {
       {/* <LifeCycleMethodMouting /> */}
       {/* <LifeCycleMethodsUpdating data={name} />
       <button onMouseOver={handleChangeName}>Change Name</button> */}
-      {/* <LifeCycleMethodsUnmounting /> */}
-      <LifeCycleMethodF />
+      <LifeCycleMethodsUnmounting />
+      {/* <LifeCycleMethodF /> */}
     </div>
   );
 };

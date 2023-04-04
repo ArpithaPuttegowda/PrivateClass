@@ -21,8 +21,15 @@ export default LifeCycleMethodsUnmounting;
 class Child extends Component {
   componentWillUnmount() {
     alert("Unmounted");
+    clearInterval(this.id);
   }
   render() {
     return <div>I'm Child</div>;
+  }
+  componentDidMount() {
+    this.id = setInterval(() => {
+      console.log("child");
+    }, 2000);
+    console.log(this.id);
   }
 }

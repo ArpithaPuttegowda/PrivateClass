@@ -15,7 +15,8 @@ export const LifeCycleMethodF = () => {
   //componentDidUpdate
   useEffect(() => {
     console.log("I'm gonna executed for all the state and props changes");
-  });
+  }, [count]);
+
   const handleNameChange = () => {
     setName("Dhoni");
   };
