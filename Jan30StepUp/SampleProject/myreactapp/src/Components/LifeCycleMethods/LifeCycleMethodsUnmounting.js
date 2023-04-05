@@ -4,6 +4,7 @@ class LifeCycleMethodsUnmounting extends Component {
   state = {
     isChild: true
   };
+
   render() {
     return (
       <div>
@@ -26,6 +27,7 @@ class Child extends Component {
   render() {
     return <div>I'm Child</div>;
   }
+
   componentDidMount() {
     this.id = setInterval(() => {
       console.log("child");
