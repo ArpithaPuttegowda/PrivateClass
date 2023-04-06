@@ -1,17 +1,25 @@
 import React, {Component} from "react";
 
 class SetStateObjectCallBack extends Component {
-  state = {
-    count: 0
-  };
+  constructor() {
+    super();
+    this.data = 0;
+    this.state = {
+      count: 0
+    };
+  }
+
   handleClick = () => {
-    debugger;
     this.setState(
       {
         count: this.state.count + 1
       },
-      () => console.log(this.state.count, "count inside the callback")
+      () => {
+        this.data = this.state.count + 100;
+        console.log(this.data, "data");
+      }
     );
+    console.log(this.state.count + 100);
   };
   render() {
     return (
