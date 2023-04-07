@@ -1,0 +1,12 @@
+
+
+Real DOM     Virtual DOM1
+5000lines     5000lines
+count 2       count 2
+               
+               Diff algorithms
+
+               Virtual DOM2
+               5000 lines 
+               count 3
+              

@@ -1,8 +1,10 @@
 import React, {Component} from "react";
+import {Timer} from "./Components/ExamplesofUseEffects/Timer";
 import LifeCycleUnMounting2 from "./Components/LifeCycleMethods/LifeCycleUnMounting2";
 import SetStateCallback from "./Components/SetStateArguments/SetStateCallback";
 import SetStateObject from "./Components/SetStateArguments/SetStateObject";
 import SetStateObjectCallBack from "./Components/SetStateArguments/SetStateObjectCallback";
+import VirtualDOM from "./Components/VirtualDOM";
 
 class App extends Component {
   render() {
@@ -11,7 +13,9 @@ class App extends Component {
         {/* <LifeCycleUnMounting2 /> */}
         {/* <SetStateObject /> */}
         {/* <SetStateObjectCallBack /> */}
-        <SetStateCallback />
+        {/* <SetStateCallback /> */}
+        {/* <VirtualDOM /> */}
+        <Timer />
       </div>
     );
   }

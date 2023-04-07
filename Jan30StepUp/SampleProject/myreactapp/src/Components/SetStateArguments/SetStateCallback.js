@@ -3,7 +3,8 @@ import React, {Component} from "react";
 class SetStateCallback extends Component {
   state = {
     count: 0,
-    name: "Dhoni"
+    name: "Dhoni",
+    col: "red"
   };
   handleClick1 = () => {
     // this.setState((prevState) => {
