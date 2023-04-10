@@ -1,4 +1,6 @@
 import React, {Component} from "react";
+import {Form} from "./Components/ControlledComponents/Form";
+import {AjaxWithUseEffect} from "./Components/ExamplesofUseEffects/AjaxWithUseEffect";
 import {Timer} from "./Components/ExamplesofUseEffects/Timer";
 import LifeCycleUnMounting2 from "./Components/LifeCycleMethods/LifeCycleUnMounting2";
 import SetStateCallback from "./Components/SetStateArguments/SetStateCallback";
@@ -15,7 +17,9 @@ class App extends Component {
         {/* <SetStateObjectCallBack /> */}
         {/* <SetStateCallback /> */}
         {/* <VirtualDOM /> */}
-        <Timer />
+        {/* <Timer /> */}
+        {/* <AjaxWithUseEffect /> */}
+        <Form />
       </div>
     );
   }
