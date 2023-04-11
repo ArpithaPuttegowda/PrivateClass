@@ -2,6 +2,7 @@ import React, {Component} from "react";
 import {Form} from "./Components/ControlledComponents/Form";
 import {AjaxWithUseEffect} from "./Components/ExamplesofUseEffects/AjaxWithUseEffect";
 import {Timer} from "./Components/ExamplesofUseEffects/Timer";
+import Exception from "./Components/ExceptionHandling/Exception";
 import LifeCycleUnMounting2 from "./Components/LifeCycleMethods/LifeCycleUnMounting2";
 import SetStateCallback from "./Components/SetStateArguments/SetStateCallback";
 import SetStateObject from "./Components/SetStateArguments/SetStateObject";
@@ -19,7 +20,8 @@ class App extends Component {
         {/* <VirtualDOM /> */}
         {/* <Timer /> */}
         {/* <AjaxWithUseEffect /> */}
-        <Form />
+        {/* <Form /> */}
+        <Exception />
       </div>
     );
   }
