@@ -3,6 +3,7 @@ import {Form} from "./Components/ControlledComponents/Form";
 import {AjaxWithUseEffect} from "./Components/ExamplesofUseEffects/AjaxWithUseEffect";
 import {Timer} from "./Components/ExamplesofUseEffects/Timer";
 import Exception from "./Components/ExceptionHandling/Exception";
+import MyAnotherComp from "./Components/ExceptionHandling/MyAnotherComp";
 import LifeCycleUnMounting2 from "./Components/LifeCycleMethods/LifeCycleUnMounting2";
 import SetStateCallback from "./Components/SetStateArguments/SetStateCallback";
 import SetStateObject from "./Components/SetStateArguments/SetStateObject";
@@ -22,6 +23,7 @@ class App extends Component {
         {/* <AjaxWithUseEffect /> */}
         {/* <Form /> */}
         <Exception />
+        <MyAnotherComp />
       </div>
     );
   }

@@ -1,7 +1,7 @@
 import React, {Component} from "react";
 import {Hero} from "./Hero";
 
-class Exception extends Component {
+class MyAnotherComp extends Component {
   constructor() {
     super();
     this.state = {
@@ -23,15 +23,11 @@ class Exception extends Component {
         {this.state.isError ? (
           "something went wrong"
         ) : (
-          <>
-            <Hero heroName="Prabas">Pune</Hero>
-            <Hero heroName="MB" />
-            <Hero heroName="joker" />
-          </>
+          <Hero heroName="joker" />
         )}
       </div>
     );
   }
 }
 
-export default Exception;
+export default MyAnotherComp;

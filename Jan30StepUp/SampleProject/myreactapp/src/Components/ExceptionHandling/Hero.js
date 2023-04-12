@@ -1,13 +1,12 @@
 import React from "react";
 
-export const Hero = ({heroName}) => {
-  try {
-    if (heroName === "joker") {
-      throw new Error("joker is not a hero");
-    }
-  } catch (e) {
-    console.log(e);
+export const Hero = ({heroName, children}) => {
+  if (heroName === "joker") {
+    throw new Error("joker is not a hero");
   }
-
-  return <div>Hero:::{heroName}</div>;
+  return (
+    <div>
+      Hero:::{heroName}...{children}
+    </div>
+  );
 };
