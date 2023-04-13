@@ -1,34 +1,22 @@
 import React, {Component} from "react";
+import ErrorBoundary from "./ErrorBoundary";
 import {Hero} from "./Hero";
 
 class Exception extends Component {
-  constructor() {
-    super();
-    this.state = {
-      isError: false
-    };
-  }
-  static getDerivedStateFromError() {
-    alert("componentdidCatch called");
-    return {
-      isError: true
-    };
-  }
-  componentDidCatch(e) {
-    console.log(e, "myError message");
-  }
   render() {
     return (
       <div>
-        {this.state.isError ? (
-          "something went wrong"
-        ) : (
-          <>
+        <>
+          <ErrorBoundary>
             <Hero heroName="Prabas">Pune</Hero>
+          </ErrorBoundary>
+          <ErrorBoundary>
             <Hero heroName="MB" />
+          </ErrorBoundary>
+          <ErrorBoundary>
             <Hero heroName="joker" />
-          </>
-        )}
+          </ErrorBoundary>
+        </>
       </div>
     );
   }

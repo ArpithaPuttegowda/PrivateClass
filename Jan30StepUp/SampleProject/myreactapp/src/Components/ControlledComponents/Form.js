@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect} from "react";
 
 export const Form = () => {
   return (
@@ -6,7 +6,7 @@ export const Form = () => {
       <h1>Registration Form</h1>
       <p>
         <b>Name:</b>
-        <input required />
+        <input />
       </p>
       <p>
         <b>Password:</b>
