@@ -2,9 +2,10 @@ import React from "react";
 
 export const RenderColorFlower = () => {
   const colFlower = [
-    {clr: "Red", flr: "Rose"},
     {clr: "white", flr: "Jasmin"},
+    {clr: "Red", flr: "Rose"},
     {clr: "yellow", flr: "lilly"},
+    {clr: "orange", flr: "sunflower"},
     {clr: "pink", flr: "hibscus"}
   ];
   return (

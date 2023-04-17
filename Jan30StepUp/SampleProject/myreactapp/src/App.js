@@ -5,6 +5,9 @@ import MyAnotherComp from "./Components/ExceptionHandling/MyAnotherComp";
 import {Players} from "./Components/ListAndKeys/Players";
 import {DropDown} from "./Components/ListAndKeys/DropDown";
 import {RenderColorFlower} from "./Components/ListAndKeys/RenderColorFlower";
+import {Input} from "./Components/ListAndKeys/Input";
+import {OrderUnOrderedList} from "./Components/ListAndKeys/OrderUnOrderedList";
+import {TableList} from "./Components/ListAndKeys/TableList";
 
 const App = () => {
   return (
@@ -14,7 +17,10 @@ const App = () => {
       <Form /> */}
       {/* <Players />
       <DropDown /> */}
-      <RenderColorFlower />
+      {/* <RenderColorFlower /> */}
+      {/* <Input />
+      <OrderUnOrderedList /> */}
+      <TableList />
     </div>
   );
 };
