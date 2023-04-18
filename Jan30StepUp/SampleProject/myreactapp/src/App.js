@@ -1,26 +1,30 @@
-import React from "react";
-import {Form} from "./Components/ControlledComponents/Form";
-import Exception from "./Components/ExceptionHandling/Exception";
-import MyAnotherComp from "./Components/ExceptionHandling/MyAnotherComp";
-import {Players} from "./Components/ListAndKeys/Players";
-import {DropDown} from "./Components/ListAndKeys/DropDown";
-import {RenderColorFlower} from "./Components/ListAndKeys/RenderColorFlower";
-import {Input} from "./Components/ListAndKeys/Input";
-import {OrderUnOrderedList} from "./Components/ListAndKeys/OrderUnOrderedList";
-import {TableList} from "./Components/ListAndKeys/TableList";
+import React, {useEffect, useRef} from "react";
+import {InputReusuable} from "./Components/ResuableComponents/GenericComponents/Input";
+import {OrderedListComp} from "./Components/ResuableComponents/GenericComponents/OrderedListComp";
+import {ColorList} from "./Components/ResuableComponents/WithoutResuability/ColorList";
+import {FlowerList} from "./Components/ResuableComponents/WithoutResuability/FlowerList";
 
 const App = () => {
+  useEffect(() => {
+    myRef?.current?.focus();
+  }, []);
+  const myRef = useRef();
+  const data = ["Jamun", "Champakali"];
+  const inputData = [
+    {label: "NAME:", type: "text"},
+    {label: "Password:", type: "password"}
+  ];
   return (
     <div>
-      {/* <Exception />
-      <MyAnotherComp />
-      <Form /> */}
-      {/* <Players />
-      <DropDown /> */}
-      {/* <RenderColorFlower /> */}
-      {/* <Input />
-      <OrderUnOrderedList /> */}
-      <TableList />
+      <ColorList />
+      <FlowerList />
+      <OrderedListComp data={data} />
+      {inputData?.map((obj, i) => {
+        const {label, type} = obj;
+        return (
+          <InputReusuable key={obj?.label + i} label={label} type={type} />
+        );
+      })}
     </div>
   );
 };
