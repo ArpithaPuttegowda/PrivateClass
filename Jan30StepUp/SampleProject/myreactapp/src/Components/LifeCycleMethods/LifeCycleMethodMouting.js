@@ -1,26 +1,46 @@
 import React, {Component} from "react";
 
 class LifeCycleMethodMouting extends Component {
-  constructor() {
+  constructor(properties) {
     super();
-    this.state = {};
-    console.log("constructor called");
+    this.state = {
+      count: 0,
+      loc: "mumbai"
+    };
+    console.log("constructor called", properties);
   }
-  static getDerivedStateFromProps() {
-    console.log("getDerivedStateFromProps");
-    return null;
+  static getDerivedStateFromProps(nextProps, nextState) {
+    if (nextState.count === 4) {
+      return {
+        loc: "Delhi"
+      };
+    }
   }
 
-  render() {
-    console.log("render called");
+  shouldComponentUpdate(nextProps, nextState, {}) {
+    return true;
+  }
+
+  handleCount = () => {
+    this.setState({
+      count: this.state.count + 1
+    });
+  };
+
+  render(a, b, c) {
     return (
       <div>
-        Get Data in the first time load
-        {/* <button onClick={this.handleAjax}>Click me </button> */}
+        <button onClick={this.handleCount}>Inc Count {this.state.count}</button>
+        <p>{this.state.loc}</p>
       </div>
     );
   }
-  componentDidMount() {
+
+  getSnapshotBeforeUpdate(prevProp, prevState) {}
+  componentDidUpdate(prevProp, prevState) {
+    debugger;
+  }
+  componentDidMount(a, b, c) {
     fetch("https://jsonplaceholder.typicode.com/posts")
       .then((rawResp) => rawResp.json())
       .then((actualData) => console.log(actualData))

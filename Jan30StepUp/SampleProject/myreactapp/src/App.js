@@ -7,6 +7,10 @@ import {DropDownReusuable} from "./Components/ResuableComponents/GenericComponen
 import {TableReusableComp} from "./Components/ResuableComponents/GenericComponents/TableReusableComp";
 import ButtonComp from "./Components/HOC/ButtonComp";
 import HoverComp from "./Components/HOC/HoverComp";
+import {ButtonWithCustom} from "./Components/HOC/ButtonWithCustom";
+import {HoverWithCustom} from "./Components/HOC/HoverWithCustom";
+import LifeCycleMethodMouting from "./Components/LifeCycleMethods/LifeCycleMethodMouting.js";
+import CountPureComp from "./Components/PureComponentReactMemo/CountPureComp.js";
 
 const App = () => {
   useEffect(() => {
@@ -44,8 +48,11 @@ const App = () => {
         data={[{sId: "1", tId: "2", sT: "Finals"}]}
         keys={["sId", "tId", "sT"]}
       /> */}
-      <ButtonComp />
-      <HoverComp />
+      {/* <ButtonComp />
+      <HoverComp /> */}
+      {/* <ButtonWithCustom />
+      <HoverWithCustom /> */}
+      <CountPureComp />
     </div>
   );
 };
