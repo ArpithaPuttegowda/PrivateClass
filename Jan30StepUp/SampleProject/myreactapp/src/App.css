@@ -1,3 +1,6 @@
+body{
+  margin:0
+}
 .App {
   text-align: center;
 }
@@ -44,4 +47,18 @@ background: greenyellow;
 .cg{
 color: green;
 background: purple;
+}
+
+header{
+  color: blue;
+    text-align: center;
+    background: yellow;
+}
+footer{
+  position: fixed;
+  background: yellow;
+  color: blue;
+  width: 100%;
+  text-align: center;
+  bottom: 0;
 }

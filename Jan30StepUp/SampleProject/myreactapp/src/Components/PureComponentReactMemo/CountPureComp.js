@@ -1,4 +1,4 @@
-import React, {PureComponent, Component} from "react";
+import React, {PureComponent} from "react";
 
 class CountPureComp extends PureComponent {
   state = {
