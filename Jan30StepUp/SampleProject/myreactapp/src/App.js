@@ -6,11 +6,11 @@ import "./App.css";
 
 const App = () => {
   return (
-    <div>
+    <>
       <Header />
       <Menu />
       <Footer />
-    </div>
+    </>
   );
 };
 export default App;
