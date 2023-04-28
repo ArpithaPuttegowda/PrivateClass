@@ -3,6 +3,7 @@ import {BrowserRouter, Link, Route, Routes} from "react-router-dom";
 import {AboutUs} from "../AboutUs";
 import {ExampleUseMemo} from "../Hooks/ExampleUseMemo";
 import {PageNotFound} from "../PageNotFount";
+import {ExampleCallback} from "../Hooks/ExampleCallback";
 
 export const Menu = () => {
   return (
@@ -12,13 +13,13 @@ export const Menu = () => {
           <Link to="/">Home</Link>
           <Link to="/about">About</Link>
           <Link to="/useMemo">Usememo</Link>
-          <Link to="/reg">Registration Page</Link>
+          <Link to="/useCb">UseCallBack</Link>
         </div>
         <Routes>
           <Route path="/" element={<div>Home</div>} />
           <Route element={<AboutUs />} path="/about" />
           <Route path="/useMemo" element={<ExampleUseMemo />} />
-          <Route path="/reg" element={<div>Register</div>} />
+          <Route path="/useCb" element={<ExampleCallback />} />
           <Route path="*" element={<PageNotFound />} />
         </Routes>
       </BrowserRouter>
