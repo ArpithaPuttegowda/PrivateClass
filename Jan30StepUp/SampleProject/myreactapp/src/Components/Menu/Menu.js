@@ -4,6 +4,7 @@ import {AboutUs} from "../AboutUs";
 import {ExampleUseMemo} from "../Hooks/ExampleUseMemo";
 import {PageNotFound} from "../PageNotFount";
 import {ExampleCallback} from "../Hooks/ExampleCallback";
+import {Home} from "../Home";
 
 export const Menu = () => {
   return (
@@ -16,7 +17,7 @@ export const Menu = () => {
           <Link to="/useCb">UseCallBack</Link>
         </div>
         <Routes>
-          <Route path="/" element={<div>Home</div>} />
+          <Route path="/" element={<Home />} />
           <Route element={<AboutUs />} path="/about" />
           <Route path="/useMemo" element={<ExampleUseMemo />} />
           <Route path="/useCb" element={<ExampleCallback />} />
