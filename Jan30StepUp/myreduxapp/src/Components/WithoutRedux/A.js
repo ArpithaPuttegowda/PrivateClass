@@ -1,10 +1,15 @@
-import React from "react";
+import React, {useRef} from "react";
 
-export const A = () => {
+export const A = ({getName}) => {
+  const nameRef = useRef(null);
+  const handleName = () => {
+    let name = nameRef?.current?.value;
+    getName(name);
+  };
   return (
     <p>
-      <input />
-      <button>Name</button>
+      <input ref={nameRef} />
+      <button onClick={handleName}>Name</button>
     </p>
   );
 };
