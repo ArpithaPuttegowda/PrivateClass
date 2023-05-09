@@ -2,7 +2,7 @@ import axios from "axios";
 import React, {useEffect} from "react";
 import {useDispatch, useSelector} from "react-redux";
 
-export const Ajax = () => {
+const Ajax = () => {
   const dispatch = useDispatch();
   const state = useSelector((state) => state);
   const data = state?.ajax?.data;
@@ -17,11 +17,18 @@ export const Ajax = () => {
       })
       .catch((failure) => {});
   }, []);
+
+  // const delay = () => {
+  //   for (let i = 0; i <= 1000000000; i++) {}
+  //   return 10;
+  // };
   return (
     <div>
+      {/* <h1>{delay()}</h1> */}
       {data?.map((obj, i) => {
         return <h1 key={obj?.userId}>{obj?.title}</h1>;
       })}
     </div>
   );
 };
+export default Ajax;

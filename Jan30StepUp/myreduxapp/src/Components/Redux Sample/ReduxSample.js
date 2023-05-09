@@ -3,7 +3,7 @@ import {A} from "./A";
 import {B} from "./B";
 import {C} from "./C";
 
-export const ReduxSample = () => {
+const ReduxSample = () => {
   return (
     <div>
       <A />
@@ -12,3 +12,4 @@ export const ReduxSample = () => {
     </div>
   );
 };
+export default ReduxSample;

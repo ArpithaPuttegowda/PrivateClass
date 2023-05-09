@@ -6,3 +6,8 @@ export const initData = {
 export const initAjax = {
   data: []
 };
+
+export const initDataC = {
+  name: "",
+  loc: ""
+};
