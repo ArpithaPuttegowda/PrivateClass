@@ -4,7 +4,8 @@ export const initData = {
 };
 
 export const initAjax = {
-  data: []
+  data: [],
+  comments: []
 };
 
 export const initDataC = {
