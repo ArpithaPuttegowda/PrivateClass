@@ -3,6 +3,7 @@ import nameLocReducer from "../Reducers/nameLocReducer";
 import logger from "redux-logger";
 import ajaxRed from "../Reducers/ajax";
 import nameLoc from "../Reducers/nameLocRedC";
+import thunk from "redux-thunk";
 
 const rootReducer = combineReducers({
   nl: nameLocReducer,
@@ -12,7 +13,7 @@ const rootReducer = combineReducers({
 
 const store = configureStore({
   reducer: rootReducer,
-  middleware: [logger]
+  middleware: [logger, thunk]
 });
 
 export default store;
