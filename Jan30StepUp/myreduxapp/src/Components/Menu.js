@@ -5,6 +5,7 @@ import {Loader} from "./Loader";
 // import ReduxSample from "./Redux Sample/ReduxSample";
 import Ajax from "./Ajax";
 import {ReduxWithConnect} from "./UsingConnectMethod/ReduxWithConnect";
+import { Users } from "./Thunk-redux/Users";
 const WithoutRedux = lazy(() => import("./WithoutRedux/WithoutRedux"));
 const ReduxSample = lazy(() => {
   return import("./Redux Sample/ReduxSample");
@@ -26,8 +27,8 @@ export const Menu = () => {
       children: "Ajax-Ex"
     },
     {
-      to: "connect",
-      children: "Connect"
+      to: "thunk",
+      children: "Thunk"
     },
     {
       to: "reduxC",
@@ -38,7 +39,12 @@ export const Menu = () => {
     {path: "withoutRedux", element: <WithoutRedux />},
     {path: "redux-sample", element: <ReduxSample />},
     {path: "ajax", element: <Ajax />},
-    {path: "reduxC", element: <ReduxWithConnect />}
+    {path: "reduxC", element: <ReduxWithConnect />},
+    {
+      path:"thunk",
+      element:<Users/>
+    }
+
   ];
   return (
     <HashRouter>
