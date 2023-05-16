@@ -10,7 +10,6 @@ export const Users = () => {
     return (
         <div>
             <button onClick={handleUsers}>Users</button>
-
         </div>
     )
 }
