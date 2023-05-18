@@ -13,9 +13,16 @@ const Ajax = ({thunkAction}) => {
   const handleComments = () => {
     thunkAction();
   };
+
+  const handleUsers=()=>{
+    dispatch({
+      type:'PHOTOS_SAGA'
+    })
+  }
   return (
     <div>
-      <button onClick={handleComments}>Comments</button>
+     <p><button onClick={handleComments}>Comments</button></p> 
+     <p> <button onClick={handleUsers}>Users</button></p>
       {/* {data?.map((obj, i) => {
         return <h1 key={obj?.userId}>{obj?.title}</h1>;
       })} */}

@@ -6,7 +6,9 @@ export const initData = {
 export const initAjax = {
   data: [],
   comments: [],
-  users:[]
+  users:[],
+  users_saga:[],
+  saga_error_message_users:""
 };
 
 export const initDataC = {

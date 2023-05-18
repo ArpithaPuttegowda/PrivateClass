@@ -4,7 +4,7 @@ import logger from "redux-logger";
 import ajaxRed from "../Reducers/ajax";
 import nameLoc from "../Reducers/nameLocRedC";
 import thunk from "redux-thunk";
-import createSagaMiddleware from "@redux-saga";
+import createSagaMiddleware from "redux-saga";
 import rootSaga from "../Components/Saga/rootSaga";
 
 const sagaMiddleware = createSagaMiddleware()
