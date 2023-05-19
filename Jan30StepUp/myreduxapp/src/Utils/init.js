@@ -1,17 +1,18 @@
 export const initData = {
   name: "",
-  loc: ""
+  loc: "",
 };
 
 export const initAjax = {
   data: [],
   comments: [],
-  users:[],
-  users_saga:[],
-  saga_error_message_users:""
+  users: [],
+  users_saga: [],
+  saga_error_message_users: "",
+  todo: [],
 };
 
 export const initDataC = {
   name: "",
-  loc: ""
+  loc: "",
 };

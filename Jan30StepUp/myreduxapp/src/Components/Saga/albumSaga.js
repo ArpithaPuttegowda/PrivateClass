@@ -1,4 +1,4 @@
-import { call, takeLatest, put } from "redux-saga/effects";
+import { call, takeLatest, put, throttle } from "redux-saga/effects";
 import ServerCallService from "../../ServerCallService/ServerCallService";
 
 function* photos() {
@@ -20,10 +20,21 @@ function* photos() {
 }
 
 function* userAlbum() {}
+function* todos() {
+  const res = yield call(
+    ServerCallService.get,
+    "https://jsonplaceholder.typicode.com/todos"
+  );
+  yield put({
+    type: "TODO",
+    todo: res.data,
+  });
+}
 
 function* rootAlbum() {
-  yield takeLatest("PHOTOS_SAGA", photos);
+  yield throttle(5000, "PHOTOS_SAGA", photos);
   yield takeLatest("USER_ALBUM", userAlbum);
+  yield throttle(4000, "TODO_SAGA", todos);
 }
 
 export default rootAlbum;

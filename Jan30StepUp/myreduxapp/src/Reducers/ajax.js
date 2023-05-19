@@ -16,6 +16,9 @@ const ajaxRed = (state = initAjax, action) => {
   if (action.type === "ERROR_USERS") {
     state = { ...state, saga_error_message_users: action.payload };
   }
+  if (action.type === "TODO") {
+    state = { ...state, todo: action.todo };
+  }
   return state;
 };
 export default ajaxRed;
