@@ -1,11 +1,12 @@
-import React, {Suspense, lazy} from "react";
-import {HashRouter, Link, Route, Routes} from "react-router-dom";
-import {Loader} from "./Loader";
+import React, { Suspense, lazy } from "react";
+import { HashRouter, Link, Route, Routes } from "react-router-dom";
+import { Loader } from "./Loader";
 // import WithoutRedux from "./WithoutRedux/WithoutRedux";
 // import ReduxSample from "./Redux Sample/ReduxSample";
 import Ajax from "./Ajax";
-import {ReduxWithConnect} from "./UsingConnectMethod/ReduxWithConnect";
+import { ReduxWithConnect } from "./UsingConnectMethod/ReduxWithConnect";
 import { Users } from "./Thunk-redux/Users";
+import { ReduxToolkit } from "./ReduxToolkit/ReduxToolkit";
 const WithoutRedux = lazy(() => import("./WithoutRedux/WithoutRedux"));
 const ReduxSample = lazy(() => {
   return import("./Redux Sample/ReduxSample");
@@ -16,35 +17,42 @@ export const Menu = () => {
   const linkData = [
     {
       to: "withoutRedux",
-      children: "WithOutRedux"
+      children: "WithOutRedux",
     },
     {
       to: "redux-sample",
-      children: "Redux Sample"
+      children: "Redux Sample",
     },
     {
       to: "ajax",
-      children: "Ajax-Ex"
+      children: "Ajax-Ex",
     },
     {
       to: "thunk",
-      children: "Thunk"
+      children: "Thunk",
     },
     {
       to: "reduxC",
-      children: "Redux With Connect"
-    }
+      children: "Redux With Connect",
+    },
+    {
+      to: "redux-toolkit",
+      children: "Redux toolkit",
+    },
   ];
   const routeData = [
-    {path: "withoutRedux", element: <WithoutRedux />},
-    {path: "redux-sample", element: <ReduxSample />},
-    {path: "ajax", element: <Ajax />},
-    {path: "reduxC", element: <ReduxWithConnect />},
+    { path: "withoutRedux", element: <WithoutRedux /> },
+    { path: "redux-sample", element: <ReduxSample /> },
+    { path: "ajax", element: <Ajax /> },
+    { path: "reduxC", element: <ReduxWithConnect /> },
     {
-      path:"thunk",
-      element:<Users/>
-    }
-
+      path: "thunk",
+      element: <Users />,
+    },
+    {
+      path: "redux-toolkit",
+      element: <ReduxToolkit />,
+    },
   ];
   return (
     <HashRouter>
