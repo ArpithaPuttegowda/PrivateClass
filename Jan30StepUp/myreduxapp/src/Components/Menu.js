@@ -8,6 +8,7 @@ import { ReduxWithConnect } from "./UsingConnectMethod/ReduxWithConnect";
 import { Users } from "./Thunk-redux/Users";
 import { ReduxToolkit } from "./ReduxToolkit/ReduxToolkit";
 import { GetComments } from "./ReduxToolkit/GetComments";
+import { Counter } from "./useReducer/Counter";
 const WithoutRedux = lazy(() => import("./WithoutRedux/WithoutRedux"));
 const ReduxSample = lazy(() => {
   return import("./Redux Sample/ReduxSample");
@@ -44,6 +45,10 @@ export const Menu = () => {
       to: "comments",
       children: "GET COMMENTS",
     },
+    {
+      to: "useReducer",
+      children: "useReducer",
+    },
   ];
   const routeData = [
     { path: "withoutRedux", element: <WithoutRedux /> },
@@ -61,6 +66,10 @@ export const Menu = () => {
     {
       path: "comments",
       element: <GetComments />,
+    },
+    {
+      path: "useReducer",
+      element: <Counter />,
     },
   ];
   return (
