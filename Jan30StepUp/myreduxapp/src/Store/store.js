@@ -7,6 +7,7 @@ import thunk from "redux-thunk";
 import createSagaMiddleware from "redux-saga";
 import rootSaga from "../Components/Saga/rootSaga";
 import nameLocSlice from "../Components/ReduxToolkit/nameLocSlice";
+import ajaxSlice from "../Components/ReduxToolkit/ajaxSlice";
 
 const sagaMiddleware = createSagaMiddleware();
 const rootReducer = combineReducers({
@@ -14,6 +15,7 @@ const rootReducer = combineReducers({
   ajax: ajaxRed,
   nlC: nameLoc,
   nlRTK: nameLocSlice,
+  ajaxRTK: ajaxSlice,
 });
 
 const store = configureStore({
