@@ -45,3 +45,32 @@
 .navbar ul li:hover::after{
     width: 100%;
 }
+.content{
+    width: 100%;
+    position: absolute;
+    top:50%;
+    text-align: center;
+    color:blue;
+    transform: translateY(-50%);
+}
+.content h1{
+    font-size: 80px;
+    text-transform: uppercase;
+    margin: 20px;
+}
+button{
+    width: 100px;
+    padding: 10px;
+    text-align: center;
+    margin: 10px;
+    color: white;
+    background: blue;
+    border-radius: 20px;
+    border:2px solid red;
+    cursor: pointer;
+    transition: 1s;
+}
+button:hover{
+    background: yellow;
+    color:brown
+}

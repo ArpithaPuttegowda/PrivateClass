@@ -1,0 +1,38 @@
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  header {
+    background: lightblue;
+    padding: 20px;
+  }
+
+  main {
+    flex: 1;
+    overflow-y: auto; /* Enable vertical scrolling if content exceeds available space */
+    padding: 20px;
+  }
+
+  footer {
+    background: lightgray;
+    padding: 20px;
+  }
+</style>
+<body>
+  <div class="container">
+    <header>Header</header>
+    <main>Content</main>
+    <footer>Footer</footer>
+  </div>
+</body>
