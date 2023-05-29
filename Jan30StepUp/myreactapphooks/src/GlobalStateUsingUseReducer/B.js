@@ -9,6 +9,7 @@ export const B = () => {
       type: "LOC",
       payload: locRef?.current?.value,
     });
+    locRef.current.value = "";
   };
   return (
     <div>

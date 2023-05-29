@@ -9,6 +9,7 @@ export const A = () => {
       type: "NAME",
       payload: nameRef?.current?.value,
     });
+    nameRef.current.value = "";
   };
   return (
     <div>
