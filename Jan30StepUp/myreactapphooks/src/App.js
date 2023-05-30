@@ -7,6 +7,8 @@
 // import { initData } from "./initData";
 // import { ctx } from "./ctx";
 
+import { Counter } from "./Counter/Counter";
+
 // function App() {
 //   const [state, dispatch] = useReducer(reducer, initData);
 //   return (
@@ -26,6 +28,9 @@ const App = () => {
     <div>
       Hellow world
       <span>Pune</span>
+      <button disabled>Submit</button>
+      <button data-testid="register-btn">Register</button>
+      <Counter />
     </div>
   );
 };
