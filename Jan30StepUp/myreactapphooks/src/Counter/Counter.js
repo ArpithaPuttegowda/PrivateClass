@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "./Counter.css";
 
 export const Counter = () => {
   const [count, setCount] = useState(0);
@@ -15,8 +16,11 @@ export const Counter = () => {
   };
   return (
     <div>
-      <h1 data-testid="heading">
-        Counter <span data-testid="count">{count}</span>
+      <h1 data-testid="heading" className={count > 100 ? "cr" : "cg"}>
+        Counter{" "}
+        <span data-testid="count" id="count" className="my-count">
+          {count}
+        </span>
       </h1>
       <button data-testid="inc-btn" onClick={handleInc}>
         +
