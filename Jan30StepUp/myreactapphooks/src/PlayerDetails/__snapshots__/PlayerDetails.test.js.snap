@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PlayerDetails should render successufully 1`] = `
+<div>
+  <div>
+    <b>
+      Name:
+    </b>
+    <span />
+    <b>
+      Loc:
+    </b>
+    <span />
+  </div>
+</div>
+`;

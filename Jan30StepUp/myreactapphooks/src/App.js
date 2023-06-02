@@ -8,6 +8,8 @@
 // import { ctx } from "./ctx";
 
 import { Counter } from "./Counter/Counter";
+import { CountryDown } from "./DropDown/CountryDown";
+import { PlayerDetails } from "./PlayerDetails/PlayerDetails";
 
 // function App() {
 //   const [state, dispatch] = useReducer(reducer, initData);
@@ -31,6 +33,8 @@ const App = () => {
       <button disabled>Submit</button>
       <button data-testid="register-btn">Register</button>
       <Counter />
+      <PlayerDetails name="Dhoni" loc="Ranchi" />
+      <CountryDown country={["India", "China"]} />
     </div>
   );
 };
