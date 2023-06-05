@@ -7,6 +7,7 @@
 // import { initData } from "./initData";
 // import { ctx } from "./ctx";
 
+import { Ajax } from "./Ajax/Ajax";
 import { Counter } from "./Counter/Counter";
 import { CountryDown } from "./DropDown/CountryDown";
 import { PlayerDetails } from "./PlayerDetails/PlayerDetails";
@@ -35,6 +36,7 @@ const App = () => {
       <Counter />
       <PlayerDetails name="Dhoni" loc="Ranchi" />
       <CountryDown country={["India", "China"]} />
+      <Ajax />
     </div>
   );
 };
