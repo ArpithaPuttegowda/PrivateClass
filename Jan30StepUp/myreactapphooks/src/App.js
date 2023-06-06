@@ -10,6 +10,7 @@
 import { Ajax } from "./Ajax/Ajax";
 import { Counter } from "./Counter/Counter";
 import { CountryDown } from "./DropDown/CountryDown";
+import { GetData } from "./GetData/GetData";
 import { PlayerDetails } from "./PlayerDetails/PlayerDetails";
 
 // function App() {
@@ -37,6 +38,7 @@ const App = () => {
       <PlayerDetails name="Dhoni" loc="Ranchi" />
       <CountryDown country={["India", "China"]} />
       <Ajax />
+      <GetData />
     </div>
   );
 };

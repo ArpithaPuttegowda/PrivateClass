@@ -7,7 +7,6 @@ export const Ajax = () => {
     (async () => {
       const res = await fetch("https://jsonplaceholder.typicode.com/todos");
       const data = await res.json();
-      console.log(data?.slice(0, 3));
       setData(data?.slice(0, 5));
     })();
   }, []);
