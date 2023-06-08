@@ -1,0 +1,11 @@
+
+.home{
+  background: yellow;
+  font-style: italic;
+}
+.home span{
+  color:blue
+}
+.home div{
+  color:blueviolet
+}

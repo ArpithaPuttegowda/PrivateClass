@@ -12,6 +12,8 @@ import { Counter } from "./Counter/Counter";
 import { CountryDown } from "./DropDown/CountryDown";
 import { GetData } from "./GetData/GetData";
 import { PlayerDetails } from "./PlayerDetails/PlayerDetails";
+import MainApp from "./StyledComponentExample/Example";
+import { Header } from "./StyledComponentExample/Header";
 
 // function App() {
 //   const [state, dispatch] = useReducer(reducer, initData);
@@ -34,11 +36,13 @@ const App = () => {
       <span>Pune</span>
       <button disabled>Submit</button>
       <button data-testid="register-btn">Register</button>
-      <Counter />
+      {/* <Counter />
       <PlayerDetails name="Dhoni" loc="Ranchi" />
       <CountryDown country={["India", "China"]} />
       <Ajax />
-      <GetData />
+      <GetData /> */}
+      <Header />
+      <MainApp />
     </div>
   );
 };
