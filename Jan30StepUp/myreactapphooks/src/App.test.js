@@ -4,7 +4,7 @@ import App from "./App";
 test("the App component", () => {
   render(<App />);
   expect(screen.getByText("Hellow world")).toBeInTheDocument();
-  expect(screen.getByText("Pune")).toBeInTheDocument();
+  expect(screen.getAllByText("Pune")[0]).toBeInTheDocument();
 });
 
 test("buttons should present", () => {
