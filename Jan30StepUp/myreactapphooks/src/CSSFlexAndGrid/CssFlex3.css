@@ -1,0 +1,12 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 300px;
+  }
+  
+  .item {
+    flex: 0 0 100px;
+    margin: 10px;
+    background-color: #f2f2f2;
+  }
