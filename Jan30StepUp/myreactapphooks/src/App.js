@@ -2,6 +2,7 @@ import "./App.css";
 // import { CssFlex3 } from "./CSSFlexAndGrid/CssFlex3";
 // import { CssFlex1 } from "./CSSFlexAndGrid/CssFlex1";
 import { CssFlex2 } from "./CSSFlexAndGrid/CssFlex2";
+import { Debouncing } from "./DebouncingAndThroggtling/Debouncing";
 const App = () => {
   return (
     // <div className="container">
@@ -10,8 +11,9 @@ const App = () => {
     //   <div className="item">Item 3</div>
     // </div>
     // <CssFlex1 />
-    <CssFlex2 />
+    // <CssFlex2 />
     // <CssFlex3 />
+    <Debouncing />
   );
 };
 
