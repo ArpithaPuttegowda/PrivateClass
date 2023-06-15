@@ -3,6 +3,9 @@ import "./App.css";
 // import { CssFlex1 } from "./CSSFlexAndGrid/CssFlex1";
 import { CssFlex2 } from "./CSSFlexAndGrid/CssFlex2";
 import { Debouncing } from "./DebouncingAndThroggtling/Debouncing";
+import { RegistrationNormal } from "./RegistrationPage/RegistrationNormal";
+import RegistrationPage from "./RegistrationPage/RegistrationPage";
+
 const App = () => {
   return (
     // <div className="container">
@@ -13,7 +16,9 @@ const App = () => {
     // <CssFlex1 />
     // <CssFlex2 />
     // <CssFlex3 />
-    <Debouncing />
+    // <Debouncing />
+    // <RegistrationPage />
+    <RegistrationNormal />
   );
 };
 

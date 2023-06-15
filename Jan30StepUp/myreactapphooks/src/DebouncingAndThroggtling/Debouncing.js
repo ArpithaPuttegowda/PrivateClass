@@ -22,6 +22,7 @@ export const Debouncing = () => {
   // scenirio that can affect the perfomance and we can over come by using debouncing
   let timer;
   function onDebounce() {
+    alert("called");
     clearTimeout(timer);
     timer = setTimeout(() => {
       onSearchItem();
