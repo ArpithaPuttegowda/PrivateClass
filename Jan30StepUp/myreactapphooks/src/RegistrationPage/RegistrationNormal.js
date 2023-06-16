@@ -1,21 +1,17 @@
 import React, { useState } from "react";
 
 export const RegistrationNormal = () => {
-  const [data, setData] = useState({
-    name: "",
-    pwd: "",
-    email: "",
-  });
+  let data = {};
   const handleClick = () => {
     console.log(data, "myData");
   };
   const handleChange = (eve) => {
     let k = eve.target.id;
     let value = eve.target.value;
-    setData({
+    data = {
       ...data,
       [k]: value,
-    });
+    };
   };
   return (
     <div style={{ display: "flex", justifyContent: "space-around" }}>

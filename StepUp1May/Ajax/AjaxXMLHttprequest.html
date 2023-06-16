@@ -1,0 +1,18 @@
+<button onclick="fetchPosts()">Fetch Posts using XMLHttpRequest</button>
+
+<script>
+  function fetchPosts() {
+    //ajax
+    let obj = new XMLHttpRequest();
+    obj.open("GET", "https://jsonplaceholder.typicode.com/posts");
+    obj.send();
+    obj.onload = () => {
+      const res = obj.responseText;
+      console.log(res, "success");
+    };
+    obj.onerror = () => {
+      const res = obj.responseText;
+      console.log(res, "failure");
+    };
+  }
+</script>
