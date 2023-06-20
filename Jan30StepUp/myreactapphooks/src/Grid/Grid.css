@@ -1,13 +1,14 @@
 .items-container{
     border: 5px solid black;
-    display: flex;
-     flex-direction: row;
-    flex-wrap: wrap;
-    /* flex-flow: column wrap-reverse; */
-    /* height: 200px; */
-    justify-content: start;
-    /* column-gap: 10px; */
-    align-items:baseline ;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    /* grid-template-columns: 1fr 2fr 2fr; */
+    grid-template-rows:repeat(3,1fr);
+    /* grid-template-rows: 300px 200px 100px; */
+    height: 600px;
+    /* column-gap:10px ;
+    row-gap: 10px; */
+    gap:10px ;
 }
 .item{
     padding: 10px;
@@ -16,7 +17,6 @@
 }
 .item-1{
 background-color: blue;
-/* order: 1; */
 }
 .item-2{
 background-color: rgb(0, 255, 47);
@@ -29,14 +29,12 @@ background-color: rgb(23, 185, 161);
 }
 .item-5{
 background-color: rgb(112, 13, 71);
-order:inherit
 }
 .item-6{
 background-color: rgb(29, 57, 7);
 }
 .item-7{
 background-color: rgb(7, 8, 42);
-/* order: 2; */
 }
 .item-8{
 background-color: rgb(135, 19, 143);

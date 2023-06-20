@@ -1,0 +1,25 @@
+<script src="react.development.js"></script>
+<script src="react-dom.development.js"></script>
+<script src="babel.js"></script>
+
+<div id="root"></div>
+
+<script type="text/babel">
+  function App() {
+    return (
+      <div>
+        <div>
+          Hellow
+          <Add></Add>
+          {false ? <div>Sachin</div> : <span>Dhoni</span>}
+        </div>
+        <span>Hyderabad</span>
+      </div>
+    );
+  }
+  function Add() {
+    return <div>Add</div>;
+  }
+
+  ReactDOM.render(<App />, document.getElementById("root"));
+</script>

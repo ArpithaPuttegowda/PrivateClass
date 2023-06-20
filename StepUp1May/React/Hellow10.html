@@ -1,0 +1,30 @@
+<script src="react.development.js"></script>
+<script src="react-dom.development.js"></script>
+<script src="babel.js"></script>
+
+<span id="container"></span>
+
+<script type="text/babel">
+  function App() {
+    return (
+      <div>
+        <Hellow /> <Hellow /> <Hellow /> <Hellow /> <Hellow /> <Hellow />
+        <Hellow /> <Hellow /> <Hellow />
+      </div>
+    );
+  }
+  function Welcome() {
+    return <div>Welcome</div>;
+  }
+  function Hellow() {
+    return (
+      <div>
+        <Welcome />
+      </div>
+    );
+  }
+
+  ReactDOM.render(<App />, document.getElementById("container"));
+</script>
+
+<!-- jsx = javascript , xml and html -->

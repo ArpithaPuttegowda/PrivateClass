@@ -1,10 +1,11 @@
 import "./App.css";
 // import { CssFlex3 } from "./CSSFlexAndGrid/CssFlex3";
 // import { CssFlex1 } from "./CSSFlexAndGrid/CssFlex1";
-import { CssFlex2 } from "./CSSFlexAndGrid/CssFlex2";
-import { Debouncing } from "./DebouncingAndThroggtling/Debouncing";
-import { RegistrationNormal } from "./RegistrationPage/RegistrationNormal";
-import RegistrationPage from "./RegistrationPage/RegistrationPage";
+// import { CssFlex2 } from "./CSSFlexAndGrid/CssFlex2";
+// import { Debouncing } from "./DebouncingAndThroggtling/Debouncing";
+import { GridCSS } from "./Grid/Grid";
+// import { RegistrationNormal } from "./RegistrationPage/RegistrationNormal";
+// import RegistrationPage from "./RegistrationPage/RegistrationPage";
 
 const App = () => {
   return (
@@ -18,7 +19,8 @@ const App = () => {
     // <CssFlex3 />
     // <Debouncing />
     // <RegistrationPage />
-    <RegistrationNormal />
+    // <RegistrationNormal />
+    <GridCSS />
   );
 };
 
