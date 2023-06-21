@@ -1,0 +1,36 @@
+<script src="react.development.js"></script>
+<script src="react-dom.development.js"></script>
+<script src="babel.js"></script>
+
+<div id="root"></div>
+
+<script type="text/babel">
+  class App extends React.Component {
+    render() {
+      return (
+        <span>
+          <Hellow />
+          <Hellow />
+          <Hellow />
+          <Hellow />
+          <Hellow />
+          <Hellow />
+          <Hellow />
+          <Hellow />
+        </span>
+      );
+    }
+  }
+
+  //   class Hellow extends React.Component {
+  //     render() {
+  //       return <div>Hellow...World</div>;
+  //     }
+  //   }
+
+  const Hellow = () => {
+    return <div>Hellow..World</div>;
+  };
+
+  ReactDOM.render(<App />, document.getElementById("root"));
+</script>
