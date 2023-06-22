@@ -1,0 +1,52 @@
+<script src="react.development.js"></script>
+<script src="react-dom.development.js"></script>
+<script src="babel.js"></script>
+
+<div id="root"></div>
+
+<script type="text/babel">
+  //   const Player = (data) => {
+  //     return (
+  //       <div>
+  //         <p>
+  //           I'm {data.n},I'm from {data.l}
+  //         </p>
+  //       </div>
+  //     );
+  //   };
+
+  //   const Player = (data) => {
+  //     const { n, l } = data;
+  //     return (
+  //       <div>
+  //         <p>
+  //           I'm {n},I'm from {l}
+  //         </p>
+  //       </div>
+  //     );
+  //   };
+
+  const Player = ({ n, l }) => {
+    return (
+      <div>
+        <p>
+          I'm {n},I'm from {l}
+        </p>
+      </div>
+    );
+  };
+
+  const App = () => {
+    const name = "Sachin";
+    const loc = "Maharastra";
+    return (
+      <div>
+        <Player n={name} l={loc} />
+        <Player n="Dhoni" l="Ranchi" />
+        <Player n="Kohli" l="Delhi" />
+      </div>
+    );
+  };
+
+  ReactDOM.render(<App />, document.getElementById("root"));
+</script>

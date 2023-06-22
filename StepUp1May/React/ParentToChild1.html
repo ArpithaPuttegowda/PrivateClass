@@ -1,0 +1,23 @@
+<script src="react.development.js"></script>
+<script src="react-dom.development.js"></script>
+<script src="babel.js"></script>
+
+<div id="root"></div>
+
+<!-- passing data from parent to child -->
+<script type="text/babel">
+  const App = () => {
+    const myColor = "Red";
+    return (
+      <div>
+        <Color clr={myColor} />
+      </div>
+    );
+  };
+
+  const Color = ({ clr }) => {
+    return <div>I'm Child...{clr}</div>;
+  };
+
+  ReactDOM.render(<App />, document.getElementById("root"));
+</script>
