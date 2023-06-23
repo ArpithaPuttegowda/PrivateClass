@@ -1,0 +1,27 @@
+<script src="react.development.js"></script>
+<script src="react-dom.development.js"></script>
+<script src="babel.js"></script>
+
+<div id="root"></div>
+
+<script type="text/babel">
+  class Count extends React.Component {
+    constructor() {
+      super();
+      this.count = 100;
+    }
+    onIncCount = () => {
+      this.count = this.count + 1;
+      console.log(this.count, "Count value");
+    };
+    render() {
+      return (
+        <div>
+          <button onClick={this.onIncCount}>Inc Count</button>
+          <h1>Count:{this.count}</h1>
+        </div>
+      );
+    }
+  }
+  ReactDOM.render(<Count />, document.getElementById("root"));
+</script>
