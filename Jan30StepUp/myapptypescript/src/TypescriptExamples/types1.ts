@@ -17,3 +17,7 @@ const f1 = (a: string): string => {
 };
 fn("sachin");
 console.log(greet("John", "mumbai")); // Output: Hello, John!
+
+let a: unknown;
+
+a = "sachin";
