@@ -8,20 +8,31 @@
   class Count extends React.Component {
     constructor() {
       super();
-      this.count = 100;
+      //   this.count = 100;
+      this.state = {
+        count: 0,
+        name: "Sachin",
+      };
     }
     onIncCount = () => {
-      this.count = this.count + 1;
-      console.log(this.count, "Count value");
+      //   this.count = this.count + 1;
+      this.setState({
+        count: this.state.count + 1,
+        name: "DHONI",
+      });
     };
     render() {
+      alert("called");
       return (
         <div>
           <button onClick={this.onIncCount}>Inc Count</button>
-          <h1>Count:{this.count}</h1>
+          <h1>
+            Count:{this.state.count}...{this.state.name}
+          </h1>
         </div>
       );
     }
   }
+
   ReactDOM.render(<Count />, document.getElementById("root"));
 </script>

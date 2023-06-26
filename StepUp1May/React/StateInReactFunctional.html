@@ -1,0 +1,20 @@
+<script src="react.development.js"></script>
+<script src="react-dom.development.js"></script>
+<script src="babel.js"></script>
+
+<div id="root"></div>
+
+<script type="text/babel">
+  const CountComp = () => {
+    const [count, setCount] = React.useState(0);
+    const incCount = () => {
+      setCount(count + 1);
+    };
+    return (
+      <div>
+        <button onClick={incCount}>Inc Count...{count}</button>
+      </div>
+    );
+  };
+  ReactDOM.render(<CountComp />, document.getElementById("root"));
+</script>
