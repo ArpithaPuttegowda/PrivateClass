@@ -1,0 +1,36 @@
+<script src="react.development.js"></script>
+<script src="react-dom.development.js"></script>
+<script src="babel.js"></script>
+
+<div id="root"></div>
+
+<script type="text/babel">
+  const Add = () => {
+    const n1Ref = React.useRef(null);
+    const n2Ref = React.createRef(null);
+    const [result, setResult] = React.useState(0);
+
+    const handleSum = () => {
+      let n1 = n1Ref.current.value;
+      let n2 = n2Ref.current.value;
+      let sum = Number(n1) + Number(n2);
+      setResult(sum);
+    };
+    return (
+      <div>
+        <p>
+          <b>No1:</b>
+          <input id="n1" type="number" ref={n1Ref} />
+        </p>
+        <p>
+          <b>No2:</b>
+          <input ref={n2Ref} id="n2" type="number" />
+        </p>
+        <button onClick={handleSum}>Sum</button>
+        <h1>Result:{result}</h1>
+      </div>
+    );
+  };
+
+  ReactDOM.render(<Add />, document.querySelector("#root"));
+</script>

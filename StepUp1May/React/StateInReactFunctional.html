@@ -7,12 +7,16 @@
 <script type="text/babel">
   const CountComp = () => {
     const [count, setCount] = React.useState(0);
+    const [name, setName] = React.useState("Sachin");
     const incCount = () => {
       setCount(count + 1);
+      setName("Dhoni");
     };
     return (
       <div>
-        <button onClick={incCount}>Inc Count...{count}</button>
+        <button onClick={incCount}>
+          Inc Count...{count}...{name}
+        </button>
       </div>
     );
   };
