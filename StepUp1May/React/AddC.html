@@ -1,0 +1,56 @@
+<script src="react.development.js"></script>
+<script src="react-dom.development.js"></script>
+<script src="babel.js"></script>
+
+<div id="root"></div>
+
+<script type="text/babel">
+  class Add extends React.Component {
+    constructor() {
+      super();
+      this.state = {
+        result: 0,
+        clr: "blue",
+      };
+      this.n1Ref = React.createRef(null);
+      this.n2Ref = React.createRef(null);
+    }
+    handleSum = () => {
+      let n1 = this.n1Ref.current.value;
+      let n2 = this.n2Ref.current.value;
+      this.n1Ref.current.value = "";
+      this.n2Ref.current.value = "";
+      let sum = Number(n1) + Number(n2);
+      this.setState({
+        result: sum,
+        // clr: sum > 100 && "pink",
+      });
+      if (sum > 100) {
+        this.setState({
+          clr: "yellow",
+        });
+      }
+    };
+    render() {
+      return (
+        <div>
+          <p>
+            <b>No1:</b>
+            <input id="n1" type="number" ref={this.n1Ref} />
+          </p>
+          <p>
+            <b>No2:</b>
+            <input ref={this.n2Ref} id="n2" type="number" />
+          </p>
+          <button onClick={this.handleSum}>Sum</button>
+          <h1 style={{ color: this.state.result > 100 ? "red" : "green" }}>
+            Result:{this.state.result}
+          </h1>
+          <h1 style={{ color: this.state.clr }}>Result:{this.state.result}</h1>
+        </div>
+      );
+    }
+  }
+
+  ReactDOM.render(<Add />, document.querySelector("#root"));
+</script>

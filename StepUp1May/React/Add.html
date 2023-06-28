@@ -4,18 +4,37 @@
 
 <div id="root"></div>
 
+<style>
+  .cr {
+    color: red;
+  }
+
+  .cg {
+    color: green;
+  }
+
+  .cb {
+    color: blue;
+  }
+</style>
+
 <script type="text/babel">
   const Add = () => {
     const n1Ref = React.useRef(null);
     const n2Ref = React.createRef(null);
     const [result, setResult] = React.useState(0);
+    const [clr, setClr] = React.useState("blue");
 
     const handleSum = () => {
       let n1 = n1Ref.current.value;
       let n2 = n2Ref.current.value;
       let sum = Number(n1) + Number(n2);
       setResult(sum);
+      if (sum > 100) {
+        setClr("pink");
+      }
     };
+    const changeColr = result < 100 ? "red" : "green";
     return (
       <div>
         <p>
@@ -27,7 +46,11 @@
           <input ref={n2Ref} id="n2" type="number" />
         </p>
         <button onClick={handleSum}>Sum</button>
-        <h1>Result:{result}</h1>
+        <h1 style={{ color: changeColr, fontStyle: "italic" }}>
+          Result:{result}
+        </h1>
+        <h1 style={{ color: clr }}>Result:{result}</h1>
+        <h1 className={result > 100 ? "cr" : "cg"}>Result:{result}</h1>
       </div>
     );
   };
