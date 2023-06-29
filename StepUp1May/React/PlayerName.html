@@ -1,0 +1,35 @@
+<script src="react.development.js"></script>
+<script src="react-dom.development.js"></script>
+<script src="babel.js"></script>
+
+<div id="root"></div>
+
+<script type="text/babel">
+  const PlayerName = () => {
+    const [player, setPlayer] = React.useState("");
+    const [isStrick, setIsStrick] = React.useState(false);
+
+    const playerRef = React.useRef(null);
+    const onButtonClick = () => {
+      let playerName = playerRef.current.value;
+      playerRef.current.value = "";
+      setPlayer(playerName);
+    };
+    const handlePlayer = () => {
+      setIsStrick(!isStrick);
+    };
+    return (
+      <div>
+        <input ref={playerRef} />
+        <button onClick={onButtonClick}>Render Player</button>
+        <h1
+          onClick={handlePlayer}
+          style={{ textDecoration: isStrick ? "line-through" : "none" }}
+        >
+          {player}
+        </h1>
+      </div>
+    );
+  };
+  ReactDOM.render(<PlayerName />, document.getElementById("root"));
+</script>
