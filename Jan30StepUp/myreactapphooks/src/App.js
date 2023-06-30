@@ -1,4 +1,5 @@
 import "./App.css";
+import { Throggling } from "./DebouncingAndThroggtling/Throggling";
 // import { CssFlex3 } from "./CSSFlexAndGrid/CssFlex3";
 // import { CssFlex1 } from "./CSSFlexAndGrid/CssFlex1";
 // import { CssFlex2 } from "./CSSFlexAndGrid/CssFlex2";
@@ -20,7 +21,8 @@ const App = () => {
     // <Debouncing />
     // <RegistrationPage />
     // <RegistrationNormal />
-    <GridCSS />
+    // <GridCSS />
+    <Throggling />
   );
 };
 
