@@ -1,12 +1,13 @@
 export const Parent = () => {
+  const myName = "Sachin";
   return (
     <div>
       I'm Parent
-      <Child />
+      <Child data={myName} />
     </div>
   );
 };
 
-const Child = () => {
-  return <div>Child...</div>;
+const Child = ({ data }) => {
+  return <div>I'm Child...{data}</div>;
 };
