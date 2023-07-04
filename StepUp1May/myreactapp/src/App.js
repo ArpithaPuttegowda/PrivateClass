@@ -1,15 +1,12 @@
 import "./App.css";
-import Profile from "./Components/ChildToParent/AvatarProfile";
-import { Parent } from "./Components/ChildToParent/ChildToParent1";
-import { Parent2 } from "./Components/ChildToParent/ChildToParent2";
+import { Parent3 } from "./Components/ChildToParent/PassingDataFromChildToParent";
+import { Parent2 } from "./Components/ParentToChild/ParentToChild2";
 
 function App() {
   return (
     <div>
       App
-      <Parent />
-      <Parent2 />
-      <Profile />
+      <Parent3 />
     </div>
   );
 }

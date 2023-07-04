@@ -8,7 +8,6 @@ export const Parent2 = () => {
   };
   return (
     <div>
-      {alert("called parent")}
       <h1>I'm Parent</h1>
       <button onClick={handleChangeData}>
         Click me to Pass data from Parent to Child
@@ -19,6 +18,5 @@ export const Parent2 = () => {
 };
 
 const Child2 = ({ data }) => {
-  alert("called child");
   return <div>I'm Child....{data}</div>;
 };
