@@ -22,7 +22,6 @@ export const Debouncing = () => {
   // scenirio that can affect the perfomance and we can over come by using debouncing
   let timer;
   function onDebounce() {
-    alert("called");
     clearTimeout(timer);
     timer = setTimeout(() => {
       onSearchItem();
@@ -30,12 +29,12 @@ export const Debouncing = () => {
   }
   return (
     <div>
-      <input
+      {/* <input
         onKeyUp={onSearch}
         placeholder="search"
         onChange={(e) => setSearchText(e.target.value)}
       />
-      <button onClick={handleClick}>Search</button>
+      <button onClick={handleClick}>Search</button> */}
 
       {/* scenirio that can affect the perfomance and we can over come by using debouncing */}
       <p>

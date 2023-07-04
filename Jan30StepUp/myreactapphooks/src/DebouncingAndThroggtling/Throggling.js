@@ -3,6 +3,7 @@ import React, { useCallback, useEffect } from "react";
 export const Throggling = () => {
   let _flag = true;
   let timer;
+
   const fnResize = () => {
     alert("called");
   };
