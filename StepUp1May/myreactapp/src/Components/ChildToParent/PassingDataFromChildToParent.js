@@ -1,11 +1,14 @@
+import { useState } from "react";
+
 export const Parent3 = () => {
+  const [data, setData] = useState("");
   const callback = (d) => {
-    alert(d);
+    setData(d);
   };
 
   return (
     <div>
-      <h1>I'm Parent....</h1>
+      <h1>I'm Parent....{data}</h1>
       <Child myData={callback} />
     </div>
   );
