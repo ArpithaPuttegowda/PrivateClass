@@ -5,39 +5,39 @@ export const MainComp = () => {
   return (
     <div>
       <h1>I'm Parent</h1>
-      <A />
+      <A d={data} />
     </div>
   );
 };
 
-const A = () => {
+const A = ({ d }) => {
   return (
     <div>
-      <h1>I'm A</h1>
-      <B />
+      <h1>I'm A...</h1>
+      <B data={d} />
     </div>
   );
 };
-const B = () => {
+const B = ({ data }) => {
   return (
     <div>
       <h1>I'm B</h1>
-      <C />
+      <C data={data} />
     </div>
   );
 };
-const C = () => {
+const C = ({ data }) => {
   return (
     <div>
       <h1>I'm C</h1>
-      <D />
+      <D myData={data} />
     </div>
   );
 };
-export const D = () => {
+export const D = ({ myData }) => {
   return (
     <div>
-      <h1>I'm D::</h1>
+      <h1>I'm D::{myData}</h1>
     </div>
   );
 };
