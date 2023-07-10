@@ -8,6 +8,8 @@ import { GridCSS } from "./Grid/Grid";
 import { RegistrationNormal } from "./RegistrationPage/RegistrationNormal";
 import RegistrationPage from "./RegistrationPage/RegistrationPage";
 import { PromiseAll } from "./PromiseAll";
+import { Transform } from "./Css/Transform";
+import { MediaQueryCss } from "./Css/MediaQueryCss";
 
 const App = () => {
   return (
@@ -24,9 +26,11 @@ const App = () => {
       <RegistrationPage />
       <RegistrationNormal />
       <GridCSS /> */}
-      <Throggling />
+      {/* <Throggling />
       <Debouncing />
-      <PromiseAll />
+      <PromiseAll /> */}
+      <Transform />
+      <MediaQueryCss />
     </>
   );
 };

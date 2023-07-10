@@ -1,0 +1,35 @@
+.box {
+    width: 100px;
+    height: 100px;
+    background-color: #f9c;
+    margin: 20px;
+    transition:0.5s;
+  }
+
+  .box:hover {
+    transform: scaleX(2) rotateX(45deg) rotateY(25deg);
+  }
+
+  .box2 {
+    width: 100px;
+    height: 100px;
+    background-color: #9cf;
+    margin: 20px;
+    transition: 0.5s;
+  }
+
+  .box2:hover {
+    transform: translate(100%)
+  }
+
+  .box3 {
+    width: 100px;
+    height: 100px;
+    background-color: #f9c;
+    margin: 20px;
+    transition:0.5s;
+  }
+
+  .box3:hover {
+    transform:  rotateX(30deg);
+  }

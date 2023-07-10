@@ -1,0 +1,12 @@
+Scale:
+
+Scale an element by changing its size.
+Example: transform: scale(1.5); (scales the element by 1.5 times)
+Rotate:
+
+Rotate an element by a specified angle.
+Example: transform: rotate(45deg); (rotates the element by 45 degrees)
+Translate:
+
+Move an element horizontally and/or vertically.
+Example: transform: translate(50px, -20px); (moves the element 50 pixels to the right and 20 pixels up)

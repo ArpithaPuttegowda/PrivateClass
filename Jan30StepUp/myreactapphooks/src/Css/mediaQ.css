@@ -1,0 +1,11 @@
+@media screen and (min-width:700px){ 
+    span{
+         color:red 
+        } 
+}
+
+@media screen and (min-width:700px) and (max-width:1000px){
+    h1{
+         color:green 
+        } 
+}
