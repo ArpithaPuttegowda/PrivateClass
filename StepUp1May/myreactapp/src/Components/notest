@@ -1,0 +1,2 @@
+Propdrilling in react
+Prop drilling refers to the practice of passing data through multiple components in a React application, even when the intermediate components do not need the data, resulting in code inefficiency and reduced maintainability.
