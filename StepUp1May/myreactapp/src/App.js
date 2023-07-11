@@ -6,7 +6,11 @@ import { ContextAPI3 } from "./Components/ContextAPI/ContextAPI3";
 import { ContextComp } from "./Components/ContextAPI/ContextAPITechnique";
 import { MainComp } from "./Components/ContextAPI/PropDrilling";
 import { DropdownListKeys } from "./Components/ListsKeys/DropdownListKeys";
+import { HeaderList } from "./Components/ListsKeys/HeaderList";
+import { OrderedListKeys } from "./Components/ListsKeys/OrderedListKeys";
 import { PlayerLists } from "./Components/ListsKeys/PlayerLists";
+import { TableComp } from "./Components/ListsKeys/TableComp";
+import { ListsComp } from "./Components/ListsKeys/UnorderedList";
 import { Parent2 } from "./Components/ParentToChild/ParentToChild2";
 
 function App() {
@@ -20,7 +24,11 @@ function App() {
       {/* <ContextAPI2 /> */}
       {/* <ContextAPI3 /> */}
       {/* <PlayerLists /> */}
-      <DropdownListKeys />
+      {/* <DropdownListKeys />
+      <OrderedListKeys /> */}
+      {/* <ListsComp /> */}
+      {/* <HeaderList /> */}
+      <TableComp />
     </div>
   );
 }
