@@ -10,6 +10,7 @@ import RegistrationPage from "./RegistrationPage/RegistrationPage";
 import { PromiseAll } from "./PromiseAll";
 import { Transform } from "./Css/Transform";
 import { MediaQueryCss } from "./Css/MediaQueryCss";
+import { RealTimeMediaQuery } from "./Css/RealTimeMediaQuery";
 
 const App = () => {
   return (
@@ -29,8 +30,9 @@ const App = () => {
       {/* <Throggling />
       <Debouncing />
       <PromiseAll /> */}
-      <Transform />
-      <MediaQueryCss />
+      {/* <Transform /> */}
+      {/* <MediaQueryCss /> */}
+      <RealTimeMediaQuery />
     </>
   );
 };
