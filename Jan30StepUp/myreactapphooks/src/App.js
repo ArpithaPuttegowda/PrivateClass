@@ -1,4 +1,5 @@
 import "./App.css";
+import { useEffect, useState } from "react";
 import { Throggling } from "./DebouncingAndThroggtling/Throggling";
 import { CssFlex3 } from "./CSSFlexAndGrid/CssFlex3";
 import { CssFlex1 } from "./CSSFlexAndGrid/CssFlex1";
@@ -13,6 +14,10 @@ import { MediaQueryCss } from "./Css/MediaQueryCss";
 import { RealTimeMediaQuery } from "./Css/RealTimeMediaQuery";
 
 const App = () => {
+  const [name, setName] = useState("");
+  const getData = (d) => {
+    console.log(d, "I'm parent");
+  };
   return (
     <>
       {/* <div className="container">
@@ -32,9 +37,18 @@ const App = () => {
       <PromiseAll /> */}
       {/* <Transform /> */}
       {/* <MediaQueryCss /> */}
-      <RealTimeMediaQuery />
+      {/* <RealTimeMediaQuery /> */}
+      <Child fn={getData} />
     </>
   );
 };
 
 export default App;
+
+const Child = ({ fn }) => {
+  const data = "sachin";
+  useEffect(() => {
+    fn(data);
+  }, [fn]);
+  return <div>I'm Child</div>;
+};

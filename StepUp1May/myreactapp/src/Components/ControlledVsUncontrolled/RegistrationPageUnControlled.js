@@ -1,8 +1,8 @@
-import React, { useRef } from "react";
+import React, { createRef, useRef } from "react";
 
 //uncontrolled component
 export const RegistrationPageUnControlled = () => {
-  const nameRef = useRef(null);
+  const nameRef = createRef(null);
   const locRef = useRef(null);
   const phnRef = useRef(null);
   const handleSubmit = () => {
@@ -23,7 +23,7 @@ export const RegistrationPageUnControlled = () => {
     <>
       <p>
         <b>Name:</b>
-        <input ref={nameRef} />
+        <input id="name" ref={nameRef} />
       </p>
       <p>
         <b>Loc:</b>
@@ -31,7 +31,7 @@ export const RegistrationPageUnControlled = () => {
       </p>
       <p>
         <b>Phone No:</b>
-        <input ref={phnRef} />
+        <input type="number" ref={phnRef} />
       </p>
       <button onClick={handleSubmit}>Submit</button>
     </>

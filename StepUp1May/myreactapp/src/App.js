@@ -5,6 +5,7 @@ import { ContextAPI2 } from "./Components/ContextAPI/ContextAPI2";
 import { ContextAPI3 } from "./Components/ContextAPI/ContextAPI3";
 import { ContextComp } from "./Components/ContextAPI/ContextAPITechnique";
 import { MainComp } from "./Components/ContextAPI/PropDrilling";
+import { RegistrationControlled } from "./Components/ControlledVsUncontrolled/RegistrationControlled";
 import { RegistrationPageUnControlled } from "./Components/ControlledVsUncontrolled/RegistrationPageUnControlled";
 import { DropdownListKeys } from "./Components/ListsKeys/DropdownListKeys";
 import { HeaderList } from "./Components/ListsKeys/HeaderList";
@@ -30,7 +31,8 @@ function App() {
       {/* <ListsComp /> */}
       {/* <HeaderList /> */}
       {/* <TableComp /> */}
-      <RegistrationPageUnControlled />
+      {/* <RegistrationPageUnControlled /> */}
+      <RegistrationControlled />
     </div>
   );
 }

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      html {
+        font-size: 116px; /* 1rem = 16px */
+      }
+
+      .container {
+        font-size: 1.5rem; /* 1.5 times the root font-size (24px) */
+        padding: 2rem; /* 2 times the root font-size (32px) */
+        background-color: lightgray;
+      }
+
+      .child {
+        font-size: 1.5em; /* 1.5 times the parent's font-size (36px) */
+        margin: 1em; /* 1 times the parent's font-size (24px) */
+        background-color: lightblue;
+      }
+
+      .fixed {
+        font-size: 20px; /* 20 pixels */
+        padding: 10px; /* 10 pixels */
+        background-color: lightyellow;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <p>This is the container element.</p>
+    </div>
+    <div class="fixed">
+      <p>This is an element with fixed font-size and padding.</p>
+    </div>
+    <div>
+      <div class="child">
+        <p>This is the child element with relative font-size and margin.</p>
+      </div>
+    </div>
+  </body>
+</html>
