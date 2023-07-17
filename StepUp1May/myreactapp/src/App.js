@@ -9,6 +9,8 @@ import { ContextComp } from "./Components/ContextAPI/ContextAPITechnique";
 import { MainComp } from "./Components/ContextAPI/PropDrilling";
 import { RegistrationControlled } from "./Components/ControlledVsUncontrolled/RegistrationControlled";
 import { RegistrationPageUnControlled } from "./Components/ControlledVsUncontrolled/RegistrationPageUnControlled";
+import LifeCycleMounting from "./Components/LifeCycleMethods/LifeCycleMounting";
+import LifeCycleUpdating from "./Components/LifeCycleMethods/LifeCycleUpdating";
 import { DropdownListKeys } from "./Components/ListsKeys/DropdownListKeys";
 import { HeaderList } from "./Components/ListsKeys/HeaderList";
 import { OrderedListKeys } from "./Components/ListsKeys/OrderedListKeys";
@@ -21,7 +23,9 @@ function App() {
   return (
     <div>
       {/* <ConditionalRendering1 /> */}
-      <ConditionalRendering2 />
+      {/* <ConditionalRendering2 /> */}
+      {/* <LifeCycleMounting /> */}
+      <LifeCycleUpdating />
     </div>
   );
 }
