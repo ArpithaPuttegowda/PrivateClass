@@ -1,0 +1,24 @@
+.box {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    position: relative;
+    animation: myAnimation 2s infinite;
+  }
+  
+  @keyframes myAnimation {
+    0% {
+      background-color:green;
+      border: 2px solid brown;
+      transform: translateY(60px) scale(2) rotate(50deg);
+    }
+    50% {
+      background-color:pink;
+      transform: translateY(100px);
+    }
+    100% {
+      background-color:yellow;
+      transform: translateY(30px);
+    }
+  }
+  
