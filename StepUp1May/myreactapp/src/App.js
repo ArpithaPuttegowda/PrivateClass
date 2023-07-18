@@ -1,3 +1,4 @@
+import { useState } from "react";
 import "./App.css";
 import { Parent3 } from "./Components/ChildToParent/PassingDataFromChildToParent";
 import { PassingDataFromChildToParent2 } from "./Components/ChildToParent/PassingDataFromChildToParent2";
@@ -17,15 +18,19 @@ import { OrderedListKeys } from "./Components/ListsKeys/OrderedListKeys";
 import { PlayerLists } from "./Components/ListsKeys/PlayerLists";
 import { TableComp } from "./Components/ListsKeys/TableComp";
 import { ListsComp } from "./Components/ListsKeys/UnorderedList";
+import { MutableState } from "./Components/MutableStateAndImmutableProps/MutableState";
 import { Parent2 } from "./Components/ParentToChild/ParentToChild2";
 
 function App() {
+  const [name, setName] = useState("sachin");
   return (
     <div>
       {/* <ConditionalRendering1 /> */}
       {/* <ConditionalRendering2 /> */}
       {/* <LifeCycleMounting /> */}
-      <LifeCycleUpdating />
+      <button onClick={() => setName("Dhoni")}>Click me</button>
+      <LifeCycleUpdating n={name} />
+      {/* <MutableState /> */}
     </div>
   );
 }

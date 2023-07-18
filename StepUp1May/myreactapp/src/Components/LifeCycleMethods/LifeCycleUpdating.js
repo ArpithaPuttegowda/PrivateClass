@@ -13,6 +13,7 @@ export default class LifeCycleUpdating extends Component {
   }
 
   shouldComponentUpdate() {
+    alert(this.state.count);
     console.log("shouldcomponentupate");
     return true;
   }
@@ -29,6 +30,7 @@ export default class LifeCycleUpdating extends Component {
         >
           Count....{this.state.count}
         </button>
+        <h1>{this.props.n}</h1>
       </div>
     );
   }
