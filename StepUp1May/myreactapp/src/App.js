@@ -12,6 +12,7 @@ import { RegistrationControlled } from "./Components/ControlledVsUncontrolled/Re
 import { RegistrationPageUnControlled } from "./Components/ControlledVsUncontrolled/RegistrationPageUnControlled";
 import LifeCycleMounting from "./Components/LifeCycleMethods/LifeCycleMounting";
 import LifeCycleUpdating from "./Components/LifeCycleMethods/LifeCycleUpdating";
+import { LifeCycleFunctionalMounting } from "./Components/LifeCycleMethods/UseEffectHook/LifeCycleFunctionalMounting";
 import { DropdownListKeys } from "./Components/ListsKeys/DropdownListKeys";
 import { HeaderList } from "./Components/ListsKeys/HeaderList";
 import { OrderedListKeys } from "./Components/ListsKeys/OrderedListKeys";
@@ -28,9 +29,10 @@ function App() {
       {/* <ConditionalRendering1 /> */}
       {/* <ConditionalRendering2 /> */}
       {/* <LifeCycleMounting /> */}
-      <button onClick={() => setName("Dhoni")}>Click me</button>
-      <LifeCycleUpdating n={name} />
+      {/* <button onClick={() => setName("Dhoni")}>Click me</button>
+      <LifeCycleUpdating n={name} /> */}
       {/* <MutableState /> */}
+      <LifeCycleFunctionalMounting />
     </div>
   );
 }
