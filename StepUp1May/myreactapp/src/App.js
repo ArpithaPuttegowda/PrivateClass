@@ -13,6 +13,7 @@ import { RegistrationPageUnControlled } from "./Components/ControlledVsUncontrol
 import LifeCycleMounting from "./Components/LifeCycleMethods/LifeCycleMounting";
 import LifeCycleUpdating from "./Components/LifeCycleMethods/LifeCycleUpdating";
 import { LifeCycleFunctionalMounting } from "./Components/LifeCycleMethods/UseEffectHook/LifeCycleFunctionalMounting";
+import { LifeCycleFunctionalUpdating } from "./Components/LifeCycleMethods/UseEffectHook/LifeCycleFunctionalUpdating";
 import { DropdownListKeys } from "./Components/ListsKeys/DropdownListKeys";
 import { HeaderList } from "./Components/ListsKeys/HeaderList";
 import { OrderedListKeys } from "./Components/ListsKeys/OrderedListKeys";
@@ -23,16 +24,17 @@ import { MutableState } from "./Components/MutableStateAndImmutableProps/Mutable
 import { Parent2 } from "./Components/ParentToChild/ParentToChild2";
 
 function App() {
-  const [name, setName] = useState("sachin");
+  const [color, setColor] = useState("red");
   return (
     <div>
       {/* <ConditionalRendering1 /> */}
       {/* <ConditionalRendering2 /> */}
       {/* <LifeCycleMounting /> */}
-      {/* <button onClick={() => setName("Dhoni")}>Click me</button>
-      <LifeCycleUpdating n={name} /> */}
+      <button onClick={() => setColor("blue")}>Click me</button>
+      {/* <LifeCycleUpdating n={name} />  */}
       {/* <MutableState /> */}
-      <LifeCycleFunctionalMounting />
+      {/* <LifeCycleFunctionalMounting /> */}
+      <LifeCycleFunctionalUpdating color={color} />
     </div>
   );
 }
