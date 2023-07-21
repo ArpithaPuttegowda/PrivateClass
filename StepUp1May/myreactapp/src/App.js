@@ -22,6 +22,7 @@ import { TableComp } from "./Components/ListsKeys/TableComp";
 import { ListsComp } from "./Components/ListsKeys/UnorderedList";
 import { MutableState } from "./Components/MutableStateAndImmutableProps/MutableState";
 import { Parent2 } from "./Components/ParentToChild/ParentToChild2";
+import ExamplePureComponent from "./Components/PureComponentAndReactMemo/ExamplePureComponent";
 
 function App() {
   const [color, setColor] = useState("red");
@@ -30,11 +31,12 @@ function App() {
       {/* <ConditionalRendering1 /> */}
       {/* <ConditionalRendering2 /> */}
       {/* <LifeCycleMounting /> */}
-      <button onClick={() => setColor("blue")}>Click me</button>
+      {/* <button onClick={() => setColor("blue")}>Click me</button> */}
       {/* <LifeCycleUpdating n={name} />  */}
       {/* <MutableState /> */}
       {/* <LifeCycleFunctionalMounting /> */}
-      <LifeCycleFunctionalUpdating color={color} />
+      {/* <LifeCycleFunctionalUpdating color={color} /> */}
+      <ExamplePureComponent />
     </div>
   );
 }

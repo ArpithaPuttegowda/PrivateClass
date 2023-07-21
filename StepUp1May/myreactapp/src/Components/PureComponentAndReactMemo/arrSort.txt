@@ -1,0 +1,8 @@
+let arr=["Arpitha","Swetha","geetha","Radhika","ramya"]
+
+arr.sort((a, b) => a.localeCompare(b));
+output:['Arpitha', 'geetha', 'Radhika', 'ramya', 'Swetha']
+
+
+arr.sort((a, b) => b.localeCompare(a));
+output:['Swetha', 'ramya', 'Radhika', 'geetha', 'Arpitha']
