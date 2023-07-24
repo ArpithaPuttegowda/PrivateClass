@@ -10,6 +10,7 @@ import { ContextComp } from "./Components/ContextAPI/ContextAPITechnique";
 import { MainComp } from "./Components/ContextAPI/PropDrilling";
 import { RegistrationControlled } from "./Components/ControlledVsUncontrolled/RegistrationControlled";
 import { RegistrationPageUnControlled } from "./Components/ControlledVsUncontrolled/RegistrationPageUnControlled";
+import { NameUpate } from "./Components/ExamplesReactMemo/NameUpate";
 import LifeCycleMounting from "./Components/LifeCycleMethods/LifeCycleMounting";
 import LifeCycleUpdating from "./Components/LifeCycleMethods/LifeCycleUpdating";
 import { LifeCycleFunctionalMounting } from "./Components/LifeCycleMethods/UseEffectHook/LifeCycleFunctionalMounting";
@@ -36,7 +37,8 @@ function App() {
       {/* <MutableState /> */}
       {/* <LifeCycleFunctionalMounting /> */}
       {/* <LifeCycleFunctionalUpdating color={color} /> */}
-      <ExamplePureComponent />
+      {/* <ExamplePureComponent /> */}
+      <NameUpate />
     </div>
   );
 }
