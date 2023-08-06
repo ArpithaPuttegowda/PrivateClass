@@ -11,9 +11,13 @@ import { MainComp } from "./Components/ContextAPI/PropDrilling";
 import { RegistrationControlled } from "./Components/ControlledVsUncontrolled/RegistrationControlled";
 import { RegistrationPageUnControlled } from "./Components/ControlledVsUncontrolled/RegistrationPageUnControlled";
 import { NameUpate } from "./Components/ExamplesReactMemo/NameUpate";
+import ExceptionHandlingParent from "./Components/ExceptionHandling/ExceptionHandlingParent";
+import { Hero } from "./Components/ExceptionHandling/Hero";
+import Parent2 from "./Components/ExceptionHandling/Parent2";
 import LifeCycleMounting from "./Components/LifeCycleMethods/LifeCycleMounting";
 import LifeCycleUpdating from "./Components/LifeCycleMethods/LifeCycleUpdating";
 import { LifeCycleFunctionalMounting } from "./Components/LifeCycleMethods/UseEffectHook/LifeCycleFunctionalMounting";
+import LifeCycleFunctionalUnMounting from "./Components/LifeCycleMethods/UseEffectHook/LifeCycleFunctionalUnMounting";
 import { LifeCycleFunctionalUpdating } from "./Components/LifeCycleMethods/UseEffectHook/LifeCycleFunctionalUpdating";
 import { DropdownListKeys } from "./Components/ListsKeys/DropdownListKeys";
 import { HeaderList } from "./Components/ListsKeys/HeaderList";
@@ -22,7 +26,6 @@ import { PlayerLists } from "./Components/ListsKeys/PlayerLists";
 import { TableComp } from "./Components/ListsKeys/TableComp";
 import { ListsComp } from "./Components/ListsKeys/UnorderedList";
 import { MutableState } from "./Components/MutableStateAndImmutableProps/MutableState";
-import { Parent2 } from "./Components/ParentToChild/ParentToChild2";
 import ExamplePureComponent from "./Components/PureComponentAndReactMemo/ExamplePureComponent";
 
 function App() {
@@ -38,7 +41,10 @@ function App() {
       {/* <LifeCycleFunctionalMounting /> */}
       {/* <LifeCycleFunctionalUpdating color={color} /> */}
       {/* <ExamplePureComponent /> */}
-      <NameUpate />
+      {/* <NameUpate /> */}
+      {/* <ExceptionHandlingParent/> */}
+      {/* <Parent2/> */}
+      <LifeCycleFunctionalUnMounting/>
     </div>
   );
 }
