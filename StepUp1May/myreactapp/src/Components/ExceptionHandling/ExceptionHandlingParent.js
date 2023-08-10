@@ -9,7 +9,6 @@ export default class ExceptionHandlingParent extends Component {
       <div>
         <ErrorBoundaryResualble>
           <Hero heroName="Salman">
-            <Content />
           </Hero>
         </ErrorBoundaryResualble>
         <ErrorBoundaryResualble>
