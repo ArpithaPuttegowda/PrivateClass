@@ -1,6 +1,6 @@
-import { ForwardRef } from "./Components/ForwardRef"
+import Parent from "./Components/MultipleRef"
 
 const App=()=>{
-  return <div><ForwardRef/></div>
+  return <div><Parent/></div>
 }
 export default App
