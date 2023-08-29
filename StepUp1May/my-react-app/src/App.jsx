@@ -1,6 +1,6 @@
-import Parent from "./Components/MultipleRef"
+import { CombComp } from "./Components/HOC/CombComp"
 
 const App=()=>{
-  return <div><Parent/></div>
+  return <div><CombComp/></div>
 }
 export default App
