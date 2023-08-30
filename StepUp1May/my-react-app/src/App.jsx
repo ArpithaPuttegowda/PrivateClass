@@ -1,4 +1,4 @@
-import { CombComp } from "./Components/HOC/CombComp"
+import { CombComp } from "./Components/customHooks/CombComp"
 
 const App=()=>{
   return <div><CombComp/></div>
