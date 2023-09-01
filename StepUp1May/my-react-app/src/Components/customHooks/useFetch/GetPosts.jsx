@@ -1,7 +1,7 @@
 import { useFetch } from "./useFetch";
 
 export const GetPosts = () => {
-  const [posts,isError,isLoading]=useFetch("https://jsonplaceholder.typicode.com/posts")
+  const {data:posts,isError,isLoading}=useFetch("https://jsonplaceholder.typicode.com/posts")
   return <div>
 {
   posts?.map((post)=>{

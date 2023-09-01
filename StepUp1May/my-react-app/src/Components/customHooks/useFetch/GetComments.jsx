@@ -1,7 +1,7 @@
 import { useFetch } from "./useFetch"
 
 export const GetComments = () => {
-    const [comments,isError,isLoading]=useFetch("https://jsonplaceholder.typicode.com/comments")
+    const {data:comments, isError, isLoading}=useFetch("https://jsonplaceholder.typicode.com/comments")
     return <div>
   {
     comments?.map((comment)=>{
