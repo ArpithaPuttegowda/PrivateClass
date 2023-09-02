@@ -1,11 +1,9 @@
-import { GetComments } from "./Components/customHooks/useFetch/GetComments";
-import { GetPosts } from "./Components/customHooks/useFetch/GetPosts";
+import StoreData from "./Components/customHooks/useLocalStorage/StoreData"
 
 const App = () => {
   return (
     <div>
-      <GetPosts />
-      <GetComments />
+      <StoreData/>
     </div>
   );
 };
