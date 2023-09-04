@@ -1,9 +1,9 @@
-import StoreData from "./Components/customHooks/useLocalStorage/StoreData"
+import { StoreDataBrowser } from "./Components/customHooks/StoreDataBrowser";
 
 const App = () => {
   return (
     <div>
-      <StoreData/>
+      <StoreDataBrowser/>
     </div>
   );
 };

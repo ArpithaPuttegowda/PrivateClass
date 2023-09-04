@@ -1,18 +1,19 @@
 import React, { Component } from "react";
 
 export default class LifeCycleMounting extends Component {
-  constructor() {
+  constructor(p) {
     super();
-    console.log("constructor executed");
+    console.log("constructor executed",p?.name,p?.loc);
     this.state = {
       name: "Sachin",
+      count:0
     };
   }
-  static getDerivedStateFromProps() {
+  static getDerivedStateFromProps(nextProps,nextState) {
+    debugger
     console.log("static method executed");
-    return {
-      name: "Dhoni",
-    };
+    return null
+      
   }
   handleAjax = () => {
     fetch("https://jsonplaceholder.typicode.com/posts")
@@ -26,7 +27,11 @@ export default class LifeCycleMounting extends Component {
   };
   render() {
     console.log("render executed");
-    return <div>Ajax...{this.state.name}</div>;
+    return <div>Data:::{this.props.name}
+    <button onClick={()=>this.setState({
+     count:this.state.count+1 
+    })}>Count....{this.state.count}</button>
+    </div>;
   }
   componentDidMount() {
     this.handleAjax();
