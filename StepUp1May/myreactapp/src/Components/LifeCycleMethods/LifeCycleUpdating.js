@@ -6,16 +6,15 @@ export default class LifeCycleUpdating extends Component {
     console.log("constructor");
     this.state = {
       count: 0,
+      name:"Sachin"
     };
   }
   static getDerivedStateFromProps() {
     console.log("static method executed");
   }
 
-  shouldComponentUpdate() {
-    alert(this.state.count);
-    console.log("shouldcomponentupate");
-    return true;
+  shouldComponentUpdate(nextProps,nextState) {
+   return true
   }
   render() {
     console.log("render");
@@ -31,16 +30,20 @@ export default class LifeCycleUpdating extends Component {
           Count....{this.state.count}
         </button>
         <h1>{this.props.n}</h1>
+        <button onClick={()=>this.setState({
+          name:"Sachin"
+        })}>Set name</button>
       </div>
     );
   }
   componentDidMount() {
     console.log("componentDidMount executed");
   }
-  getSnapshotBeforeUpdate() {
-    console.log("getSnapshotBeforeUpate");
+  getSnapshotBeforeUpdate(prevProps,prevState) {
+      console.log("getSnapshotBeforeUpate");
   }
-  componentDidUpdate() {
+  componentDidUpdate(prevProps,prevState) {
+    debugger
     console.log("componentDidUpdate");
   }
 }

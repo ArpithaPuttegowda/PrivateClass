@@ -10,9 +10,10 @@ export default class LifeCycleMounting extends Component {
     };
   }
   static getDerivedStateFromProps(nextProps,nextState) {
-    debugger
     console.log("static method executed");
-    return null
+    return {
+      count:1000
+    }
       
   }
   handleAjax = () => {
@@ -25,7 +26,8 @@ export default class LifeCycleMounting extends Component {
         console.log(e);
       });
   };
-  render() {
+  render(a,b,c,d) {
+
     console.log("render executed");
     return <div>Data:::{this.props.name}
     <button onClick={()=>this.setState({
@@ -33,7 +35,8 @@ export default class LifeCycleMounting extends Component {
     })}>Count....{this.state.count}</button>
     </div>;
   }
-  componentDidMount() {
+  componentDidMount(a,b,c,d) {
+    debugger
     this.handleAjax();
   }
 }

@@ -1,9 +1,10 @@
 import "./App.css";
 import LifeCycleMounting from "./Components/LifeCycleMethods/LifeCycleMounting";
+import LifeCycleUpdating from "./Components/LifeCycleMethods/LifeCycleUpdating";
 function App() {
   return (
    <div>
-    <LifeCycleMounting name="Rahul" loc="mumbai"/>
+    <LifeCycleUpdating name="Rahul" loc="mumbai"/>
     </div>
   );
 }

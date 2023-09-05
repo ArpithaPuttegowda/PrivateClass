@@ -1,9 +1,10 @@
-import { StoreDataBrowser } from "./Components/customHooks/StoreDataBrowser";
+import { VirtualDom } from "./Components/PerfomanceOptimisation/VirtualDom";
 
 const App = () => {
   return (
     <div>
-      <StoreDataBrowser/>
+      {/* <StoreDataBrowser/> */}
+      <VirtualDom/>
     </div>
   );
 };
