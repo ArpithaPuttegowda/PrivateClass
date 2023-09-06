@@ -1,0 +1,9 @@
+
+
+REAL DOM                        VIRTUAL DOM 1
+ 50000LINES CODE + COUNT 1+NAME   50000LINES CODE + COUNT 1+NAME 
+
+                                    DIFF ALGORITHM
+                               
+                               VIRTUAL DOM 2
+                               50000LINES CODE + COUNT 2+NAME 

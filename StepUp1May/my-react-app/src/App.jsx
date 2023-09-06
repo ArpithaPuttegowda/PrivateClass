@@ -1,10 +1,11 @@
-import { VirtualDom } from "./Components/PerfomanceOptimisation/VirtualDom";
+import { ExampleOfUseMemo } from "./Components/PerfomanceOptimisation/ExampleOfUseMemo";
 
 const App = () => {
   return (
     <div>
       {/* <StoreDataBrowser/> */}
-      <VirtualDom/>
+      {/* <VirtualDom/> */}
+      <ExampleOfUseMemo/>
     </div>
   );
 };
