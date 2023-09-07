@@ -1,4 +1,5 @@
-import { ExampleuseCallback2 } from "./Components/PerfomanceOptimisation/ExampleuseCallback2";
+import { ComponentWillUnMountExample } from "./Components/ComponentWillUnMountExample";
+// import ParentTimer from "./Components/StartTimer";
 
 const App = () => {
   return (
@@ -7,7 +8,9 @@ const App = () => {
       {/* <VirtualDom/> */}
       {/* <ExampleOfUseMemo/> */}
       {/* <ExampleOfUseCallBack/> */}
-      <ExampleuseCallback2/>
+      {/* <ExampleuseCallback2/> */}
+      {/* <ParentTimer/> */}
+      <ComponentWillUnMountExample/>
     </div>
   );
 };
