@@ -1,11 +1,13 @@
-import { ExampleOfUseMemo } from "./Components/PerfomanceOptimisation/ExampleOfUseMemo";
+import { ExampleuseCallback2 } from "./Components/PerfomanceOptimisation/ExampleuseCallback2";
 
 const App = () => {
   return (
     <div>
       {/* <StoreDataBrowser/> */}
       {/* <VirtualDom/> */}
-      <ExampleOfUseMemo/>
+      {/* <ExampleOfUseMemo/> */}
+      {/* <ExampleOfUseCallBack/> */}
+      <ExampleuseCallback2/>
     </div>
   );
 };
