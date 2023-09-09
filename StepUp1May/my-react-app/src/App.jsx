@@ -1,16 +1,14 @@
-import { ComponentWillUnMountExample } from "./Components/ComponentWillUnMountExample";
-// import ParentTimer from "./Components/StartTimer";
+import { Footer } from "./Components/Routes/Footer";
+import { Header } from "./Components/Routes/Header";
+import { Menu } from "./Components/Routes/Menu";
+import "./App.css"
 
 const App = () => {
   return (
     <div>
-      {/* <StoreDataBrowser/> */}
-      {/* <VirtualDom/> */}
-      {/* <ExampleOfUseMemo/> */}
-      {/* <ExampleOfUseCallBack/> */}
-      {/* <ExampleuseCallback2/> */}
-      {/* <ParentTimer/> */}
-      <ComponentWillUnMountExample/>
+     <Header/>
+     <Menu/>
+     <Footer/>
     </div>
   );
 };
