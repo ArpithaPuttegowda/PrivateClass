@@ -1,6 +1,6 @@
 import { useMemo, useState } from "react"
 
-export const ExampleOfUseMemo = () => {
+ const ExampleOfUseMemo = () => {
     const [count,setCount]=useState(0)
 
     const delay=useMemo(()=>{
@@ -15,3 +15,5 @@ export const ExampleOfUseMemo = () => {
     </div>
   )
 }
+
+export default ExampleOfUseMemo

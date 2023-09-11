@@ -23,3 +23,15 @@ footer{
     bottom: 0;
     width: 100%;
 }
+
+#menu{
+  background: green;
+    text-align: right;
+}
+#menu a{
+  color:white;
+  margin:10px;
+}
+#comp{
+  margin:20px
+}

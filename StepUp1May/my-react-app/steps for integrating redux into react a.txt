@@ -1,0 +1,4 @@
+steps for integrating redux into react application
+
+
+1.npm install @reduxjs/toolkit and npm i react-redux

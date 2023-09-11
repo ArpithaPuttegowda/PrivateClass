@@ -1,7 +1,7 @@
 import axios from "axios"
 import { useEffect } from "react"
 
-export const About = () => {
+const About = () => {
     useEffect(()=>{
         axios.get("https://jsonplaceholder.typicode.com/comments").then((res)=>{
             console.log(res.data)
@@ -13,3 +13,5 @@ export const About = () => {
     <div>About</div>
   )
 }
+
+export default About
