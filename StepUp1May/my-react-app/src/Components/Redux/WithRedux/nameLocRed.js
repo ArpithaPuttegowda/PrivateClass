@@ -1,4 +1,6 @@
-const  nameLocRed=(state,action)=>{
+import initData from "./initData"
+
+const  nameLocRed=(state=initData,action)=>{
 return state
 }
 
