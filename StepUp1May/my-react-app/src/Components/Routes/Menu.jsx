@@ -7,6 +7,7 @@ import { Routes,Route,BrowserRouter,Link, Navigate } from "react-router-dom"
 // import  Home  from "./Home"
 import { PageNotFound } from "./PageNotFound"
 import { WithourRedux } from "../Redux/WithoutRedux/WithourRedux"
+import { WithRedux } from "../Redux/WithRedux/WithRedux"
 
 const Parent=lazy(()=>import("../ForwardRef"))
 const ParentTimer=lazy(()=>import("../StartTimer"))
@@ -36,6 +37,10 @@ export const Menu = () => {
   },{
     to:"/withoutRedux",
     content:"WRedux"
+  },
+  {
+    to:"/withRedux",
+    content:"Redux"
   }]
   return (
     <>
@@ -60,6 +65,7 @@ export const Menu = () => {
         <Route path="startTimer" element={<ParentTimer/>}/>
         <Route path="useMemo" element={<ExampleOfUseMemo/>}/>
         <Route path="withoutRedux" element={<WithourRedux/>}/>
+        <Route path="withRedux" element={<WithRedux/>}/>
     </Routes>
     </div>
     </Suspense>
