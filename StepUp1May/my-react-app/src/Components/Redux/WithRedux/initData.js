@@ -1,7 +1,10 @@
 
 const initData={
-    name:"",
-    loc:""
+    name:"Sachin",
+    loc:"Mumbai"
+}
+export const paymentInfoInit={
+    posts:[]
 }
 
 export default initData

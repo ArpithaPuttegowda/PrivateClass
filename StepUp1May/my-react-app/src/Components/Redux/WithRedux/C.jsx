@@ -1,9 +1,15 @@
+import { useSelector } from "react-redux"
+import { PostsAjax } from "./PostsAjax"
 
 export const C = () => {
+  const storeData=useSelector((state)=>state)
+  console.log(storeData,"Redux data")
+
   return (
     <div>
-        <h1>Name:</h1>
-        <h1>Loc:</h1>
+        <h1>Name:{storeData?.nl?.name}</h1>
+        <h1>Loc:{storeData?.nl?.loc}</h1>
+        <PostsAjax/>
     </div>
   )
 }
