@@ -1,16 +1,21 @@
 import axios from "axios"
 import { useEffect } from "react"
+import { useDispatch, useSelector } from "react-redux"
 
 const About = () => {
+  const dispatch=useDispatch()
+  const storeData=useSelector(state=>state)
     useEffect(()=>{
         axios.get("https://jsonplaceholder.typicode.com/comments").then((res)=>{
-            console.log(res.data)
         }).catch((e)=>{
          console.log(e)
         })
     },[])
   return (
-    <div>About</div>
+    <div>About...{storeData?.counter?.count}
+    <button onClick={()=>dispatch({
+      type:"DEC"
+    })}>Dec Btn</button></div>
   )
 }
 

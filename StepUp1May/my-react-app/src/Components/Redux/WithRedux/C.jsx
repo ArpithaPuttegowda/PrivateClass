@@ -3,7 +3,6 @@ import { PostsAjax } from "./PostsAjax"
 
 export const C = () => {
   const storeData=useSelector((state)=>state)
-  console.log(storeData,"Redux data")
 
   return (
     <div>

@@ -1,0 +1,3 @@
+
+npx create-next-app your-app-name
+npm run dev

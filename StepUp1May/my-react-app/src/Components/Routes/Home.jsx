@@ -4,7 +4,6 @@ import { useSelector } from "react-redux"
 
 const Home = () => {
   const storeData=useSelector((state)=>state)
-  console.log(storeData?.paymentR?.posts,"homeComp")
     useEffect(()=>{
         axios.get("https://jsonplaceholder.typicode.com/posts").then((res)=>{
             console.log(res.data)

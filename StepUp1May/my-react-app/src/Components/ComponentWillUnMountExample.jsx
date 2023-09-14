@@ -20,7 +20,6 @@ export const ComponentWillUnMountExample = () => {
 const Child = () => {
   useEffect(() => {
  const id=setInterval(() => {
-      console.log("setInterval");
     }, 2000);
  return ()=>{
     //componentWillUnMount

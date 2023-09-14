@@ -8,6 +8,7 @@ import { Routes,Route,BrowserRouter,Link, Navigate } from "react-router-dom"
 import { PageNotFound } from "./PageNotFound"
 import { WithourRedux } from "../Redux/WithoutRedux/WithourRedux"
 import { WithRedux } from "../Redux/WithRedux/WithRedux"
+import { CounterWReduxWithoutRedux } from "../Redux/CounterWReduxWithoutRedux"
 
 const Parent=lazy(()=>import("../ForwardRef"))
 const ParentTimer=lazy(()=>import("../StartTimer"))
@@ -41,6 +42,9 @@ export const Menu = () => {
   {
     to:"/withRedux",
     content:"Redux"
+  },{
+    to:"counter",
+    content:"Counter"
   }]
   return (
     <>
@@ -66,6 +70,7 @@ export const Menu = () => {
         <Route path="useMemo" element={<ExampleOfUseMemo/>}/>
         <Route path="withoutRedux" element={<WithourRedux/>}/>
         <Route path="withRedux" element={<WithRedux/>}/>
+        <Route path="counter" element={<CounterWReduxWithoutRedux/>}/>
     </Routes>
     </div>
     </Suspense>

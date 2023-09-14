@@ -4,12 +4,10 @@ import { useState, useEffect, useCallback } from 'react';
 function Timer({ startTimer }) {
   useEffect(() => {
     const intervalId = setInterval(() => {
-      console.log('Tick');
     }, 1000);
 
     return () => {
       clearInterval(intervalId);
-      console.log('Timer stopped');
     };
   }, [startTimer]);
 
@@ -26,7 +24,6 @@ function ParentTimer() {
 
   useEffect(() => {
     if (timerStarted) {
-      console.log('Timer started');
     }
   }, [timerStarted]);
 

@@ -8,7 +8,6 @@ export const ExampleuseCallback2 = () => {
     const [loc,setLoc]=useState("Mumbai")
 
     const getCount=useCallback((myCount)=>{
-        console.log(myCount)
         setCount(myCount)
     },[])
 

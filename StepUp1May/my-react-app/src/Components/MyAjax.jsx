@@ -8,11 +8,9 @@ export const MyAjax = () => {
         return res.json();
       })
       .then((data) => {
-        console.log(data);
         setData(data)
       })
       .catch((e) => {
-        console.log(e);
       });
   }, []);
   return <div>{
