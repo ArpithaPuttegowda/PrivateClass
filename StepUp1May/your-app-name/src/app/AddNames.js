@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from 'react-redux'
 export const AddNames = () => {
     const dispatch=useDispatch()
     const storeData=useSelector((store)=>store)
+    console.log(storeData,"storeData")
     const nameRef=useRef(null)
     const [names,setNames]=useState([])
     const addName=()=>{
@@ -18,6 +19,7 @@ export const AddNames = () => {
     <div>
         <input ref={nameRef}/>
         <button onClick={addName}>Add Name</button>
+        <h1>Local state useState</h1>
         <ol>
         {
             names?.map((name,i)=>{
@@ -25,6 +27,7 @@ export const AddNames = () => {
             })
         }
         </ol>
+        <h1>Global state redux</h1>
         <ul>
         {
            storeData?.namesRed?.names?.map((name,i)=>{

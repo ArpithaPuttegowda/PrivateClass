@@ -1,3 +1,4 @@
+"use client"
 import myStore from "./Redux/store"
 import { Provider } from "react-redux"
 export const metadata = {
