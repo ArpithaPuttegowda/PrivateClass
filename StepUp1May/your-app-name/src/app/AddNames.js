@@ -1,10 +1,15 @@
 import React, { useRef, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
+import store from './Redux/store'
 
 export const AddNames = () => {
     const dispatch=useDispatch()
     const storeData=useSelector((store)=>store)
+    // for class component
+    //  const globalState=store.getState()
     console.log(storeData,"storeData")
+    console.log(storeData?.ajaxRed?.posts,storeData?.ajaxRed?.comments,"add names comp")
+    // console.log(globalState?.ajaxRed?.posts,globalState?.ajaxRed?.comments,"add names comp getState")
     const nameRef=useRef(null)
     const [names,setNames]=useState([])
     const addName=()=>{
