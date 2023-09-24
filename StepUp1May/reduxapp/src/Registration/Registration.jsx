@@ -1,5 +1,7 @@
 // import { useRef } from "react"
 
+import { useDispatch } from "react-redux"
+
 // export const Registration = () => {
 //     const nameRef=useRef(null)
 //     const locRef=useRef(null)
@@ -28,9 +30,13 @@
 
 
 export const Registration = () => {
+  const dispatch=useDispatch()
     let data={}
     const handleRegistration=()=>{
-        console.log(data)
+       dispatch({
+        type:"REG_DATA",
+        payload:data
+       })
     }
     const handleChange=(event)=>{
        const val=event.target.value;
@@ -42,9 +48,10 @@ export const Registration = () => {
     }
   return (
     <div>
+      <h1>Registration</h1>
         <p><span>Name:</span><input id="name" onChange={handleChange}/></p>
         <p><span>Location:</span><input id="loc" onChange={handleChange}/></p>
-        <p><span>Phone no:</span><input id="pn" onChange={handleChange}/></p>
+        <p><span>Phone no:</span><input type="number" id="pn" onChange={handleChange}/></p>
         <button onClick={handleRegistration}>Registration</button>
     </div>
   )
