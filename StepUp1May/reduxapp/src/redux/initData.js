@@ -3,3 +3,7 @@ export const initData={
     paymentInfo:""
 }
 
+export const initDataChangeName={
+    name:"Ethan"
+}
+
