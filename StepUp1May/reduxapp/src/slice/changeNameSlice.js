@@ -1,23 +1,24 @@
 import { createSlice } from "@reduxjs/toolkit";
+import { REDUX_KEYS } from "./constants";
 
-const initialState={
+const initData={
     name:"JOHN",
-    count:10
+    count:0
 }
 
-const changeName=createSlice({
-    name:"Change_Name",
-    initialState:initialState,
+const nameChange=createSlice({
+    initialState:initData,
+    name:REDUX_KEYS.CHANGE_NAME,
     reducers:{
         setChangeName:(state,action)=>{
-       state.name=action.payload
+            state.name=action.payload
         },
         setCount:(state,action)=>{
-         state.count=action.payload
+           state.count=action.payload
         }
     }
 })
 
-export const {setChangeName,setCount}=changeName.actions
+export const {setChangeName,setCount}=nameChange.actions
 
-export default changeName.reducer
+export default nameChange.reducer

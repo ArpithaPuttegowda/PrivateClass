@@ -3,15 +3,16 @@ import { regRed } from "./regRed";
 import logger from "redux-logger";
 import changeNameRed from "../reducers/changeNameRed";
 import changeNameRedRTK from "../slice/changeNameSlice"
+import nameLocRedRTK from "../ReduxTookit/ReduxToolkitNameLoc/slice"
 
-const rootRed=combineReducers({
+const reducer=combineReducers({
     regRed,
     changeNameRed,
-    changeNameRedRTK
-
+    changeNameRedRTK,
+    nameLocRedRTK
 })
 const store=configureStore({
-    reducer:rootRed,
+    reducer,
     middleware:[logger]
 })
 

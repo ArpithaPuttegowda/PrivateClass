@@ -7,9 +7,10 @@ export const ChangeNameWithReduxToolkit = () => {
     const dispatch=useDispatch()
     const [val,setVal]=useState("")
     const handleClick=()=>{
-        dispatch(setChangeName(val))
+        dispatch()
         setVal("")
     }
+
   return (
     <div><h1>Change Name with ReduxToolkit</h1>
         <input value={val} onChange={(e)=>setVal(e.target.value)}/>
