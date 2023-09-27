@@ -1,8 +1,9 @@
 import { useState } from "react"
-import { useDispatch } from "react-redux"
+import { useDispatch} from "react-redux"
 import { setLoc } from "./slice"
 
 export const B = () => {
+  
     const dispatch=useDispatch()
     const [val,setVal]=useState("")
     const handleLoc=()=>{

@@ -1,4 +1,4 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createSelector, createSlice } from "@reduxjs/toolkit";
 
 
 const initialState={
@@ -20,5 +20,20 @@ const nameLoc=createSlice({
 })
 
 export const {setName,setLoc}=nameLoc.actions
+
+
+const selectSelf = (state) => state;
+
+export const getName = createSelector(
+    selectSelf,
+  ({  nameLocRedRTK}) =>  nameLocRedRTK.name
+);
+
+export const getLoc = createSelector(
+    selectSelf,
+  ({  nameLocRedRTK}) =>  nameLocRedRTK.loc
+);
+
+
 
 export default nameLoc.reducer
