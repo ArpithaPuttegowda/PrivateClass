@@ -15,8 +15,8 @@ const counter=createSlice({
        setDec:(state,action)=>{
         state.count=state.count-action.payload
        },
-       setReset:(state)=>{
-        state.count=0
+       setReset:(state,action)=>{
+        state.count=action.payload
        }
     }
 })
