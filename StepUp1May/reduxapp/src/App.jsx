@@ -1,4 +1,5 @@
 import './App.css'
+import PlayerName from './connectMethod/PlayerName'
 import { Login } from './Login'
 import { ChangeName } from './ReduxTookit/ChangeName'
 import { ChangeNameWithRedux } from './ReduxTookit/ChangeNameWithRedux'
@@ -20,6 +21,7 @@ function App() {
       <ReduxToolkitNameLoc/> */}
       {/* <Counter/> */}
       <GetPosts/>
+      <PlayerName/>
     </>
   )
 }
