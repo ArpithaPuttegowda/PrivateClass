@@ -1,15 +1,25 @@
 import { bindActionCreators } from "@reduxjs/toolkit"
-import { useDispatch } from "react-redux"
+import { connect } from "react-redux"
 import { postAction } from "../actions/thunkActionPosts"
 
-export const GetPosts = () => {
-    const dispatch=useDispatch()
-    const handlePost=()=>{
-     bindActionCreators(postAction,dispatch)
-    }
+const GetPosts = ({pa}) => {
+  const handlePost=()=>{
+    pa()
+  }
   return (
     <div>
-        <button onClick={handlePost}>Get Post</button>
+    <button onClick={handlePost}>Get Posts</button>
     </div>
   )
 }
+// const mdp=(dispatch)=>{
+//   return {
+//     pa:bindActionCreators(postAction,dispatch)
+//   }
+// }
+
+
+const mdp={
+  pa:postAction
+}
+export default connect(null,mdp)(GetPosts)

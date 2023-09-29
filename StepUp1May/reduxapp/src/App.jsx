@@ -7,7 +7,7 @@ import { ChangeNameWithReduxToolkit } from './ReduxTookit/ChangeNameWithReduxToo
 import { Counter } from './ReduxTookit/CounterWithRTK/Counter'
 import { ReduxToolkitNameLoc } from './ReduxTookit/ReduxToolkitNameLoc/ReduxToolkitNameLoc'
 import { Registration } from './Registration/Registration'
-import { GetPosts } from './Thunk/GetPosts'
+import GetPosts from './Thunk/GetPosts'
 
 function App() {
 
