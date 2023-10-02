@@ -7,6 +7,7 @@ import nameLocRedRTK from "../ReduxTookit/ReduxToolkitNameLoc/slice"
 import counterRedRTK from "../ReduxTookit/CounterWithRTK/counterSlice";
 import thunk from "redux-thunk";
 import nameRed from "../connectMethod/nameRed";
+import { ajaxRed } from "../reducers/ajax";
 
 const reducer=combineReducers({
     regRed,
@@ -14,7 +15,8 @@ const reducer=combineReducers({
     changeNameRedRTK,
     nameLocRedRTK,
     counterRedRTK,
-    nameRed
+    nameRed,
+    ajaxRed
 })
 const store=configureStore({
     reducer,

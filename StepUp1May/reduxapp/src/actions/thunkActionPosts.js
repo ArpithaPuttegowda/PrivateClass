@@ -2,9 +2,13 @@ import { ServerCallService } from "../ServerCallService/ServerCallService"
 
 
 export const postAction=()=>{
-    alert("outerFunction execute")
-    return ()=>{
-        alert("inner function called")
-    ServerCallService.fetchData("https://jsonplaceholder.typicode.com/posts")
+    return async(dispatch,getState)=>{
+        if(!getState()?.ajaxRed?.posts?.length){
+        let res=await  ServerCallService.fetchData("https://jsonplaceholder.typicode.com/posts")
+        dispatch({
+            type:"POSTS",
+            payload:res.data
+        })
     }
+}
 }
