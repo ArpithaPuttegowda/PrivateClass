@@ -7,6 +7,7 @@ import { ChangeNameWithReduxToolkit } from './ReduxTookit/ChangeNameWithReduxToo
 import { Counter } from './ReduxTookit/CounterWithRTK/Counter'
 import { ReduxToolkitNameLoc } from './ReduxTookit/ReduxToolkitNameLoc/ReduxToolkitNameLoc'
 import { Registration } from './Registration/Registration'
+import { GetComments } from './saga/GetComments'
 import GetPosts from './Thunk/GetPosts'
 
 function App() {
@@ -20,8 +21,9 @@ function App() {
       <ChangeNameWithReduxToolkit/>
       <ReduxToolkitNameLoc/> */}
       {/* <Counter/> */}
-      <GetPosts/>
-      <PlayerName/>
+      {/* <GetPosts/>
+      <PlayerName/> */}
+      <GetComments/>
     </>
   )
 }

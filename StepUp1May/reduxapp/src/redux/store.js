@@ -8,6 +8,10 @@ import counterRedRTK from "../ReduxTookit/CounterWithRTK/counterSlice";
 import thunk from "redux-thunk";
 import nameRed from "../connectMethod/nameRed";
 import { ajaxRed } from "../reducers/ajax";
+import createSagaMiddleware from 'redux-saga';
+import rootSaga from "../saga/rootSaga";
+
+const saga=createSagaMiddleware()
 
 const reducer=combineReducers({
     regRed,
@@ -20,7 +24,9 @@ const reducer=combineReducers({
 })
 const store=configureStore({
     reducer,
-    middleware:[logger,thunk]
+    middleware:[logger,thunk,saga]
 })
+
+saga.run(rootSaga)
 
 export default store
