@@ -7,9 +7,16 @@ export const GetComments = () => {
         type:"COMMENTS_SAGA"
        })
     }
+
+    const handlePosts=()=>{
+      dispatch({
+        type:"POST_SAGA"
+      })
+    }
   return (
     <div>
         <button onClick={handleComments}>Get Comments</button>
+        <button onClick={handlePosts}>Get Posts</button>
     </div>
   )
 }
