@@ -7,7 +7,8 @@ const reducer=(state,action="COUNT")=>{
 return state
 }
 const initialState={
-    count:0
+    count:0,
+    name:""
 }
 
 

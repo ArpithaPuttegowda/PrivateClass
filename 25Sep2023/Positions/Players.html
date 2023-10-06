@@ -1,0 +1,33 @@
+<style>
+  #parent {
+    border: 2px solid red;
+    height: 60px;
+    width: 129px;
+ 
+  }
+  #first-div {
+    position: absolute;
+    /* bottom: 0; */
+    right: 0;
+  }
+  #super-parent {
+    border: 1px solid green;
+    height: 200px;
+    width: 200px;
+  }
+  #s-super-parent{
+    position: relative;
+    border: 1px solid blue;
+    height: 400px;
+    width: 400px;
+  }
+</style>
+<div id="s-super-parent">
+<div id="super-parent">
+  <div id="parent">
+    <div id="first-div">Sachin</div>
+  </div>
+</div>
+</div>
+<div>Dhoni</div>
+<div>Kohli</div>
