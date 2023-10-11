@@ -6,6 +6,8 @@ import { Form } from './Hooks/Form'
 import { ParentNL } from './Hooks/GlobalStateWithuseReducerContextAPI/ParentNL'
 import {ctx} from "./ctx"
 import { useReducer } from 'react'
+import ExampleComponent from './Hooks/ExampleuseLayoutEffect'
+import { ExampleUseTransition } from './Hooks/ExampleUseTransition'
 
 const initData={
 name:"",
@@ -24,11 +26,15 @@ const reducer=(state,action)=>{
 function App() {
 const [state,dispatch]=useReducer(reducer,initData)
   return <>
-  <ctx.Provider value={{state,dispatch}}><Counter/>
-  <Counter5/>
+  <ctx.Provider value={{state,dispatch}}>
+  {/* <Counter5/>
   <Form/>
   <ChangeName/>
-  <ParentNL/></ctx.Provider></>
+  <ParentNL/> */}
+  {/* <ExampleComponent/> */}
+  {/* <ExampleComponent/> */}
+  <ExampleUseTransition/>
+  </ctx.Provider></>
 }
 
 export default App
