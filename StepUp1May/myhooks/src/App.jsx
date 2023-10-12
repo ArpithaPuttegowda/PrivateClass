@@ -8,6 +8,7 @@ import {ctx} from "./ctx"
 import { useReducer } from 'react'
 import ExampleComponent from './Hooks/ExampleuseLayoutEffect'
 import { ExampleUseTransition } from './Hooks/ExampleUseTransition'
+import { Debouncing } from './Javascript/Debouncing'
 
 const initData={
 name:"",
@@ -33,7 +34,8 @@ const [state,dispatch]=useReducer(reducer,initData)
   <ParentNL/> */}
   {/* <ExampleComponent/> */}
   {/* <ExampleComponent/> */}
-  <ExampleUseTransition/>
+  {/* <ExampleUseTransition/> */}
+  <Debouncing/>
   </ctx.Provider></>
 }
 
