@@ -10,6 +10,7 @@ import ExampleComponent from './Hooks/ExampleuseLayoutEffect'
 import { ExampleUseTransition } from './Hooks/ExampleUseTransition'
 import { Debouncing } from './Javascript/Debouncing'
 import { Throttling } from './Javascript/Throttling'
+import { ExampleUseDifferedValue } from './Hooks/ExampleUseDifferedValue'
 
 const initData={
 name:"",
@@ -37,7 +38,8 @@ const [state,dispatch]=useReducer(reducer,initData)
   {/* <ExampleComponent/> */}
   {/* <ExampleUseTransition/> */}
   {/* <Debouncing/> */}
-  <Throttling/>
+  {/* <Throttling/> */}
+  <ExampleUseDifferedValue/>
   </ctx.Provider></>
 }
 
