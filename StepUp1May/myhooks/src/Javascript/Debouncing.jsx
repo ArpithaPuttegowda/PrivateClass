@@ -1,11 +1,19 @@
 
 export const Debouncing = () => {
+    let id;
     const handleKeyUp=()=>{
-        //ajax
+        console.log("ajax called")
+    }
+
+    const handleDebouncing=()=>{
+        clearTimeout(id)
+      id=setTimeout(()=>{
+            handleKeyUp()
+        },2000)
     }
   return (
     <div>
-        <input onKeyUp={handleKeyUp} placeholder="search"/>
+        <input onKeyUp={handleDebouncing} placeholder="search"/>
     </div>
   )
 }
