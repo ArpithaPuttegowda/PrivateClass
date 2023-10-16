@@ -1,4 +1,4 @@
-import './App.css'
+// import './App.css'
 import { ChangeName } from './Hooks/ChangeName'
 import { Counter } from './Hooks/Counter'
 import { Counter5 } from './Hooks/Counter5'
@@ -11,6 +11,12 @@ import { ExampleUseTransition } from './Hooks/ExampleUseTransition'
 import { Debouncing } from './Javascript/Debouncing'
 import { Throttling } from './Javascript/Throttling'
 import { ExampleUseDifferedValue } from './Hooks/ExampleUseDifferedValue'
+import { MediaQueries1 } from './mediaQueries/MediaQueries1'
+import "./mediaQueries/mediaQueries.css"
+import { MediaQueries2 } from './mediaQueries/MediaQueries2'
+import { MediaQueries3 } from './mediaQueries/MediaQueries3'
+import { MediaQueries4 } from './mediaQueries/MediaQueries4'
+import { MediaQueries5 } from './mediaQueries/MediaQueries5'
 
 const initData={
 name:"",
@@ -39,7 +45,8 @@ const [state,dispatch]=useReducer(reducer,initData)
   {/* <ExampleUseTransition/> */}
   {/* <Debouncing/> */}
   {/* <Throttling/> */}
-  <ExampleUseDifferedValue/>
+  {/* <ExampleUseDifferedValue/> */}
+  <MediaQueries5/>
   </ctx.Provider></>
 }
 
