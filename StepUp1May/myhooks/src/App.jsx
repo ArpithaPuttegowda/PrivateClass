@@ -17,6 +17,7 @@ import { MediaQueries2 } from './mediaQueries/MediaQueries2'
 import { MediaQueries3 } from './mediaQueries/MediaQueries3'
 import { MediaQueries4 } from './mediaQueries/MediaQueries4'
 import { MediaQueries5 } from './mediaQueries/MediaQueries5'
+import { ExampleFlex } from './Flex/ExampleFlex'
 
 const initData={
 name:"",
@@ -46,7 +47,8 @@ const [state,dispatch]=useReducer(reducer,initData)
   {/* <Debouncing/> */}
   {/* <Throttling/> */}
   {/* <ExampleUseDifferedValue/> */}
-  <MediaQueries5/>
+  {/* <MediaQueries5/> */}
+  <ExampleFlex/>
   </ctx.Provider></>
 }
 

@@ -1,35 +1,48 @@
-@media screen and (max-width:700px){ 
-    #span-1{
-         color:red 
-        } 
+@media screen and (max-width: 700px) {
+  #span-1 {
+    color: red;
+  }
 }
 
-@media screen and (min-width:700px) and (max-width:1000px){
-    #span-2{
-         color:green 
-        } 
+@media screen and (min-width: 700px) and (max-width: 1000px) {
+  #span-2 {
+    color: green;
+  }
 }
 
-@media screen and (min-width:1000px){ 
-#span-3{
-         color:rgb(255, 0, 200)
-        } 
+@media screen and (min-width: 1000px) {
+  #span-3 {
+    color: rgb(255, 0, 200);
+  }
 }
 
 /* In a CSS file */
 /* Default styles for your element */
 .my-element {
-        background-color: #3498db;
-        color: #fff;
-        padding: 10px;
-      }
-      
-      /* Media query for screens with a maximum width of 768px */
-      @media screen and (max-width: 768px) {
-        .my-element {
-          background-color: #e74c3c;
-          color: #000;
-          font-size: 16px;
-        }
-      }
-      
+  background-color: #3498db;
+  color: #fff;
+  padding: 10px;
+}
+
+/* Media query for screens with a maximum width of 768px */
+@media screen and (max-width: 768px) {
+  .my-element {
+    background-color: #e74c3c;
+    color: #000;
+    font-size: 16px;
+  }
+}
+
+#my-div {
+  background-color: red;
+  color: #fff;
+  padding: 10px;
+}
+
+@media screen and (max-width: 768px) {
+  #my-div {
+    background-color: blue;
+    color: #000;
+    font-size: 16px;
+  }
+}

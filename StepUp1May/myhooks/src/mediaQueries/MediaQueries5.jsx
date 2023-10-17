@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { useState } from "react";
 
+
 export function MediaQueries5() {
     const [isMobile,setIsMobile]=useState(false)
     const containerStyles = {
@@ -27,7 +28,7 @@ export function MediaQueries5() {
     }, [])
   
     return (
-      <div style={isMobile? mediaQueryStyles : containerStyles}>
+      <div id="my-div" style={isMobile?mediaQueryStyles:containerStyles}>
         Certainly! You can use media queries in JSX code by embedding inline styles in your React components. Here`s how you can apply media queries using inline styles in JSX:
       </div>
     );

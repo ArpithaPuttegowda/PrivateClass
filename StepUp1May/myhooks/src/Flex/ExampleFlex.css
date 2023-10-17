@@ -1,0 +1,47 @@
+#box-1{
+  background: rgb(50, 115, 205);
+  border:3px solid;
+}
+
+#box-2{
+    background: rgb(117, 50, 205);
+    border:3px solid;
+  }
+  #box-3{
+    background: rgb(202, 205, 50);
+    border:3px solid;
+  }
+  #box-4{
+    background: rgb(205, 50, 58);
+    border:3px solid;
+  }
+  #box-5{
+    background: rgb(205, 50, 148);
+    border:3px solid;
+  }
+  #box-6{
+    background: rgb(50, 117, 205);
+    border:3px solid;
+  }
+  #box-7{
+    background: rgb(205, 128, 50);
+    border:3px solid;
+  }
+  #box-8{
+    background: yellowgreen;
+    border:3px solid;
+  }
+  #box-9{
+    background: rgb(68, 98, 8);
+    border:3px solid;
+  }
+
+  #container{
+    height: 500px;
+    display: flex;
+    border:2px solid;
+    flex-direction: row;
+    flex-wrap:nowrap;
+    justify-content:flex-start;
+    align-items: flex-start;
+  }
