@@ -1,0 +1,19 @@
+    <button onclick="f1()">Btn1</button>
+    <h1 id="hyd" class="city" name="place">Hyderabad</h1>
+    <h1 id="mum" class="city" name="place">Mumbai</h1>
+    
+    
+    <script>
+    function f1(){
+        let hyd=document.querySelector('#hyd')
+        // let hyd=document.querySelector(".city")
+        // let hyd=document.querySelector("[name='place']")
+        // let hyd=document.querySelector("h1")
+
+
+        hyd.style.color="red"
+        let mumRef=document.querySelectorAll(".city")[1]
+        mumRef.style.background="yellow"
+    }
+    
+    </script>

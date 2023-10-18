@@ -1,0 +1,20 @@
+    <button onclick="f1()">Btn1</button>
+    <button onclick="f2()">Btn2</button>
+    <h1 class="city">Hyderabad</h1>
+    <h2 class="city">Mumbai</h2>
+    
+    
+    <script>
+    function f1(){
+        let hydRef=document.getElementsByClassName("city")[0]
+        hydRef.style.color="red"
+        hydRef.style.background="blue"
+    }
+
+    function f2(){
+        let mumbaiRef=document.getElementsByClassName("city")[1]
+        mumbaiRef.style.color="blue";
+        mumbaiRef.style.background="red"
+    }
+    
+    </script>
