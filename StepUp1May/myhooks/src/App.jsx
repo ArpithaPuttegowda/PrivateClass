@@ -18,6 +18,7 @@ import { MediaQueries3 } from './mediaQueries/MediaQueries3'
 import { MediaQueries4 } from './mediaQueries/MediaQueries4'
 import { MediaQueries5 } from './mediaQueries/MediaQueries5'
 import { ExampleFlex } from './Flex/ExampleFlex'
+import  ExamplePropTypes  from './PropTypesAndDefaultProps/ExamplePropTypes'
 
 const initData={
 name:"",
@@ -48,7 +49,9 @@ const [state,dispatch]=useReducer(reducer,initData)
   {/* <Throttling/> */}
   {/* <ExampleUseDifferedValue/> */}
   {/* <MediaQueries5/> */}
-  <ExampleFlex/>
+  {/* <ExampleFlex/> */}
+  <ExamplePropTypes name="Dhoni" loc="Ranchi" pincode={123} students={["std1","std2"]} />
+  <ExamplePropTypes/>
   </ctx.Provider></>
 }
 
