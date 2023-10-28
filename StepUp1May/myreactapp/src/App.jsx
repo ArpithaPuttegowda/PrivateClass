@@ -1,12 +1,13 @@
-import "./App.css";
-import LifeCycleMounting from "./Components/LifeCycleMethods/LifeCycleMounting";
-import LifeCycleUpdating from "./Components/LifeCycleMethods/LifeCycleUpdating";
-function App() {
-  return (
-   <div>
-    <LifeCycleUpdating name="Rahul" loc="mumbai"/>
-    </div>
-  );
-}
+import React from 'react'
+import Counter from './UnitTest/Counter'
 
-export default App;
+export const App = () => {
+  return (
+    <div>
+      <h1>My first react app</h1>
+      <div>Hooks</div>
+      <div>Redux</div>
+      <Counter/>
+    </div>
+  )
+}

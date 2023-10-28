@@ -1,8 +1,10 @@
 import { render, screen } from '@testing-library/react';
-import App from './App';
+import {App} from './App';
 
-test('renders learn react link', () => {
-  render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
-});
+
+test("renders App comp",()=>{
+  render(<App/>)
+  expect(screen.getByText("My first react app")).toBeInTheDocument()
+  expect(screen.getByText("Hooks")).toBeInTheDocument()
+  expect(screen.getByText("Redux")).toBeInTheDocument()
+})
