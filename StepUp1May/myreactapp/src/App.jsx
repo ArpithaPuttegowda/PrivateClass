@@ -1,4 +1,5 @@
 import React from 'react'
+import { Ajax } from './UnitTest/Ajax'
 import { Message } from './UnitTest/ConditionalRendering'
 import Counter from './UnitTest/Counter'
 import ElementComponent from './UnitTest/ElementText'
@@ -16,6 +17,7 @@ export const App = () => {
       <Message isError={false}/>
       <ElementComponent/>
       <LoginForm/>
+      <Ajax/>
     </div>
   )
 }
