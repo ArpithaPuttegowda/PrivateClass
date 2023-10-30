@@ -6,6 +6,7 @@ describe("Counter Comp",()=>{
         render(<Counter/>)
         expect(screen.getByText("Count:")).toBeInTheDocument()
         expect(screen.getByText("0")).toBeInTheDocument()
+        // expect(screen.getByRole("button").innerHTML).toBe("Increment")
         expect(screen.getByText("Increment")).toBeInTheDocument()
     })
     it("should click the button",()=>{

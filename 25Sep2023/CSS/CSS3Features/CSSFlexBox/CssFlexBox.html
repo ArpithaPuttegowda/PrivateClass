@@ -1,36 +1,39 @@
 
 <style>
    #container{
-    height: 400px;
-    display: flex;
     border:4px solid red;
-    flex-direction:row;
+    display: flex;
+    flex-direction: row;
     flex-wrap: nowrap;
-    justify-content: flex-start;
-    align-items: stretch;
+    justify-content:flex-start; /*main axis*/
+    align-items: stretch; /*cross axis*/
    }
     .item{
         text-align: center;
     }
     .item1{
         background: red;
+        flex-grow: 1;
+        order: 1;
     }
     .item2{
         background: blue;
-        padding: 40px;
+        order: 1;
     }
     .item3{
         background: rgb(0, 128, 255);
     }
     .item4{
         background: rgb(0, 255, 213);
-        padding: 80px;
     }
     .item5{
         background: rgb(149, 0, 255);
+        flex-basis: 500px;
+        order: 2;
     }
     .item6{
         background: rgb(41, 41, 50);
+        flex-basis: 100px;
     }
     .item7{
         background: yellowgreen
