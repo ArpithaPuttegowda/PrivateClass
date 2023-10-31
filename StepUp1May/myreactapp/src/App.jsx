@@ -5,6 +5,7 @@ import Counter from './UnitTest/Counter'
 import ElementComponent from './UnitTest/ElementText'
 import { LoginForm } from './UnitTest/InputControl'
 import { UserProfile } from './UnitTest/NameComp'
+import { StylesDynamically } from './UnitTest/StylesDynamically'
 
 export const App = () => {
   return (
@@ -18,6 +19,9 @@ export const App = () => {
       <ElementComponent/>
       <LoginForm/>
       <Ajax/>
+      <h1>
+      <StylesDynamically/>
+      </h1>
     </div>
   )
 }
