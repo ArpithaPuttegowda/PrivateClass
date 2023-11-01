@@ -1,4 +1,5 @@
 import { useState } from "react"
+import "../index.css"
 
 export const StylesDynamically = () => {
     const [count,setCount]=useState(0)
@@ -12,10 +13,11 @@ export const StylesDynamically = () => {
   return (
     <div>
         <h1>Counter</h1>
-        <button onClick={handleSub}>-</button>
-        <input value={input} onChange={(e)=>setInput(e.target.value)}/>
-        <button onClick={handleAdd}>+</button>
-        <h2>{count}</h2>
+        <div>Counter</div>
+        <button data-testid="dec-btn" onClick={handleSub}>-</button>
+        <input data-testid="input" value={input} onChange={(e)=>setInput(e.target.value)}/>
+        <button data-testid="inc-btn" onClick={handleAdd}>+</button>
+        <h2 className={count>100?"cg":"cr"} data-testid="count">{count}</h2>
     </div>
   )
 }
