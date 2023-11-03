@@ -1,7 +1,17 @@
 #container {
+    height: 1000px;
+    border:2px solid red;
     display: grid;
-    grid-template-columns: 1000px 200px 150px;
-    grid-template-rows:200px 200px 500px 
+    /* grid-template-columns:100px repeat(3,400px)  ; */
+    grid-template-columns:repeat(3,100px);
+    grid-template-rows: repeat(3,200px);
+    /* row-gap: 30px;
+    column-gap: 20px; */
+    gap:30px 40px;
+    justify-items: stretch;
+    align-items: stretch;
+    justify-content: flex-start;
+    align-content: stretch;
 }
 .item {
   padding: 10px;
@@ -10,6 +20,14 @@
 }
 #box-1 {
   background: rgb(50, 115, 205);
+  /* grid-column-start:1;
+  grid-column-end: 3; */
+  /* grid-column-start: 1;
+  grid-column-end:3 ;
+  grid-row-start: 1;
+  grid-row-end:3; */
+  grid-column: 1/3;
+  grid-row:1/3;
 }
 
 #box-2 {
