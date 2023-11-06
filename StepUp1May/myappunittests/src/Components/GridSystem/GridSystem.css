@@ -1,0 +1,12 @@
+.grid-container {
+    height: 1000px;
+    border: 1px solid red;
+    display: grid;
+    grid-template-rows: repeat(3, 100px);
+    align-content: center; /* This aligns the content of the grid container vertically to the center. */
+  }
+  
+  .item1 {
+    align-self: start; /* This overrides the align-content value for this specific grid item, aligning it to the start. */
+  }
+  
