@@ -19,6 +19,8 @@ import { MediaQueries4 } from './mediaQueries/MediaQueries4'
 import { MediaQueries5 } from './mediaQueries/MediaQueries5'
 import { ExampleFlex } from './Flex/ExampleFlex'
 import  ExamplePropTypes  from './PropTypesAndDefaultProps/ExamplePropTypes'
+import Button from './ReusuableComponents/Button'
+import { useState } from 'react'
 
 const initData={
 name:"",
@@ -36,6 +38,10 @@ const reducer=(state,action)=>{
   }
 function App() {
 const [state,dispatch]=useReducer(reducer,initData)
+const [name,setName]=useState("Dhoni")
+const handleName=()=>{
+  setName("MD")
+}
   return <>
   <ctx.Provider value={{state,dispatch}}>
   {/* <Counter5/>
@@ -50,8 +56,9 @@ const [state,dispatch]=useReducer(reducer,initData)
   {/* <ExampleUseDifferedValue/> */}
   {/* <MediaQueries5/> */}
   {/* <ExampleFlex/> */}
-  <ExamplePropTypes name="Dhoni" loc="Ranchi" pincode={123} students={["std1","std2"]} />
+  <ExamplePropTypes name={name} loc="Ranchi" pincode={123} students={["std1","std2"]} />
   <ExamplePropTypes/>
+  <Button label={"changeName"} onClick={handleName}/>
   </ctx.Provider></>
 }
 
