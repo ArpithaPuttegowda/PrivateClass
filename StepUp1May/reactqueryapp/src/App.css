@@ -36,3 +36,11 @@
     transform: rotate(360deg);
   }
 }
+#menu-items{
+  text-align: right;
+}
+#menu-items a{
+  color: red;
+  padding: 10px;
+  font-size: 20px;
+}

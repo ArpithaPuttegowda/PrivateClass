@@ -8,4 +8,20 @@ const usePostsQuery = () => {
   });
 };
 
+
+export const useCommenstsQuery=(isGetComment)=>{
+  return useQuery("comments",async()=>{
+    const response=await axios.get("https://jsonplacehoder.typicode.com/comments")
+    return response.data
+  },{
+    enabled:isGetComment,
+    onSuccess:(data)=>{
+      console.log(data,"comments response")
+    },
+    onError:(e)=>{
+      console.log(e,"error message")
+    }
+  })
+}
+
 export default usePostsQuery;

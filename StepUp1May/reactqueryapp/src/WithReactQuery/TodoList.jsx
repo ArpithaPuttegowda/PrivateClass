@@ -6,7 +6,7 @@ function TodoList() {
   const { data, isLoading, isError, error } = usePostsQuery()
 
   if (isLoading) {
-    return 'something is processing in the background';
+    return <h1>Loading.....</h1>;
   }
 
   if (isError) {
@@ -16,7 +16,7 @@ function TodoList() {
   return (
     <ol>
       {data?.map((todo) => (
-        <li key={todo.id}>{todo.title}</li>
+        <li key={todo.id}>{todo.id}</li>
       ))}
     </ol>
   );
