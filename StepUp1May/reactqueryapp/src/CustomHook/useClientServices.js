@@ -11,7 +11,7 @@ const usePostsQuery = () => {
 
 export const useCommenstsQuery=(isGetComment)=>{
   return useQuery("comments",async()=>{
-    const response=await axios.get("https://jsonplacehoder.typicode.com/comments")
+    const response=await axios.get("https://jsonplaceholder.typicode.com/comments")
     return response.data
   },{
     enabled:isGetComment,

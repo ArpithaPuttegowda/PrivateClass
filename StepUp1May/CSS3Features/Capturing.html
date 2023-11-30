@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <style>
+    div {
+      padding: 30px;
+      border: 1px solid red;
+    }
+  </style>
+</head>
+<body>
+  <div id="div1">
+    Div1
+    <div id="div2">
+      Div2
+      <div id="div3">
+        Div3
+      </div>
+    </div>
+  </div>
+  <script defer>
+//    let div1Ref=document.getElementById("div1")
+//    let div2Ref=document.getElementById("div2")
+//    let div3Ref=document.getElementById("div3")
+
+//    div1Ref.addEventListener("click",()=>{
+//     alert("div1 called")
+//    },true)
+
+//    div2Ref.addEventListener("click",()=>{
+//     alert("div2 called")
+//    },true)
+
+//    div3Ref.addEventListener("click",()=>{
+//     alert("div3 called")
+//    },true)
+
+const divRefs=document.getElementsByTagName("div");
+const divArr=Array.from(divRefs)
+
+divArr.forEach((div)=>{
+    div.addEventListener("click",function(){
+        alert(this.id)
+    },true)
+})
+
+  </script>
+</body>
+</html>

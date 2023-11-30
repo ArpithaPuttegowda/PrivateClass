@@ -1,0 +1,61 @@
+
+<style>
+    body{
+        margin: 0;
+        padding: 0;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+header{
+    background-color: rgba(0, 0, 0, 0.742);
+    color:white;
+    font-size: 1em;
+    text-align: center;
+    padding: 10px;
+}
+main{
+   width: 800px;
+   margin:20px auto;
+   box-shadow: 10px 10px 10px;
+   padding: 10px;
+}
+footer{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.742);
+    color:white;
+    font-size: 1em;
+    padding:10px
+}
+
+@keyframes slideIn {
+  0%,100% {
+    transform: translateX(0) ;
+    background: rgb(100, 0, 128);
+  }
+  50% {
+    transform: translateX(100%);
+    background: rgb(0, 140, 255);
+  }
+}
+
+main {
+  animation: slideIn 10s 2; /* animation-name duration timing-function */
+}
+
+</style>
+
+<title>My first web app</title>
+
+<header>
+    <h1>My first Static web application</h1>
+</header>
+
+<main>
+    <h2>It's main section</h2>
+    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy</p>
+</main>
+<footer>
+    &copy; rights belongs to me
+</footer>
